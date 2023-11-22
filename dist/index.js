@@ -1,13 +1,10 @@
 "use client";
-
 /* eslint-disable import/export */
 import * as colors from "@mui/material/colors";
 export { colors };
 export * from "@mui/material/styles";
-
 export { default as Button } from "./components/Button";
 export * from "./components/Button";
-
 // TODO remove, import directly from Base UI or create one folder per module
 export * from "@mui/material/utils";
 export { default as Accordion } from "@mui/material/Accordion";
@@ -272,7 +269,6 @@ export { default as useScrollTrigger } from "@mui/material/useScrollTrigger";
 export * from "@mui/material/useScrollTrigger";
 export { default as Zoom } from "@mui/material/Zoom";
 export * from "@mui/material/Zoom";
-
 // createFilterOptions is exported from Autocomplete
 export { default as useAutocomplete } from "@mui/material/useAutocomplete";
 export { default as GlobalStyles } from "@mui/material/GlobalStyles";
