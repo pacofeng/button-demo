@@ -82,6 +82,7 @@ const activeVariantStyle = {
 const disabledVariantStyle = {
   primary: {
     backgroundColor: v.monoColors.d6d8da,
+    color: v.monoColors.ffffff,
   },
   secondary: {
     backgroundColor: v.monoColors.ffffff,
