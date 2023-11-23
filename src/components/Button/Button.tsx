@@ -1,4 +1,5 @@
 import React, { forwardRef } from "react";
+import isPropValid from "@emotion/is-prop-valid";
 import {
   Button as MButton,
   styled,
@@ -34,7 +35,10 @@ export const Button = styled(
         </MButton>
       );
     }
-  )
+  ),
+  {
+    shouldForwardProp: isPropValid,
+  }
 )(style);
 
 export default Button;
