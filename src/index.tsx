@@ -5,8 +5,38 @@ import * as colors from "@mui/material/colors";
 export { colors };
 export * from "@mui/material/styles";
 
+export { default as Autocomplete } from "./components/Autocomplete";
+export * from "./components/Autocomplete";
+
 export { default as Button } from "./components/Button";
 export * from "./components/Button";
+
+export { default as Checkbox } from "./components/Checkbox";
+export * from "./components/Checkbox";
+
+export { default as FormControl } from "./components/FormControl";
+export * from "./components/FormControl";
+
+export { default as InputLabel } from "./components/InputLabel";
+export * from "./components/InputLabel";
+
+export { default as Radio } from "./components/Radio";
+export * from "./components/Radio";
+
+export { default as Select } from "./components/Select";
+export * from "./components/Select";
+
+export { default as Switch } from "./components/Switch";
+export * from "./components/Switch";
+
+export { default as Tab } from "./components/Tab";
+export * from "./components/Tab";
+
+export { default as Tabs } from "./components/Tabs";
+export * from "./components/Tabs";
+
+export { default as TextField } from "./components/TextField";
+export * from "./components/TextField";
 
 // TODO remove, import directly from Base UI or create one folder per module
 export * from "@mui/material/utils";
@@ -24,8 +54,6 @@ export { default as AlertTitle } from "@mui/material/AlertTitle";
 export * from "@mui/material/AlertTitle";
 export { default as AppBar } from "@mui/material/AppBar";
 export * from "@mui/material/AppBar";
-export { default as Autocomplete } from "@mui/material/Autocomplete";
-export * from "@mui/material/Autocomplete";
 export { default as Avatar } from "@mui/material/Avatar";
 export * from "@mui/material/Avatar";
 export { default as AvatarGroup } from "@mui/material/AvatarGroup";
@@ -58,8 +86,6 @@ export { default as CardHeader } from "@mui/material/CardHeader";
 export * from "@mui/material/CardHeader";
 export { default as CardMedia } from "@mui/material/CardMedia";
 export * from "@mui/material/CardMedia";
-export { default as Checkbox } from "@mui/material/Checkbox";
-export * from "@mui/material/Checkbox";
 export { default as Chip } from "@mui/material/Chip";
 export * from "@mui/material/Chip";
 export { default as CircularProgress } from "@mui/material/CircularProgress";
@@ -94,8 +120,6 @@ export { default as Fade } from "@mui/material/Fade";
 export * from "@mui/material/Fade";
 export { default as FilledInput } from "@mui/material/FilledInput";
 export * from "@mui/material/FilledInput";
-export { default as FormControl } from "@mui/material/FormControl";
-export * from "@mui/material/FormControl";
 export { default as FormControlLabel } from "@mui/material/FormControlLabel";
 export * from "@mui/material/FormControlLabel";
 export { default as FormGroup } from "@mui/material/FormGroup";
@@ -128,8 +152,6 @@ export { default as InputAdornment } from "@mui/material/InputAdornment";
 export * from "@mui/material/InputAdornment";
 export { default as InputBase } from "@mui/material/InputBase";
 export * from "@mui/material/InputBase";
-export { default as InputLabel } from "@mui/material/InputLabel";
-export * from "@mui/material/InputLabel";
 export { default as LinearProgress } from "@mui/material/LinearProgress";
 export * from "@mui/material/LinearProgress";
 export { default as Link } from "@mui/material/Link";
@@ -178,16 +200,12 @@ export { default as Popper } from "@mui/material/Popper";
 export * from "@mui/material/Popper";
 export { default as Portal } from "@mui/material/Portal";
 export * from "@mui/material/Portal";
-export { default as Radio } from "@mui/material/Radio";
-export * from "@mui/material/Radio";
 export { default as RadioGroup } from "@mui/material/RadioGroup";
 export * from "@mui/material/RadioGroup";
 export { default as Rating } from "@mui/material/Rating";
 export * from "@mui/material/Rating";
 export { default as ScopedCssBaseline } from "@mui/material/ScopedCssBaseline";
 export * from "@mui/material/ScopedCssBaseline";
-export { default as Select } from "@mui/material/Select";
-export * from "@mui/material/Select";
 export { default as Skeleton } from "@mui/material/Skeleton";
 export * from "@mui/material/Skeleton";
 export { default as Slide } from "@mui/material/Slide";
@@ -224,10 +242,6 @@ export { default as SvgIcon } from "@mui/material/SvgIcon";
 export * from "@mui/material/SvgIcon";
 export { default as SwipeableDrawer } from "@mui/material/SwipeableDrawer";
 export * from "@mui/material/SwipeableDrawer";
-export { default as Switch } from "@mui/material/Switch";
-export * from "@mui/material/Switch";
-export { default as Tab } from "@mui/material/Tab";
-export * from "@mui/material/Tab";
 export { default as Table } from "@mui/material/Table";
 export * from "@mui/material/Table";
 export { default as TableBody } from "@mui/material/TableBody";
@@ -246,12 +260,8 @@ export { default as TableRow } from "@mui/material/TableRow";
 export * from "@mui/material/TableRow";
 export { default as TableSortLabel } from "@mui/material/TableSortLabel";
 export * from "@mui/material/TableSortLabel";
-export { default as Tabs } from "@mui/material/Tabs";
-export * from "@mui/material/Tabs";
 export { default as TabScrollButton } from "@mui/material/TabScrollButton";
 export * from "@mui/material/TabScrollButton";
-export { default as TextField } from "@mui/material/TextField";
-export * from "@mui/material/TextField";
 export { default as TextareaAutosize } from "@mui/material/TextareaAutosize";
 export * from "@mui/material/TextareaAutosize";
 export { default as ToggleButton } from "@mui/material/ToggleButton";

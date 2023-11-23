@@ -1,5 +1,9 @@
 import React, { forwardRef } from "react";
-import { Button as MButton, styled, ButtonProps } from "@mui/material";
+import {
+  Button as MButton,
+  styled,
+  ButtonProps as MButtonProps,
+} from "@mui/material";
 import style from "./style";
 
 declare module "@mui/material/Button" {
@@ -13,9 +17,16 @@ declare module "@mui/material/Button" {
   }
 }
 
+export interface ButtonProps {
+  width?: number;
+  defaultBackgroundColor?: string;
+}
+
+export type MergedProps = ButtonProps & MButtonProps;
+
 export const Button = styled(
   forwardRef(
-    (props: ButtonProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
+    (props: MergedProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
       const { children, disableRipple = true, ...restProps } = props;
       return (
         <MButton {...restProps} ref={ref} disableRipple={disableRipple}>

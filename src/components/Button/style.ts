@@ -1,4 +1,5 @@
-import { ButtonProps } from "@mui/material";
+import * as CSS from "csstype";
+import { MergedProps } from "./Button";
 import * as v from "../../styles/variables";
 
 const defaultRectSizeStyle = {
@@ -22,12 +23,15 @@ const defaultRectSizeStyle = {
 const defaultFontSizeStyle = {
   small: {
     fontSize: "14px",
+    lineHeight: "20px",
   },
   medium: {
     fontSize: "16px",
+    lineHeight: "24px",
   },
   large: {
     fontSize: "16px",
+    lineHeight: "24px",
   },
 };
 
@@ -95,8 +99,18 @@ const disabledVariantStyle = {
   },
 };
 
-const style = ({ size = "medium", variant = "primary" }: ButtonProps) => {
+const style = ({
+  size = "medium",
+  variant = "primary",
+  fullWidth,
+  width,
+  defaultBackgroundColor,
+}: MergedProps) => {
+  const attributes: CSS.Properties = {
+    textTransform: "initial",
+  };
   return {
+    ...attributes,
     borderRadius: v.border.radius,
     letterSpacing: "0.1px",
     cursor: "pointer",
@@ -104,10 +118,11 @@ const style = ({ size = "medium", variant = "primary" }: ButtonProps) => {
     justifyContent: "center",
     alignItems: "center",
     gap: "4px",
-    "text-transform": "initial",
+    width: fullWidth ? "100%" : width ? width : "auto",
     ...defaultFontSizeStyle[size],
     ...(variant === "tertiary" ? { padding: 0 } : defaultRectSizeStyle[size]),
     ...defaultVariantStyle[variant],
+    ...(defaultBackgroundColor && { backgroundColor: defaultBackgroundColor }),
     "&:focus, &:focus-visible": {
       outline: "none",
     },
@@ -123,6 +138,9 @@ const style = ({ size = "medium", variant = "primary" }: ButtonProps) => {
     },
     "&[disabled]": {
       ...disabledVariantStyle[variant],
+      ...(defaultBackgroundColor && {
+        backgroundColor: defaultBackgroundColor,
+      }),
     },
   };
 };
