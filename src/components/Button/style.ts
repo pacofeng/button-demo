@@ -131,7 +131,7 @@ ButtonProps) => {
       cursor: "not-allowed",
       boxShadow: "none",
     },
-    "&:hover": {
+    "&:hover, &:focus-visible": {
       ...hoverVariantStyle[variant],
     },
     "&:active": {
@@ -142,6 +142,9 @@ ButtonProps) => {
       // ...(defaultBackgroundColor && {
       //   backgroundColor: defaultBackgroundColor,
       // }),
+    },
+    ".MuiButton-startIcon": {
+      margin: 0,
     },
   };
 };

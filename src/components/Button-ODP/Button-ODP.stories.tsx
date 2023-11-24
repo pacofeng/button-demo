@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { Button } from "./Button-ODP";
 
 const meta = {
@@ -16,11 +16,13 @@ export const PrimarySmall: Story = {
     size: "small",
     variant: "primary",
     children: "Button",
+    startIcon: <ChevronLeftIcon></ChevronLeftIcon>,
   },
 };
 
 export const PrimaryMedium: Story = {
   args: {
+    ...PrimarySmall.args,
     size: "medium",
     variant: "primary",
     children: "Button",
@@ -29,6 +31,7 @@ export const PrimaryMedium: Story = {
 
 export const PrimaryLarge: Story = {
   args: {
+    ...PrimarySmall.args,
     size: "large",
     variant: "primary",
     children: "Button",
@@ -37,6 +40,7 @@ export const PrimaryLarge: Story = {
 
 export const PrimaryDisable: Story = {
   args: {
+    ...PrimarySmall.args,
     disabled: true,
     variant: "primary",
     children: "Button",
