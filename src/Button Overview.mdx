@@ -1,0 +1,112 @@
+{/* Checkbox.mdx */}
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as ButtonStories from "./components/Button/Button.stories.tsx";
+import * as ButtonODPStories from "./components/Button-ODP/Button-ODP.stories.tsx";
+
+# Button
+
+Buttons indicate actions that users can take. Different button types can be used to indicate heirarchy of actions or the nature of the interaction.
+
+## Primary Buttons
+
+### DLS Version
+
+<Canvas>
+  <Story of={ButtonStories.PrimarySmall} />
+  <Story of={ButtonStories.PrimaryMedium} />
+  <Story of={ButtonStories.PrimaryLarge} />
+  <Story of={ButtonStories.PrimaryDisable} />
+</Canvas>
+
+### ODP Version (based on the CSS files sent by ODP team)
+
+<Canvas>
+  <Story of={ButtonODPStories.PrimarySmall} />
+  <Story of={ButtonODPStories.PrimaryMedium} />
+  <Story of={ButtonODPStories.PrimaryLarge} />
+  <Story of={ButtonODPStories.PrimaryDisable} />
+</Canvas>
+
+#### 1. Font Size:
+
+DLS - small 14px, medium 16px, large 16px
+
+ODP - small 10px, medium 12px, large 14px
+
+#### 2. Min Width:
+
+DLS - small 64px, medium 80px, large 96px
+
+ODP - no min width is set
+
+#### 3. Disabled State Background Color:
+
+DLS: #d6d8da
+
+ODP: #42688980 - rgba(66, 104, 137, 0.5)
+
+#### 4. Interaction
+
+DLS: no ripple
+
+ODP: ripple with a different pressed background color from DLS
+
+## Secondary Buttons
+
+### DLS Version
+
+<Canvas>
+  <Story of={ButtonStories.SecondarySmall} />
+  <Story of={ButtonStories.SecondaryMedium} />
+  <Story of={ButtonStories.SecondaryLarge} />
+  <Story of={ButtonStories.SecondaryDisable} />
+</Canvas>
+
+### ODP Version (based on the CSS files sent by ODP team)
+
+<Canvas>
+  <Story of={ButtonODPStories.SecondarySmall} />
+  <Story of={ButtonODPStories.SecondaryMedium} />
+  <Story of={ButtonODPStories.SecondaryLarge} />
+  <Story of={ButtonODPStories.SecondaryDisable} />
+</Canvas>
+
+#### 1. Disabled State Border Color:
+
+DLS: #d6d8da
+
+ODP: #426889
+
+## Tertiary Buttons
+
+### DLS Version
+
+<Canvas>
+  <Story of={ButtonStories.TertiarySmall} />
+  <Story of={ButtonStories.TertiaryMedium} />
+  <Story of={ButtonStories.TertiaryLarge} />
+  <Story of={ButtonStories.TertiaryDisable} />
+</Canvas>
+
+### ODP Version (based on the CSS files sent by ODP team)
+
+<Canvas>
+  <Story of={ButtonODPStories.TertiarySmall} />
+  <Story of={ButtonODPStories.TertiaryMedium} />
+  <Story of={ButtonODPStories.TertiaryLarge} />
+  <Story of={ButtonODPStories.TertiaryDisable} />
+</Canvas>
+
+#### 1. Hover State Background Color:
+
+DLS: none
+
+ODP: #eeeff0
+
+#### 2. Hover State Text Underline Offset:
+
+DLS: 4px
+
+ODP: none

@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import { MergedProps } from "./Button";
+import { ButtonProps } from "./Button";
 import * as v from "../../styles/variables";
 
 const defaultRectSizeStyle = {
@@ -102,15 +102,16 @@ const disabledVariantStyle = {
 const style = ({
   size = "medium",
   variant = "primary",
-  fullWidth,
-  width,
-  defaultBackgroundColor,
-}: MergedProps) => {
+}: // fullWidth,
+// width,
+// defaultBackgroundColor,
+ButtonProps) => {
   const attributes: CSS.Properties = {
     textTransform: "initial",
   };
   return {
     ...attributes,
+    fontWeight: 400,
     borderRadius: v.border.radius,
     letterSpacing: "0.1px",
     cursor: "pointer",
@@ -118,11 +119,11 @@ const style = ({
     justifyContent: "center",
     alignItems: "center",
     gap: "4px",
-    width: fullWidth ? "100%" : width ? width : "auto",
+    // width: fullWidth ? "100%" : width ? width : "auto",
     ...defaultFontSizeStyle[size],
     ...(variant === "tertiary" ? { padding: 0 } : defaultRectSizeStyle[size]),
     ...defaultVariantStyle[variant],
-    ...(defaultBackgroundColor && { backgroundColor: defaultBackgroundColor }),
+    // ...(defaultBackgroundColor && { backgroundColor: defaultBackgroundColor }),
     "&:focus, &:focus-visible": {
       outline: "none",
     },
@@ -138,9 +139,9 @@ const style = ({
     },
     "&[disabled]": {
       ...disabledVariantStyle[variant],
-      ...(defaultBackgroundColor && {
-        backgroundColor: defaultBackgroundColor,
-      }),
+      // ...(defaultBackgroundColor && {
+      //   backgroundColor: defaultBackgroundColor,
+      // }),
     },
   };
 };

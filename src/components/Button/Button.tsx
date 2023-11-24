@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react";
-import isPropValid from "@emotion/is-prop-valid";
 import {
   Button as MButton,
   styled,
@@ -18,16 +17,11 @@ declare module "@mui/material/Button" {
   }
 }
 
-export interface ButtonProps {
-  width?: number;
-  defaultBackgroundColor?: string;
-}
-
-export type MergedProps = ButtonProps & MButtonProps;
+export interface ButtonProps extends MButtonProps {}
 
 export const Button = styled(
   forwardRef(
-    (props: MergedProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
+    (props: ButtonProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
       const { children, disableRipple = true, ...restProps } = props;
       return (
         <MButton {...restProps} ref={ref} disableRipple={disableRipple}>
@@ -35,10 +29,13 @@ export const Button = styled(
         </MButton>
       );
     }
-  ),
-  {
-    shouldForwardProp: isPropValid,
-  }
+  )
 )(style);
+
+Button.defaultProps = {
+  size: "medium",
+  variant: "primary",
+  disableRipple: true,
+};
 
 export default Button;
