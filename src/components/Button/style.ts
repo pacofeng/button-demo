@@ -1,150 +1,126 @@
 import * as CSS from "csstype";
 import { ButtonProps } from "./Button";
-import * as v from "../../styles/variables";
 
-const defaultRectSizeStyle = {
-  small: {
-    height: "32px",
-    minWidth: "64px",
-    padding: "6px 10px",
-  },
-  medium: {
-    height: "36px",
-    minWidth: "80px",
-    padding: "6px 12px",
-  },
-  large: {
-    height: "48px",
-    minWidth: "96px",
-    padding: "12px 16px",
-  },
-};
-
-const defaultFontSizeStyle = {
-  small: {
-    fontSize: "14px",
-    lineHeight: "20px",
-  },
-  medium: {
-    fontSize: "16px",
-    lineHeight: "24px",
-  },
-  large: {
-    fontSize: "16px",
-    lineHeight: "24px",
-  },
-};
-
-const defaultVariantStyle = {
-  primary: {
-    backgroundColor: v.primaryColors.blue,
-    color: v.monoColors.ffffff,
-    border: "none",
-  },
-  secondary: {
-    backgroundColor: v.monoColors.ffffff,
-    color: v.primaryColors.blue,
-    border: `1px solid ${v.primaryColors.blue}`,
-  },
-  tertiary: {
-    background: "none",
-    color: v.primaryColors.blue,
-    border: "none",
-    textUnderlineOffset: "4px",
-  },
-};
-
-const hoverVariantStyle = {
-  primary: {
-    backgroundColor: v.primaryColors.blue120,
-  },
-  secondary: {
-    backgroundColor: v.monoColors.eeeff0,
-    borderColor: v.primaryColors.blue120,
-  },
-  tertiary: {
-    background: "none",
-    color: v.primaryColors.blue120,
-    textDecoration: "underline",
-  },
-};
-
-const activeVariantStyle = {
-  primary: {
-    backgroundColor: v.primaryColors.blue140,
-  },
-  secondary: {
-    backgroundColor: v.monoColors.d6d8da,
-    borderColor: v.primaryColors.blue140,
-  },
-  tertiary: {
-    color: v.primaryColors.blue140,
-    textDecoration: "underline",
-  },
-};
-
-const disabledVariantStyle = {
-  primary: {
-    backgroundColor: v.monoColors.d6d8da,
-    color: v.monoColors.ffffff,
-  },
-  secondary: {
-    backgroundColor: v.monoColors.ffffff,
-    color: v.monoColors.d6d8da,
-    borderColor: v.monoColors.d6d8da,
-  },
-  tertiary: {
-    color: v.monoColors.d6d8da,
-    textDecoration: "none",
-  },
-};
-
-const style = ({
-  size = "medium",
-  variant = "primary",
-}: // fullWidth,
-// width,
-// defaultBackgroundColor,
-ButtonProps) => {
-  const attributes: CSS.Properties = {
-    textTransform: "initial",
-  };
+const style = (props: ButtonProps) => {
   return {
-    ...attributes,
-    fontWeight: 400,
-    borderRadius: v.border.radius,
-    letterSpacing: "0.1px",
-    cursor: "pointer",
-    display: "inline-flex",
+    display: props.hidden ? "none" : "inline-flex",
+    width: props.fullWidth ? "100%" : props.width ? props.width : "auto",
+    minWidth: props.fullWidth
+      ? "100%"
+      : props.width
+      ? props.width
+      : props.variant === "tertiary"
+      ? "auto"
+      : props.size === "small"
+      ? 64
+      : props.size === "large"
+      ? 96
+      : 80,
     justifyContent: "center",
     alignItems: "center",
-    gap: "4px",
-    // width: fullWidth ? "100%" : width ? width : "auto",
-    ...defaultFontSizeStyle[size],
-    ...(variant === "tertiary" ? { padding: 0 } : defaultRectSizeStyle[size]),
-    ...defaultVariantStyle[variant],
-    // ...(defaultBackgroundColor && { backgroundColor: defaultBackgroundColor }),
-    "&:focus, &:focus-visible": {
-      outline: "none",
-    },
-    "&.disabled, &[disabled]": {
-      cursor: "not-allowed",
-      boxShadow: "none",
-    },
+    borderRadius: 8,
+    textAlign: "center",
+    fontStyle: "normal",
+    textTransform: "none",
+    gap: 4,
+    fontWeight: 400,
+    letterSpacing: 0.1,
+    // Button size control
+    height:
+      props.variant === "tertiary"
+        ? "auto"
+        : props.size === "small"
+        ? 32
+        : props.size === "large"
+        ? 48
+        : 36,
+    fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
+    lineHeight: props.size === "small" ? "20px" : "24px",
+    padding:
+      props.variant === "tertiary"
+        ? "0"
+        : props.size === "large"
+        ? "12px 16px"
+        : props.size === "small"
+        ? "6px 10px"
+        : "6px 12px",
+
+    //Button variant control
+    backgroundColor: props.defaultBackgroundColor
+      ? props.defaultBackgroundColor
+      : props.variant === "tertiary"
+      ? "#ffffff"
+      : props.variant === "secondary"
+      ? "#ffffff"
+      : "#13426B",
+    color:
+      props.variant === "tertiary"
+        ? "#13426B"
+        : props.variant === "secondary"
+        ? "#13426B"
+        : "#ffffff",
+    ...(props.variant === "secondary" && {
+      border: "1px solid #13426B",
+    }),
+
     "&:hover, &:focus-visible": {
-      ...hoverVariantStyle[variant],
+      backgroundColor:
+        props.variant === "tertiary"
+          ? "transparent"
+          : props.variant === "secondary"
+          ? "#eeeff0"
+          : "#0f3556",
+      color:
+        props.variant === "tertiary"
+          ? "#0f3556"
+          : props.variant === "secondary"
+          ? "#0f3556"
+          : "#ffffff",
+      ...(props.variant === "tertiary" && {
+        textDecoration: "underline",
+        textUnderlineOffset: 2,
+      }),
+    },
+    "&:disabled": {
+      ...(props.defaultBackgroundColor && { opacity: 0.5 }),
+      ...(props.variant === "secondary" && { borderColor: "#d6d8da" }),
+      color:
+        props.variant === "tertiary"
+          ? "#d6d8da"
+          : props.variant === "secondary"
+          ? "#d6d8da"
+          : "#ffffff",
+      backgroundColor: props.defaultBackgroundColor
+        ? props.defaultBackgroundColor
+        : props.variant === "tertiary"
+        ? "transparent"
+        : props.variant === "secondary"
+        ? "#ffffff"
+        : "#d6d8da",
     },
     "&:active": {
-      ...activeVariantStyle[variant],
+      color:
+        props.variant === "tertiary"
+          ? "#0b2840"
+          : props.variant === "secondary"
+          ? "#0b2840"
+          : "#ffffff",
+      ...(props.variant === "tertiary" && {
+        textDecoration: "underline",
+        textUnderlineOffset: 2,
+      }),
+      backgroundColor:
+        props.variant === "tertiary"
+          ? "#ffffff"
+          : props.variant === "secondary"
+          ? "#d6d8da"
+          : "#0B2840",
     },
-    "&[disabled]": {
-      ...disabledVariantStyle[variant],
-      // ...(defaultBackgroundColor && {
-      //   backgroundColor: defaultBackgroundColor,
-      // }),
-    },
-    ".MuiButton-startIcon": {
+    ".MuiButton-startIcon, .MuiButton-endIcon": {
       margin: 0,
+    },
+    ".MuiTouchRipple-root": {
+      display: "none",
     },
   };
 };

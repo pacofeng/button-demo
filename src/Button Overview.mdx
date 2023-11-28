@@ -3,7 +3,7 @@
 import { Canvas, Meta, Story } from "@storybook/blocks";
 
 import * as ButtonStories from "./components/Button/Button.stories.tsx";
-import * as ButtonODPStories from "./components/Button-ODP/Button-ODP.stories.tsx";
+import * as ButtonGUIStories from "./components/Button-GUI/Button-GUI.stories.tsx";
 
 # Button
 
@@ -20,44 +20,50 @@ Buttons indicate actions that users can take. Different button types can be used
   <Story of={ButtonStories.PrimaryDisable} />
 </Canvas>
 
-### ODP Version (based on the CSS files sent by ODP team)
+### GUI Version (based on the CSS files)
 
 <Canvas>
-  <Story of={ButtonODPStories.PrimarySmall} />
-  <Story of={ButtonODPStories.PrimaryMedium} />
-  <Story of={ButtonODPStories.PrimaryLarge} />
-  <Story of={ButtonODPStories.PrimaryDisable} />
+  <Story of={ButtonGUIStories.PrimarySmall} />
+  <Story of={ButtonGUIStories.PrimaryMedium} />
+  <Story of={ButtonGUIStories.PrimaryLarge} />
+  <Story of={ButtonGUIStories.PrimaryDisable} />
 </Canvas>
 
-#### 1. Font Size:
-
-DLS - small 14px, medium 16px, large 16px
-
-ODP - small 10px, medium 12px, large 14px
-
-#### 2. Min Width:
+#### 1. Min Width:
 
 DLS - small 64px, medium 80px, large 96px
 
-ODP - no min width is set
+GUI - no min width is set
 
-#### 3. Disabled State Background Color:
+#### 2. Disabled State Background Color:
 
 DLS: #d6d8da
 
-ODP: #42688980 - rgba(66, 104, 137, 0.5)
+GUI: #42688980 - rgba(66, 104, 137, 0.5)
 
-#### 4. With Icon
+#### 3. With Icon
 
-DLS: Icon is well aligned and has a gap 4px to the text
+DLS: Margin is removed from Icon to grantee 4px gap between icon and text
 
-ODP: Icon has marging left and right from MUI
+GUI: Icon has default marging left and right from MUI
 
-#### 5. Interaction
+#### 4. Ripple
 
 DLS: no ripple
 
-ODP: ripple with a different pressed background color from DLS
+GUI: ripple with a different pressed background color
+
+#### 5. Active State Background Color
+
+DLS: background color back to normal after click and cursor move out of the button
+
+GUI: background color keep in active state after click and cursor move out of the button
+
+#### 6. Vertical alignment with/without icon
+
+DLS: buttons with icon and without icon have same vertical alignment
+
+GUI: buttons with icon and without icon have different vertical alignment
 
 ## Secondary Buttons
 
@@ -70,20 +76,20 @@ ODP: ripple with a different pressed background color from DLS
   <Story of={ButtonStories.SecondaryDisable} />
 </Canvas>
 
-### ODP Version (based on the CSS files sent by ODP team)
+### GUI Version (based on the CSS files)
 
 <Canvas>
-  <Story of={ButtonODPStories.SecondarySmall} />
-  <Story of={ButtonODPStories.SecondaryMedium} />
-  <Story of={ButtonODPStories.SecondaryLarge} />
-  <Story of={ButtonODPStories.SecondaryDisable} />
+  <Story of={ButtonGUIStories.SecondarySmall} />
+  <Story of={ButtonGUIStories.SecondaryMedium} />
+  <Story of={ButtonGUIStories.SecondaryLarge} />
+  <Story of={ButtonGUIStories.SecondaryDisable} />
 </Canvas>
 
-#### 1. Disabled State Border Color:
+#### 1. Disabled State Color and Border Color:
 
 DLS: #d6d8da
 
-ODP: #426889
+GUI: #426889
 
 ## Tertiary Buttons
 
@@ -96,23 +102,35 @@ ODP: #426889
   <Story of={ButtonStories.TertiaryDisable} />
 </Canvas>
 
-### ODP Version (based on the CSS files sent by ODP team)
+### GUI Version (based on the CSS files)
 
 <Canvas>
-  <Story of={ButtonODPStories.TertiarySmall} />
-  <Story of={ButtonODPStories.TertiaryMedium} />
-  <Story of={ButtonODPStories.TertiaryLarge} />
-  <Story of={ButtonODPStories.TertiaryDisable} />
+  <Story of={ButtonGUIStories.TertiarySmall} />
+  <Story of={ButtonGUIStories.TertiaryMedium} />
+  <Story of={ButtonGUIStories.TertiaryLarge} />
+  <Story of={ButtonGUIStories.TertiaryDisable} />
 </Canvas>
 
 #### 1. Hover State Background Color:
 
 DLS: none
 
-ODP: #eeeff0
+GUI: #eeeff0
 
 #### 2. Hover State Text Underline Offset:
 
-DLS: 4px
+DLS: 2px
 
-ODP: none
+GUI: none
+
+#### 3. Height and Width:
+
+DLS: auto
+
+GUI: has min-width and height
+
+#### 4. Padding:
+
+DLS: no padding
+
+GUI: has padding and the click area includes the padding

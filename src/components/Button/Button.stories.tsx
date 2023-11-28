@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { SvgIcon } from "@mui/material";
 
 const meta = {
-  title: "Components/Button",
+  title: "Components/Button DLS",
   component: Button,
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
@@ -52,7 +52,6 @@ export const PrimarySmall: Story = {
 
 export const PrimaryMedium: Story = {
   args: {
-    ...PrimarySmall.args,
     size: "medium",
     variant: "primary",
     children: "Button",

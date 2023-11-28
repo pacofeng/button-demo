@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { Button } from "./Button-ODP";
+import { Button } from "./Button-GUI";
 
 const meta = {
-  title: "Components/Button ODP",
+  title: "Components/Button GUI",
   component: Button,
   tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
@@ -22,7 +22,6 @@ export const PrimarySmall: Story = {
 
 export const PrimaryMedium: Story = {
   args: {
-    ...PrimarySmall.args,
     size: "medium",
     variant: "primary",
     children: "Button",

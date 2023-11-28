@@ -17,7 +17,10 @@ declare module "@mui/material/Button" {
   }
 }
 
-export interface ButtonProps extends MButtonProps {}
+export interface ButtonProps extends MButtonProps {
+  width?: number;
+  defaultBackgroundColor?: string;
+}
 
 export const Button = styled(
   forwardRef(
