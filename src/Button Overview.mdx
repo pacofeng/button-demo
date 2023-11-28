@@ -1,4 +1,10 @@
-{/* Checkbox.mdx */}
+<style>
+  {`
+  .line-through {
+    text-decoration: line-through;
+  }
+`}
+</style>
 
 import { Canvas, Meta, Story } from "@storybook/blocks";
 
@@ -35,35 +41,35 @@ DLS - small 64px, medium 80px, large 96px
 
 GUI - no min width is set
 
-#### 2. Disabled State Background Color:
-
-DLS: #d6d8da
-
-GUI: #42688980 - rgba(66, 104, 137, 0.5)
-
-#### 3. With Icon
+#### 2. With Icon
 
 DLS: Margin is removed from Icon to grantee 4px gap between icon and text
 
 GUI: Icon has default marging left and right from MUI
 
-#### 4. Ripple
+#### 3. Ripple
 
-DLS: no ripple
+DLS: no ripple when clicking the button
 
 GUI: ripple with a different pressed background color
 
-#### 5. Active State Background Color
+#### 4. Active State Background Color
 
 DLS: background color back to normal after click and cursor move out of the button
 
 GUI: background color keep in active state after click and cursor move out of the button
 
-#### 6. Vertical alignment with/without icon
+#### 5. Vertical alignment with/without icon
 
 DLS: buttons with icon and without icon have same vertical alignment
 
 GUI: buttons with icon and without icon have different vertical alignment
+
+#### <div class="line-through">6. Disabled State Background Color:</div>
+
+<div class="line-through">DLS: #d6d8da</div>
+
+<div class="line-through">GUI: #42688980 - rgba(66, 104, 137, 0.5)</div>
 
 ## Secondary Buttons
 
@@ -85,11 +91,11 @@ GUI: buttons with icon and without icon have different vertical alignment
   <Story of={ButtonGUIStories.SecondaryDisable} />
 </Canvas>
 
-#### 1. Disabled State Color and Border Color:
+#### <div class="line-through">1. Disabled State Color and Border Color:</div>
 
-DLS: #d6d8da
+<div class="line-through">DLS: #d6d8da</div>
 
-GUI: #426889
+<div class="line-through">GUI: #426889</div>
 
 ## Tertiary Buttons
 
@@ -134,3 +140,9 @@ GUI: has min-width and height
 DLS: no padding
 
 GUI: has padding and the click area includes the padding
+
+#### <div class="line-through">5. Disabled State Color:</div>
+
+<div class="line-through">DLS: #d6d8da</div>
+
+<div class="line-through">GUI: #426889</div>
