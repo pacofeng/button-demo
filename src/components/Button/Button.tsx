@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import {
   Button as MButton,
   styled,
@@ -22,18 +22,7 @@ export interface ButtonProps extends MButtonProps {
   defaultBackgroundColor?: string;
 }
 
-export const Button = styled(
-  forwardRef(
-    (props: ButtonProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
-      const { children, disableRipple = true, ...restProps } = props;
-      return (
-        <MButton {...restProps} ref={ref} disableRipple={disableRipple}>
-          {children}
-        </MButton>
-      );
-    }
-  )
-)(style);
+export const Button = styled(MButton)(style);
 
 Button.defaultProps = {
   size: "medium",
