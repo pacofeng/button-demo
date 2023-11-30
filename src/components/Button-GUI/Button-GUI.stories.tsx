@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Button } from "./Button-GUI";
 
 const meta = {
@@ -30,10 +31,10 @@ export const PrimaryMedium: Story = {
 
 export const PrimaryLarge: Story = {
   args: {
-    ...PrimarySmall.args,
     size: "large",
     variant: "primary",
     children: "Button",
+    endIcon: <ChevronRightIcon></ChevronRightIcon>,
   },
 };
 
