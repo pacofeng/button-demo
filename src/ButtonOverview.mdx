@@ -27,17 +27,17 @@ Buttons indicate actions that users can take. Different button types can be used
   <Story of={ButtonGUIStories.PrimaryDisable} />
 </Canvas>
 
-#### 1. Min Width:
+#### 1. Min Width and Height: (new change after v20230420)
 
-DLS - small 64px, medium 80px, large 96px
+DLS - 64px min width for all buttons, 22px/28px/32px height for small/medium/large button
 
-GUI - no min width is set
+GUI - no min width is set and height is not aligned with DLS
 
 #### 2. With Icon
 
-DLS: Margin is removed from Icon to grantee 4px gap between icon and text
+DLS: Margin is removed from Icon and Icon size is set based on size
 
-GUI: Icon has default marging left and right from MUI
+GUI: Icon has default marging and icon size from MUI
 
 #### 3. Ripple
 
@@ -62,6 +62,12 @@ GUI: buttons with icon and without icon have different vertical alignment
 DLS: #d6d8da
 
 GUI: #42688980 - rgba(66, 104, 137, 0.5)
+
+#### 7. Border Radius: (new change after v20230420)
+
+DLS: 4px/6px/8px for small/medium/large button
+
+GUI: 8px for all buttons
 
 ## Secondary Buttons
 

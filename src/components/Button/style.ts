@@ -1,8 +1,9 @@
-import * as CSS from "csstype";
 import { ButtonProps } from "./Button";
 
 const style = (props: ButtonProps) => {
   return {
+    // TODO: remove
+    fontFamily: '"FS Elliot Pro", Arial',
     display: props.hidden ? "none" : "inline-flex",
     width: props.fullWidth ? "100%" : props.width ? props.width : "auto",
     minWidth: props.fullWidth
@@ -11,14 +12,10 @@ const style = (props: ButtonProps) => {
       ? props.width
       : props.variant === "tertiary"
       ? "auto"
-      : props.size === "small"
-      ? 64
-      : props.size === "large"
-      ? 96
-      : 80,
+      : 64,
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: 8,
+    borderRadius: props.size === "small" ? 4 : props.size === "large" ? 8 : 6,
     textAlign: "center",
     fontStyle: "normal",
     textTransform: "none",
@@ -30,21 +27,23 @@ const style = (props: ButtonProps) => {
       props.variant === "tertiary"
         ? "auto"
         : props.size === "small"
-        ? 32
+        ? 22
         : props.size === "large"
-        ? 48
-        : 36,
+        ? 32
+        : 28,
     fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
-    lineHeight: props.size === "small" ? "20px" : "24px",
+    lineHeight:
+      props.size === "small"
+        ? "14px"
+        : props.size === "large"
+        ? "20px"
+        : "16px",
     padding:
       props.variant === "tertiary"
         ? "0"
-        : props.size === "large"
-        ? "12px 16px"
         : props.size === "small"
-        ? "6px 10px"
-        : "6px 12px",
-
+        ? "4px 8px"
+        : "6px 10px",
     //Button variant control
     backgroundColor: props.defaultBackgroundColor
       ? props.defaultBackgroundColor
@@ -118,6 +117,14 @@ const style = (props: ButtonProps) => {
     },
     ".MuiButton-startIcon, .MuiButton-endIcon": {
       margin: 0,
+      svg: {
+        fontSize:
+          props.size === "small"
+            ? "12px"
+            : props.size === "large"
+            ? "20px"
+            : "16px",
+      },
     },
     ".MuiTouchRipple-root": {
       display: "none",
