@@ -27,15 +27,15 @@ Buttons indicate actions that users can take. Different button types can be used
   <Story of={ButtonGUIStories.PrimaryDisable} />
 </Canvas>
 
-#### 1. Min Width and Height: (new change after v20230420)
+#### 1. Height and Min Width: (new change after v20230420)
 
-DLS - 64px min width for all buttons, 22px/28px/32px height for small/medium/large button
+DLS - 22px/28px/32px height is set based on button size; 64px min width for all buttons
 
-GUI - no min width is set and height is not aligned with DLS
+GUI - height is not aligned with DLS; no min width is set
 
 #### 2. With Icon
 
-DLS: Margin is removed from Icon and Icon size is set based on size
+DLS: Margin is removed from icon; 12px/16px/16px icon size is set based on button size
 
 GUI: Icon has default marging and icon size from MUI
 

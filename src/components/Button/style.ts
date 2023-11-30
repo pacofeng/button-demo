@@ -118,12 +118,7 @@ const style = (props: ButtonProps) => {
     ".MuiButton-startIcon, .MuiButton-endIcon": {
       margin: 0,
       svg: {
-        fontSize:
-          props.size === "small"
-            ? "12px"
-            : props.size === "large"
-            ? "20px"
-            : "16px",
+        fontSize: props.size === "small" ? "12px" : "16px",
       },
     },
     ".MuiTouchRipple-root": {
