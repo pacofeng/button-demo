@@ -3,16 +3,9 @@ import { ButtonProps } from "./Button";
 const style = (props: ButtonProps) => {
   return {
     // TODO: remove
-    fontFamily: '"FS Elliot Pro", Arial',
+    fontFamily: "'FS Elliot Pro', Arial",
     ...(props.hidden && { display: "none" }),
     width: props.fullWidth ? "100%" : props.width ? props.width : "auto",
-    minWidth: props.fullWidth
-      ? "100%"
-      : props.width
-      ? props.width
-      : props.variant === "tertiary"
-      ? "auto"
-      : 64,
     justifyContent: "center",
     alignItems: "center",
     borderRadius: props.size === "small" ? 4 : props.size === "large" ? 8 : 6,
@@ -61,7 +54,9 @@ const style = (props: ButtonProps) => {
     ...(props.variant === "secondary" && {
       border: "1px solid #13426B",
     }),
-
+    ...(props.variant === "tertiary" && {
+      minWidth: "auto",
+    }),
     "&:hover, &:focus-visible": {
       backgroundColor:
         props.variant === "tertiary"
