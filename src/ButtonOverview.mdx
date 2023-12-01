@@ -1,68 +1,89 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+ `}
+</style>
+
 import { Canvas, Meta, Story } from "@storybook/blocks";
 
 import * as ButtonStories from "./components/Button/Button.stories.tsx";
 import * as ButtonGUIStories from "./components/Button-GUI/Button-GUI.stories.tsx";
 
+{/* 👇 Documentation-only page */}
+
+<Meta title="Button Overview" />
+
 # Button
 
 Buttons indicate actions that users can take. Different button types can be used to indicate heirarchy of actions or the nature of the interaction.
 
-## DLS Version - Primary Button
+## Primary Button
 
-### Primary Small Buttons
+### Extra Extra Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.PrimarySmall} />
-  <Story of={ButtonStories.PrimarySmallDisable} />
-  <Story of={ButtonStories.PrimarySmallStartIcon} />
-  <Story of={ButtonStories.PrimarySmallEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.PrimarySmall} />
+      <Story of={ButtonStories.PrimarySmallDisable} />
+      <Story of={ButtonStories.PrimarySmallLeadingIcon} />
+      <Story of={ButtonStories.PrimarySmallTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.PrimarySmall} />
+      <Story of={ButtonGUIStories.PrimarySmallDisable} />
+      <Story of={ButtonGUIStories.PrimarySmallLeadingIcon} />
+      <Story of={ButtonGUIStories.PrimarySmallTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
-### Primary Medium Buttons
+### Extra Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.PrimaryMedium} />
-  <Story of={ButtonStories.PrimaryMediumDisable} />
-  <Story of={ButtonStories.PrimaryMediumStartIcon} />
-  <Story of={ButtonStories.PrimaryMediumEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.PrimaryMedium} />
+      <Story of={ButtonStories.PrimaryMediumDisable} />
+      <Story of={ButtonStories.PrimaryMediumLeadingIcon} />
+      <Story of={ButtonStories.PrimaryMediumTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.PrimaryMedium} />
+      <Story of={ButtonGUIStories.PrimaryMediumDisable} />
+      <Story of={ButtonGUIStories.PrimaryMediumLeadingIcon} />
+      <Story of={ButtonGUIStories.PrimaryMediumTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
-### Primary Large Buttons
+### Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.PrimaryLarge} />
-  <Story of={ButtonStories.PrimaryLargeDisable} />
-  <Story of={ButtonStories.PrimaryLargeStartIcon} />
-  <Story of={ButtonStories.PrimaryLargeEndIcon} />
-</Canvas>
-
-## GUI Version - Primary Button (based on the CSS files)
-
-### Primary Small Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.PrimarySmall} />
-  <Story of={ButtonGUIStories.PrimarySmallDisable} />
-  <Story of={ButtonGUIStories.PrimarySmallStartIcon} />
-  <Story of={ButtonGUIStories.PrimarySmallEndIcon} />
-</Canvas>
-
-### Primary Medium Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.PrimaryMedium} />
-  <Story of={ButtonGUIStories.PrimaryMediumDisable} />
-  <Story of={ButtonGUIStories.PrimaryMediumStartIcon} />
-  <Story of={ButtonGUIStories.PrimaryMediumEndIcon} />
-</Canvas>
-
-### Primary Large Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.PrimaryLarge} />
-  <Story of={ButtonGUIStories.PrimaryLargeDisable} />
-  <Story of={ButtonGUIStories.PrimaryLargeStartIcon} />
-  <Story of={ButtonGUIStories.PrimaryLargeEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.PrimaryLarge} />
+      <Story of={ButtonStories.PrimaryLargeDisable} />
+      <Story of={ButtonStories.PrimaryLargeLeadingIcon} />
+      <Story of={ButtonStories.PrimaryLargeTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.PrimaryLarge} />
+      <Story of={ButtonGUIStories.PrimaryLargeDisable} />
+      <Story of={ButtonGUIStories.PrimaryLargeLeadingIcon} />
+      <Story of={ButtonGUIStories.PrimaryLargeTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
 #### 1. Height and Min Width: (new change after v20230420)
@@ -107,62 +128,69 @@ DLS: 4px/6px/8px for small/medium/large button
 
 GUI: 8px for all buttons
 
-## DLS Version - Secondary Button
+## Secondary Button
 
-### Secondary Small Buttons
+### Extra Extra Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.SecondarySmall} />
-  <Story of={ButtonStories.SecondarySmallDisable} />
-  <Story of={ButtonStories.SecondarySmallStartIcon} />
-  <Story of={ButtonStories.SecondarySmallEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.SecondarySmall} />
+      <Story of={ButtonStories.SecondarySmallDisable} />
+      <Story of={ButtonStories.SecondarySmallLeadingIcon} />
+      <Story of={ButtonStories.SecondarySmallTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.SecondarySmall} />
+      <Story of={ButtonGUIStories.SecondarySmallDisable} />
+      <Story of={ButtonGUIStories.SecondarySmallLeadingIcon} />
+      <Story of={ButtonGUIStories.SecondarySmallTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
-### Secondary Medium Buttons
+### Extra Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.SecondaryMedium} />
-  <Story of={ButtonStories.SecondaryMediumDisable} />
-  <Story of={ButtonStories.SecondaryMediumStartIcon} />
-  <Story of={ButtonStories.SecondaryMediumEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.SecondaryMedium} />
+      <Story of={ButtonStories.SecondaryMediumDisable} />
+      <Story of={ButtonStories.SecondaryMediumLeadingIcon} />
+      <Story of={ButtonStories.SecondaryMediumTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.SecondaryMedium} />
+      <Story of={ButtonGUIStories.SecondaryMediumDisable} />
+      <Story of={ButtonGUIStories.SecondaryMediumLeadingIcon} />
+      <Story of={ButtonGUIStories.SecondaryMediumTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
-### Secondary Large Buttons
+### Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.SecondaryLarge} />
-  <Story of={ButtonStories.SecondaryLargeDisable} />
-  <Story of={ButtonStories.SecondaryLargeStartIcon} />
-  <Story of={ButtonStories.SecondaryLargeEndIcon} />
-</Canvas>
-
-## GUI Version - Secondary Button (based on the CSS files)
-
-### Secondary Small Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.SecondarySmall} />
-  <Story of={ButtonGUIStories.SecondarySmallDisable} />
-  <Story of={ButtonGUIStories.SecondarySmallStartIcon} />
-  <Story of={ButtonGUIStories.SecondarySmallEndIcon} />
-</Canvas>
-
-### Secondary Medium Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.SecondaryMedium} />
-  <Story of={ButtonGUIStories.SecondaryMediumDisable} />
-  <Story of={ButtonGUIStories.SecondaryMediumStartIcon} />
-  <Story of={ButtonGUIStories.SecondaryMediumEndIcon} />
-</Canvas>
-
-### Secondary Large Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.SecondaryLarge} />
-  <Story of={ButtonGUIStories.SecondaryLargeDisable} />
-  <Story of={ButtonGUIStories.SecondaryLargeStartIcon} />
-  <Story of={ButtonGUIStories.SecondaryLargeEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.SecondaryLarge} />
+      <Story of={ButtonStories.SecondaryLargeDisable} />
+      <Story of={ButtonStories.SecondaryLargeLeadingIcon} />
+      <Story of={ButtonStories.SecondaryLargeTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.SecondaryLarge} />
+      <Story of={ButtonGUIStories.SecondaryLargeDisable} />
+      <Story of={ButtonGUIStories.SecondaryLargeLeadingIcon} />
+      <Story of={ButtonGUIStories.SecondaryLargeTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
 #### 1. Disabled State Color and Border Color: (new change after v20230420)
@@ -171,62 +199,69 @@ DLS: #d6d8da
 
 GUI: #426889
 
-## DLS Version - Tertiary Button
+## Tertiary Button
 
-### Tertiary Small Buttons
+### Extra Extra Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.TertiarySmall} />
-  <Story of={ButtonStories.TertiarySmallDisable} />
-  <Story of={ButtonStories.TertiarySmallStartIcon} />
-  <Story of={ButtonStories.TertiarySmallEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.TertiarySmall} />
+      <Story of={ButtonStories.TertiarySmallDisable} />
+      <Story of={ButtonStories.TertiarySmallLeadingIcon} />
+      <Story of={ButtonStories.TertiarySmallTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.TertiarySmall} />
+      <Story of={ButtonGUIStories.TertiarySmallDisable} />
+      <Story of={ButtonGUIStories.TertiarySmallLeadingIcon} />
+      <Story of={ButtonGUIStories.TertiarySmallTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
-### Tertiary Medium Buttons
+### Extra Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.TertiaryMedium} />
-  <Story of={ButtonStories.TertiaryMediumDisable} />
-  <Story of={ButtonStories.TertiaryMediumStartIcon} />
-  <Story of={ButtonStories.TertiaryMediumEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.TertiaryMedium} />
+      <Story of={ButtonStories.TertiaryMediumDisable} />
+      <Story of={ButtonStories.TertiaryMediumLeadingIcon} />
+      <Story of={ButtonStories.TertiaryMediumTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.TertiaryMedium} />
+      <Story of={ButtonGUIStories.TertiaryMediumDisable} />
+      <Story of={ButtonGUIStories.TertiaryMediumLeadingIcon} />
+      <Story of={ButtonGUIStories.TertiaryMediumTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
-### Tertiary Large Buttons
+### Small Buttons
 
 <Canvas>
-  <Story of={ButtonStories.TertiaryLarge} />
-  <Story of={ButtonStories.TertiaryLargeDisable} />
-  <Story of={ButtonStories.TertiaryLargeStartIcon} />
-  <Story of={ButtonStories.TertiaryLargeEndIcon} />
-</Canvas>
-
-## GUI Version - Tertiary Button (based on the CSS files)
-
-### Tertiary Small Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.TertiarySmall} />
-  <Story of={ButtonGUIStories.TertiarySmallDisable} />
-  <Story of={ButtonGUIStories.TertiarySmallStartIcon} />
-  <Story of={ButtonGUIStories.TertiarySmallEndIcon} />
-</Canvas>
-
-### Tertiary Medium Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.TertiaryMedium} />
-  <Story of={ButtonGUIStories.TertiaryMediumDisable} />
-  <Story of={ButtonGUIStories.TertiaryMediumStartIcon} />
-  <Story of={ButtonGUIStories.TertiaryMediumEndIcon} />
-</Canvas>
-
-### Tertiary Large Buttons
-
-<Canvas>
-  <Story of={ButtonGUIStories.TertiaryLarge} />
-  <Story of={ButtonGUIStories.TertiaryLargeDisable} />
-  <Story of={ButtonGUIStories.TertiaryLargeStartIcon} />
-  <Story of={ButtonGUIStories.TertiaryLargeEndIcon} />
+  <div>
+    <div class="flex">
+      DLS:
+      <Story of={ButtonStories.TertiaryLarge} />
+      <Story of={ButtonStories.TertiaryLargeDisable} />
+      <Story of={ButtonStories.TertiaryLargeLeadingIcon} />
+      <Story of={ButtonStories.TertiaryLargeTrailingIcon} />
+    </div>
+    <div class="flex">
+      GUI:
+      <Story of={ButtonGUIStories.TertiaryLarge} />
+      <Story of={ButtonGUIStories.TertiaryLargeDisable} />
+      <Story of={ButtonGUIStories.TertiaryLargeLeadingIcon} />
+      <Story of={ButtonGUIStories.TertiaryLargeTrailingIcon} />
+    </div>
+  </div>
 </Canvas>
 
 #### 1. Hover State Background Color:

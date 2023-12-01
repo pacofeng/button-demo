@@ -4,4 +4,5 @@ export default create({
   base: "light",
   // Typography
   fontBase: '"FS Elliot Pro", Arial',
+  brandTitle: "DLS Demo",
 });

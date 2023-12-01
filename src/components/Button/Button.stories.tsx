@@ -57,8 +57,8 @@ export const PrimaryLargeDisable: Story = {
   },
 };
 
-// primary start icon button
-export const PrimarySmallStartIcon: Story = {
+// primary leading icon button
+export const PrimarySmallLeadingIcon: Story = {
   args: {
     ...PrimarySmall.args,
     startIcon: (
@@ -83,22 +83,22 @@ export const PrimarySmallStartIcon: Story = {
   },
 };
 
-export const PrimaryMediumStartIcon: Story = {
+export const PrimaryMediumLeadingIcon: Story = {
   args: {
-    ...PrimarySmallStartIcon.args,
+    ...PrimarySmallLeadingIcon.args,
     size: "medium",
   },
 };
 
-export const PrimaryLargeStartIcon: Story = {
+export const PrimaryLargeLeadingIcon: Story = {
   args: {
-    ...PrimarySmallStartIcon.args,
+    ...PrimarySmallLeadingIcon.args,
     size: "large",
   },
 };
 
-// primary end icon button
-export const PrimarySmallEndIcon: Story = {
+// primary trailing icon button
+export const PrimarySmallTrailingIcon: Story = {
   args: {
     ...PrimarySmall.args,
     endIcon: (
@@ -123,16 +123,16 @@ export const PrimarySmallEndIcon: Story = {
   },
 };
 
-export const PrimaryMediumEndIcon: Story = {
+export const PrimaryMediumTrailingIcon: Story = {
   args: {
-    ...PrimarySmallEndIcon.args,
+    ...PrimarySmallTrailingIcon.args,
     size: "medium",
   },
 };
 
-export const PrimaryLargeEndIcon: Story = {
+export const PrimaryLargeTrailingIcon: Story = {
   args: {
-    ...PrimarySmallEndIcon.args,
+    ...PrimarySmallTrailingIcon.args,
     size: "large",
   },
 };
@@ -178,8 +178,8 @@ export const SecondaryLargeDisable: Story = {
   },
 };
 
-// secondary start icon button
-export const SecondarySmallStartIcon: Story = {
+// secondary leading icon button
+export const SecondarySmallLeadingIcon: Story = {
   args: {
     ...SecondarySmall.args,
     startIcon: (
@@ -204,22 +204,22 @@ export const SecondarySmallStartIcon: Story = {
   },
 };
 
-export const SecondaryMediumStartIcon: Story = {
+export const SecondaryMediumLeadingIcon: Story = {
   args: {
-    ...SecondarySmallStartIcon.args,
+    ...SecondarySmallLeadingIcon.args,
     size: "medium",
   },
 };
 
-export const SecondaryLargeStartIcon: Story = {
+export const SecondaryLargeLeadingIcon: Story = {
   args: {
-    ...SecondarySmallStartIcon.args,
+    ...SecondarySmallLeadingIcon.args,
     size: "large",
   },
 };
 
-// secondary end icon button
-export const SecondarySmallEndIcon: Story = {
+// secondary trailing icon button
+export const SecondarySmallTrailingIcon: Story = {
   args: {
     ...SecondarySmall.args,
     endIcon: (
@@ -244,16 +244,16 @@ export const SecondarySmallEndIcon: Story = {
   },
 };
 
-export const SecondaryMediumEndIcon: Story = {
+export const SecondaryMediumTrailingIcon: Story = {
   args: {
-    ...SecondarySmallEndIcon.args,
+    ...SecondarySmallTrailingIcon.args,
     size: "medium",
   },
 };
 
-export const SecondaryLargeEndIcon: Story = {
+export const SecondaryLargeTrailingIcon: Story = {
   args: {
-    ...SecondarySmallEndIcon.args,
+    ...SecondarySmallTrailingIcon.args,
     size: "large",
   },
 };
@@ -299,8 +299,8 @@ export const TertiaryLargeDisable: Story = {
   },
 };
 
-// tertiary start icon button
-export const TertiarySmallStartIcon: Story = {
+// tertiary leading icon button
+export const TertiarySmallLeadingIcon: Story = {
   args: {
     ...TertiarySmall.args,
     startIcon: (
@@ -325,22 +325,22 @@ export const TertiarySmallStartIcon: Story = {
   },
 };
 
-export const TertiaryMediumStartIcon: Story = {
+export const TertiaryMediumLeadingIcon: Story = {
   args: {
-    ...TertiarySmallStartIcon.args,
+    ...TertiarySmallLeadingIcon.args,
     size: "medium",
   },
 };
 
-export const TertiaryLargeStartIcon: Story = {
+export const TertiaryLargeLeadingIcon: Story = {
   args: {
-    ...TertiarySmallStartIcon.args,
+    ...TertiarySmallLeadingIcon.args,
     size: "large",
   },
 };
 
-// tertiary end icon button
-export const TertiarySmallEndIcon: Story = {
+// tertiary trailing icon button
+export const TertiarySmallTrailingIcon: Story = {
   args: {
     ...TertiarySmall.args,
     endIcon: (
@@ -365,16 +365,16 @@ export const TertiarySmallEndIcon: Story = {
   },
 };
 
-export const TertiaryMediumEndIcon: Story = {
+export const TertiaryMediumTrailingIcon: Story = {
   args: {
-    ...TertiarySmallEndIcon.args,
+    ...TertiarySmallTrailingIcon.args,
     size: "medium",
   },
 };
 
-export const TertiaryLargeEndIcon: Story = {
+export const TertiaryLargeTrailingIcon: Story = {
   args: {
-    ...TertiarySmallEndIcon.args,
+    ...TertiarySmallTrailingIcon.args,
     size: "large",
   },
 };
