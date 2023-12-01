@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 import { Button } from "./Button-GUI";
 
 const meta = {
@@ -12,41 +11,96 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+// primary button
 export const PrimarySmall: Story = {
   args: {
     size: "small",
     variant: "primary",
     children: "Button",
-    startIcon: <ChevronLeftIcon></ChevronLeftIcon>,
   },
 };
 
 export const PrimaryMedium: Story = {
   args: {
+    ...PrimarySmall.args,
     size: "medium",
-    variant: "primary",
-    children: "Button",
   },
 };
 
 export const PrimaryLarge: Story = {
   args: {
+    ...PrimarySmall.args,
     size: "large",
-    variant: "primary",
-    children: "Button",
-    endIcon: <ChevronRightIcon></ChevronRightIcon>,
   },
 };
 
-export const PrimaryDisable: Story = {
+// primary disable button
+export const PrimarySmallDisable: Story = {
   args: {
     ...PrimarySmall.args,
     disabled: true,
-    variant: "primary",
-    children: "Button",
   },
 };
 
+export const PrimaryMediumDisable: Story = {
+  args: {
+    ...PrimarySmallDisable.args,
+    size: "medium",
+  },
+};
+
+export const PrimaryLargeDisable: Story = {
+  args: {
+    ...PrimarySmallDisable.args,
+    size: "large",
+  },
+};
+
+// primary start icon button
+export const PrimarySmallStartIcon: Story = {
+  args: {
+    ...PrimarySmall.args,
+    startIcon: <FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>,
+  },
+};
+
+export const PrimaryMediumStartIcon: Story = {
+  args: {
+    ...PrimarySmallStartIcon.args,
+    size: "medium",
+  },
+};
+
+export const PrimaryLargeStartIcon: Story = {
+  args: {
+    ...PrimarySmallStartIcon.args,
+    size: "large",
+  },
+};
+
+// primary end icon button
+export const PrimarySmallEndIcon: Story = {
+  args: {
+    ...PrimarySmall.args,
+    endIcon: <FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>,
+  },
+};
+
+export const PrimaryMediumEndIcon: Story = {
+  args: {
+    ...PrimarySmallEndIcon.args,
+    size: "medium",
+  },
+};
+
+export const PrimaryLargeEndIcon: Story = {
+  args: {
+    ...PrimarySmallEndIcon.args,
+    size: "large",
+  },
+};
+
+// secondary button
 export const SecondarySmall: Story = {
   args: {
     variant: "secondary",
@@ -56,26 +110,82 @@ export const SecondarySmall: Story = {
 };
 export const SecondaryMedium: Story = {
   args: {
-    variant: "secondary",
+    ...SecondarySmall.args,
     size: "medium",
-    children: "Button",
   },
 };
 export const SecondaryLarge: Story = {
   args: {
-    variant: "secondary",
+    ...SecondarySmall.args,
     size: "large",
-    children: "Button",
-  },
-};
-export const SecondaryDisable: Story = {
-  args: {
-    variant: "secondary",
-    disabled: true,
-    children: "Button",
   },
 };
 
+// secondary disable button
+export const SecondarySmallDisable: Story = {
+  args: {
+    ...SecondarySmall.args,
+    disabled: true,
+  },
+};
+export const SecondaryMediumDisable: Story = {
+  args: {
+    ...SecondarySmallDisable.args,
+    size: "medium",
+  },
+};
+export const SecondaryLargeDisable: Story = {
+  args: {
+    ...SecondarySmallDisable.args,
+    size: "large",
+  },
+};
+
+// secondary start icon button
+export const SecondarySmallStartIcon: Story = {
+  args: {
+    ...SecondarySmall.args,
+    startIcon: <FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>,
+  },
+};
+
+export const SecondaryMediumStartIcon: Story = {
+  args: {
+    ...SecondarySmallStartIcon.args,
+    size: "medium",
+  },
+};
+
+export const SecondaryLargeStartIcon: Story = {
+  args: {
+    ...SecondarySmallStartIcon.args,
+    size: "large",
+  },
+};
+
+// secondary end icon button
+export const SecondarySmallEndIcon: Story = {
+  args: {
+    ...SecondarySmall.args,
+    endIcon: <FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>,
+  },
+};
+
+export const SecondaryMediumEndIcon: Story = {
+  args: {
+    ...SecondarySmallEndIcon.args,
+    size: "medium",
+  },
+};
+
+export const SecondaryLargeEndIcon: Story = {
+  args: {
+    ...SecondarySmallEndIcon.args,
+    size: "large",
+  },
+};
+
+// tertiary button
 export const TertiarySmall: Story = {
   args: {
     variant: "tertiary",
@@ -85,22 +195,77 @@ export const TertiarySmall: Story = {
 };
 export const TertiaryMedium: Story = {
   args: {
-    variant: "tertiary",
+    ...TertiarySmall.args,
     size: "medium",
-    children: "Button",
   },
 };
 export const TertiaryLarge: Story = {
   args: {
-    variant: "tertiary",
+    ...TertiarySmall.args,
     size: "large",
-    children: "Button",
   },
 };
-export const TertiaryDisable: Story = {
+
+// tertiary disable button
+export const TertiarySmallDisable: Story = {
   args: {
-    variant: "tertiary",
+    ...TertiarySmall.args,
     disabled: true,
-    children: "Button",
+  },
+};
+export const TertiaryMediumDisable: Story = {
+  args: {
+    ...TertiarySmallDisable.args,
+    size: "medium",
+  },
+};
+export const TertiaryLargeDisable: Story = {
+  args: {
+    ...TertiarySmallDisable.args,
+    size: "large",
+  },
+};
+
+// tertiary start icon button
+export const TertiarySmallStartIcon: Story = {
+  args: {
+    ...TertiarySmall.args,
+    startIcon: <FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>,
+  },
+};
+
+export const TertiaryMediumStartIcon: Story = {
+  args: {
+    ...TertiarySmallStartIcon.args,
+    size: "medium",
+  },
+};
+
+export const TertiaryLargeStartIcon: Story = {
+  args: {
+    ...TertiarySmallStartIcon.args,
+    size: "large",
+  },
+};
+
+// tertiary end icon button
+export const TertiarySmallEndIcon: Story = {
+  args: {
+    ...TertiarySmall.args,
+    endIcon: <FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>,
+  },
+};
+
+export const TertiaryMediumEndIcon: Story = {
+  args: {
+    ...TertiarySmallEndIcon.args,
+    size: "medium",
+  },
+};
+
+export const TertiaryLargeEndIcon: Story = {
+  args: {
+    ...TertiarySmallEndIcon.args,
+    size: "large",
   },
 };

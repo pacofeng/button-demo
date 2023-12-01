@@ -4,7 +4,7 @@ const style = (props: ButtonProps) => {
   return {
     // TODO: remove
     fontFamily: '"FS Elliot Pro", Arial',
-    display: props.hidden ? "none" : "inline-flex",
+    ...(props.hidden && { display: "none" }),
     width: props.fullWidth ? "100%" : props.width ? props.width : "auto",
     minWidth: props.fullWidth
       ? "100%"
@@ -117,7 +117,7 @@ const style = (props: ButtonProps) => {
     },
     ".MuiButton-startIcon, .MuiButton-endIcon": {
       margin: 0,
-      svg: {
+      ".MuiSvgIcon-root": {
         fontSize: props.size === "small" ? "12px" : "16px",
       },
     },

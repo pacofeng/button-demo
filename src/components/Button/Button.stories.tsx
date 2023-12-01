@@ -12,24 +12,69 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+// primary button
 export const PrimarySmall: Story = {
   args: {
     size: "small",
     variant: "primary",
     children: "Button",
+  },
+};
+
+export const PrimaryMedium: Story = {
+  args: {
+    ...PrimarySmall.args,
+    size: "medium",
+  },
+};
+
+export const PrimaryLarge: Story = {
+  args: {
+    ...PrimarySmall.args,
+    size: "large",
+  },
+};
+
+// primary disable button
+export const PrimarySmallDisable: Story = {
+  args: {
+    ...PrimarySmall.args,
+    disabled: true,
+  },
+};
+
+export const PrimaryMediumDisable: Story = {
+  args: {
+    ...PrimarySmallDisable.args,
+    size: "medium",
+  },
+};
+
+export const PrimaryLargeDisable: Story = {
+  args: {
+    ...PrimarySmallDisable.args,
+    size: "large",
+  },
+};
+
+// primary start icon button
+export const PrimarySmallStartIcon: Story = {
+  args: {
+    ...PrimarySmall.args,
     startIcon: (
       <SvgIcon>
         <svg
-          width="12"
-          height="13"
-          viewBox="0 0 12 13"
-          fill="currentColor"
+          width="32"
+          height="33"
+          viewBox="0 0 32 33"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M7.76736 9.84866C7.91381 9.70221 7.91381 9.46478 7.76736 9.31833L5.03253 6.5835L7.76736 3.84866C7.91381 3.70221 7.91381 3.46478 7.76736 3.31833C7.62091 3.17189 7.38348 3.17189 7.23703 3.31833L4.23703 6.31833C4.09059 6.46478 4.09059 6.70221 4.23703 6.84866L7.23703 9.84866C7.38348 9.99511 7.62091 9.99511 7.76736 9.84866Z"
+            d="M10.2929 14.491C10.6834 14.1005 11.3166 14.1005 11.7071 14.491L15 17.7839L15 5.19812C15 4.64584 15.4477 4.19812 16 4.19812C16.5523 4.19812 17 4.64584 17 5.19812L17 17.7839L20.2929 14.491C20.6834 14.1005 21.3166 14.1005 21.7071 14.491C22.0976 14.8815 22.0976 15.5147 21.7071 15.9052L16.7071 20.9052C16.3166 21.2958 15.6834 21.2958 15.2929 20.9052L10.2929 15.9052C9.90237 15.5147 9.90237 14.8815 10.2929 14.491Z"
+            fill="currentColor"
+          />
+          <path
+            d="M4 18.1981C4.55228 18.1981 5 18.6458 5 19.1981V24.1981C5 25.3027 5.89543 26.1981 7 26.1981H25C26.1046 26.1981 27 25.3027 27 24.1981V19.1981C27 18.6458 27.4477 18.1981 28 18.1981C28.5523 18.1981 29 18.6458 29 19.1981V24.1981C29 26.4073 27.2091 28.1981 25 28.1981H7C4.79086 28.1981 3 26.4073 3 24.1981V19.1981C3 18.6458 3.44772 18.1981 4 18.1981Z"
             fill="currentColor"
           />
         </svg>
@@ -38,39 +83,39 @@ export const PrimarySmall: Story = {
   },
 };
 
-export const PrimaryMedium: Story = {
+export const PrimaryMediumStartIcon: Story = {
   args: {
+    ...PrimarySmallStartIcon.args,
     size: "medium",
-    variant: "primary",
-    children: "Button",
   },
 };
 
-export const PrimaryLarge: Story = {
+export const PrimaryLargeStartIcon: Story = {
   args: {
+    ...PrimarySmallStartIcon.args,
     size: "large",
-    variant: "primary",
-    children: "Button",
+  },
+};
+
+// primary end icon button
+export const PrimarySmallEndIcon: Story = {
+  args: {
+    ...PrimarySmall.args,
     endIcon: (
       <SvgIcon>
         <svg
           width="32"
           height="33"
           viewBox="0 0 32 33"
-          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M11.2988 7.49181C10.9082 7.88233 10.9082 8.5155 11.2988 8.90602L18.5916 16.1989L11.2988 23.4918C10.9082 23.8823 10.9082 24.5155 11.2988 24.906C11.6893 25.2965 12.3224 25.2965 12.713 24.906L20.713 16.906C21.1035 16.5155 21.1035 15.8823 20.713 15.4918L12.713 7.49181C12.3224 7.10128 11.6893 7.10128 11.2988 7.49181Z"
-            fill="white"
+            d="M10.2929 14.491C10.6834 14.1005 11.3166 14.1005 11.7071 14.491L15 17.7839L15 5.19812C15 4.64584 15.4477 4.19812 16 4.19812C16.5523 4.19812 17 4.64584 17 5.19812L17 17.7839L20.2929 14.491C20.6834 14.1005 21.3166 14.1005 21.7071 14.491C22.0976 14.8815 22.0976 15.5147 21.7071 15.9052L16.7071 20.9052C16.3166 21.2958 15.6834 21.2958 15.2929 20.9052L10.2929 15.9052C9.90237 15.5147 9.90237 14.8815 10.2929 14.491Z"
+            fill="currentColor"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M13.0665 7.13825C12.4807 6.55247 11.531 6.55247 10.9452 7.13825C10.3594 7.72404 10.3594 8.67379 10.9452 9.25957L17.8845 16.1989L10.9452 23.1383C10.3594 23.724 10.3594 24.6738 10.9452 25.2596C11.531 25.8454 12.4807 25.8454 13.0665 25.2596L21.0665 17.2596C21.6523 16.6738 21.6523 15.724 21.0665 15.1383L13.0665 7.13825ZM11.6523 7.84536C11.8476 7.6501 12.1642 7.6501 12.3594 7.84536L20.3594 15.8454C20.5547 16.0406 20.5547 16.3572 20.3594 16.5525L12.3594 24.5525C12.1642 24.7477 11.8476 24.7477 11.6523 24.5525C11.457 24.3572 11.457 24.0406 11.6523 23.8454L18.9452 16.5525C19.1405 16.3572 19.1405 16.0406 18.9452 15.8454L11.6523 8.55247C11.457 8.3572 11.457 8.04062 11.6523 7.84536Z"
-            fill="white"
+            d="M4 18.1981C4.55228 18.1981 5 18.6458 5 19.1981V24.1981C5 25.3027 5.89543 26.1981 7 26.1981H25C26.1046 26.1981 27 25.3027 27 24.1981V19.1981C27 18.6458 27.4477 18.1981 28 18.1981C28.5523 18.1981 29 18.6458 29 19.1981V24.1981C29 26.4073 27.2091 28.1981 25 28.1981H7C4.79086 28.1981 3 26.4073 3 24.1981V19.1981C3 18.6458 3.44772 18.1981 4 18.1981Z"
+            fill="currentColor"
           />
         </svg>
       </SvgIcon>
@@ -78,14 +123,21 @@ export const PrimaryLarge: Story = {
   },
 };
 
-export const PrimaryDisable: Story = {
+export const PrimaryMediumEndIcon: Story = {
   args: {
-    disabled: true,
-    variant: "primary",
-    children: "Button",
+    ...PrimarySmallEndIcon.args,
+    size: "medium",
   },
 };
 
+export const PrimaryLargeEndIcon: Story = {
+  args: {
+    ...PrimarySmallEndIcon.args,
+    size: "large",
+  },
+};
+
+// secondary button
 export const SecondarySmall: Story = {
   args: {
     variant: "secondary",
@@ -95,26 +147,118 @@ export const SecondarySmall: Story = {
 };
 export const SecondaryMedium: Story = {
   args: {
-    variant: "secondary",
+    ...SecondarySmall.args,
     size: "medium",
-    children: "Button",
   },
 };
 export const SecondaryLarge: Story = {
   args: {
-    variant: "secondary",
+    ...SecondarySmall.args,
     size: "large",
-    children: "Button",
-  },
-};
-export const SecondaryDisable: Story = {
-  args: {
-    variant: "secondary",
-    disabled: true,
-    children: "Button",
   },
 };
 
+// secondary disable button
+export const SecondarySmallDisable: Story = {
+  args: {
+    ...SecondarySmall.args,
+    disabled: true,
+  },
+};
+export const SecondaryMediumDisable: Story = {
+  args: {
+    ...SecondarySmallDisable.args,
+    size: "medium",
+  },
+};
+export const SecondaryLargeDisable: Story = {
+  args: {
+    ...SecondarySmallDisable.args,
+    size: "large",
+  },
+};
+
+// secondary start icon button
+export const SecondarySmallStartIcon: Story = {
+  args: {
+    ...SecondarySmall.args,
+    startIcon: (
+      <SvgIcon>
+        <svg
+          width="32"
+          height="33"
+          viewBox="0 0 32 33"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.2929 14.491C10.6834 14.1005 11.3166 14.1005 11.7071 14.491L15 17.7839L15 5.19812C15 4.64584 15.4477 4.19812 16 4.19812C16.5523 4.19812 17 4.64584 17 5.19812L17 17.7839L20.2929 14.491C20.6834 14.1005 21.3166 14.1005 21.7071 14.491C22.0976 14.8815 22.0976 15.5147 21.7071 15.9052L16.7071 20.9052C16.3166 21.2958 15.6834 21.2958 15.2929 20.9052L10.2929 15.9052C9.90237 15.5147 9.90237 14.8815 10.2929 14.491Z"
+            fill="currentColor"
+          />
+          <path
+            d="M4 18.1981C4.55228 18.1981 5 18.6458 5 19.1981V24.1981C5 25.3027 5.89543 26.1981 7 26.1981H25C26.1046 26.1981 27 25.3027 27 24.1981V19.1981C27 18.6458 27.4477 18.1981 28 18.1981C28.5523 18.1981 29 18.6458 29 19.1981V24.1981C29 26.4073 27.2091 28.1981 25 28.1981H7C4.79086 28.1981 3 26.4073 3 24.1981V19.1981C3 18.6458 3.44772 18.1981 4 18.1981Z"
+            fill="currentColor"
+          />
+        </svg>
+      </SvgIcon>
+    ),
+  },
+};
+
+export const SecondaryMediumStartIcon: Story = {
+  args: {
+    ...SecondarySmallStartIcon.args,
+    size: "medium",
+  },
+};
+
+export const SecondaryLargeStartIcon: Story = {
+  args: {
+    ...SecondarySmallStartIcon.args,
+    size: "large",
+  },
+};
+
+// secondary end icon button
+export const SecondarySmallEndIcon: Story = {
+  args: {
+    ...SecondarySmall.args,
+    endIcon: (
+      <SvgIcon>
+        <svg
+          width="32"
+          height="33"
+          viewBox="0 0 32 33"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.2929 14.491C10.6834 14.1005 11.3166 14.1005 11.7071 14.491L15 17.7839L15 5.19812C15 4.64584 15.4477 4.19812 16 4.19812C16.5523 4.19812 17 4.64584 17 5.19812L17 17.7839L20.2929 14.491C20.6834 14.1005 21.3166 14.1005 21.7071 14.491C22.0976 14.8815 22.0976 15.5147 21.7071 15.9052L16.7071 20.9052C16.3166 21.2958 15.6834 21.2958 15.2929 20.9052L10.2929 15.9052C9.90237 15.5147 9.90237 14.8815 10.2929 14.491Z"
+            fill="currentColor"
+          />
+          <path
+            d="M4 18.1981C4.55228 18.1981 5 18.6458 5 19.1981V24.1981C5 25.3027 5.89543 26.1981 7 26.1981H25C26.1046 26.1981 27 25.3027 27 24.1981V19.1981C27 18.6458 27.4477 18.1981 28 18.1981C28.5523 18.1981 29 18.6458 29 19.1981V24.1981C29 26.4073 27.2091 28.1981 25 28.1981H7C4.79086 28.1981 3 26.4073 3 24.1981V19.1981C3 18.6458 3.44772 18.1981 4 18.1981Z"
+            fill="currentColor"
+          />
+        </svg>
+      </SvgIcon>
+    ),
+  },
+};
+
+export const SecondaryMediumEndIcon: Story = {
+  args: {
+    ...SecondarySmallEndIcon.args,
+    size: "medium",
+  },
+};
+
+export const SecondaryLargeEndIcon: Story = {
+  args: {
+    ...SecondarySmallEndIcon.args,
+    size: "large",
+  },
+};
+
+// tertiary button
 export const TertiarySmall: Story = {
   args: {
     variant: "tertiary",
@@ -124,22 +268,113 @@ export const TertiarySmall: Story = {
 };
 export const TertiaryMedium: Story = {
   args: {
-    variant: "tertiary",
+    ...TertiarySmall.args,
     size: "medium",
-    children: "Button",
   },
 };
 export const TertiaryLarge: Story = {
   args: {
-    variant: "tertiary",
+    ...TertiarySmall.args,
     size: "large",
-    children: "Button",
   },
 };
-export const TertiaryDisable: Story = {
+
+// tertiary disable button
+export const TertiarySmallDisable: Story = {
   args: {
-    variant: "tertiary",
+    ...TertiarySmall.args,
     disabled: true,
-    children: "Button",
+  },
+};
+export const TertiaryMediumDisable: Story = {
+  args: {
+    ...TertiarySmallDisable.args,
+    size: "medium",
+  },
+};
+export const TertiaryLargeDisable: Story = {
+  args: {
+    ...TertiarySmallDisable.args,
+    size: "large",
+  },
+};
+
+// tertiary start icon button
+export const TertiarySmallStartIcon: Story = {
+  args: {
+    ...TertiarySmall.args,
+    startIcon: (
+      <SvgIcon>
+        <svg
+          width="32"
+          height="33"
+          viewBox="0 0 32 33"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.2929 14.491C10.6834 14.1005 11.3166 14.1005 11.7071 14.491L15 17.7839L15 5.19812C15 4.64584 15.4477 4.19812 16 4.19812C16.5523 4.19812 17 4.64584 17 5.19812L17 17.7839L20.2929 14.491C20.6834 14.1005 21.3166 14.1005 21.7071 14.491C22.0976 14.8815 22.0976 15.5147 21.7071 15.9052L16.7071 20.9052C16.3166 21.2958 15.6834 21.2958 15.2929 20.9052L10.2929 15.9052C9.90237 15.5147 9.90237 14.8815 10.2929 14.491Z"
+            fill="currentColor"
+          />
+          <path
+            d="M4 18.1981C4.55228 18.1981 5 18.6458 5 19.1981V24.1981C5 25.3027 5.89543 26.1981 7 26.1981H25C26.1046 26.1981 27 25.3027 27 24.1981V19.1981C27 18.6458 27.4477 18.1981 28 18.1981C28.5523 18.1981 29 18.6458 29 19.1981V24.1981C29 26.4073 27.2091 28.1981 25 28.1981H7C4.79086 28.1981 3 26.4073 3 24.1981V19.1981C3 18.6458 3.44772 18.1981 4 18.1981Z"
+            fill="currentColor"
+          />
+        </svg>
+      </SvgIcon>
+    ),
+  },
+};
+
+export const TertiaryMediumStartIcon: Story = {
+  args: {
+    ...TertiarySmallStartIcon.args,
+    size: "medium",
+  },
+};
+
+export const TertiaryLargeStartIcon: Story = {
+  args: {
+    ...TertiarySmallStartIcon.args,
+    size: "large",
+  },
+};
+
+// tertiary end icon button
+export const TertiarySmallEndIcon: Story = {
+  args: {
+    ...TertiarySmall.args,
+    endIcon: (
+      <SvgIcon>
+        <svg
+          width="32"
+          height="33"
+          viewBox="0 0 32 33"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.2929 14.491C10.6834 14.1005 11.3166 14.1005 11.7071 14.491L15 17.7839L15 5.19812C15 4.64584 15.4477 4.19812 16 4.19812C16.5523 4.19812 17 4.64584 17 5.19812L17 17.7839L20.2929 14.491C20.6834 14.1005 21.3166 14.1005 21.7071 14.491C22.0976 14.8815 22.0976 15.5147 21.7071 15.9052L16.7071 20.9052C16.3166 21.2958 15.6834 21.2958 15.2929 20.9052L10.2929 15.9052C9.90237 15.5147 9.90237 14.8815 10.2929 14.491Z"
+            fill="currentColor"
+          />
+          <path
+            d="M4 18.1981C4.55228 18.1981 5 18.6458 5 19.1981V24.1981C5 25.3027 5.89543 26.1981 7 26.1981H25C26.1046 26.1981 27 25.3027 27 24.1981V19.1981C27 18.6458 27.4477 18.1981 28 18.1981C28.5523 18.1981 29 18.6458 29 19.1981V24.1981C29 26.4073 27.2091 28.1981 25 28.1981H7C4.79086 28.1981 3 26.4073 3 24.1981V19.1981C3 18.6458 3.44772 18.1981 4 18.1981Z"
+            fill="currentColor"
+          />
+        </svg>
+      </SvgIcon>
+    ),
+  },
+};
+
+export const TertiaryMediumEndIcon: Story = {
+  args: {
+    ...TertiarySmallEndIcon.args,
+    size: "medium",
+  },
+};
+
+export const TertiaryLargeEndIcon: Story = {
+  args: {
+    ...TertiarySmallEndIcon.args,
+    size: "large",
   },
 };
