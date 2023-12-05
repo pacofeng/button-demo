@@ -13,8 +13,9 @@ export const Tab = styled(MTab)((props: TabProps) => ({
   alignItems: "center",
   textAlign: "center",
   height: "56px",
+  //fontSize:props.size=== 'small' ?10 :props.size=== 'large' ?14 :12,
   padding: "16px",
-  color: v.primaryColors.charcoal,
+  color: "#333D47",
   fontWeight: 400,
   fontSize: "16px",
   textTransform: "none",
@@ -22,13 +23,14 @@ export const Tab = styled(MTab)((props: TabProps) => ({
   lineHeight: "24px",
 
   "&:hover": {
-    backgroundColor: v.monoColors.f7f7f8,
+    backgroundColor: "#F7F7F8",
   },
 
   "&.Mui-selected": {
-    color: v.primaryColors.charcoal,
+    color: "#333D47",
     "&.Mui-disabled": {
-      color: v.monoColors["868b8c"],
+      color: "#868B8C",
+      //borderBottom: "3px solid #868B8C",
     },
   },
 }));

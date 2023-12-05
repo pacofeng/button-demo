@@ -4,7 +4,7 @@
   "author": {
     "name": "Paco Feng"
   },
-  "homepage": "https://github.com/pacofeng/button-demo",
+  "homepage": "https://github.com/pacofeng/poc",
   "description": "button demo",
   "main": "dist/index.es.js",
   "module": "dist/index.es.js",

@@ -29,10 +29,10 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
   "& .MuiInputLabel-root": {
     fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
     top: props.size === "small" ? 0 : props.size === "large" ? -4 : -8,
-    color: props.fontColor ? props.fontColor : v.primaryColors.charcoal80,
+    color: props.fontColor ? props.fontColor : "#5b636b",
   },
   "& .MuiInputLabel-root.Mui-focused": {
-    color: v.primaryColors.charcoal,
+    color: "#333d47",
   },
   "& .MuiInputLabel-shrink": {
     top: "0 !important",
@@ -41,7 +41,7 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
     padding: props.size === "large" ? "12px 16px" : "6px 16px",
   },
   "& .MuiInputBase-root.Mui-focused": {
-    backgroundColor: v.primaryColors.pebble50,
+    backgroundColor: "#e8eef3",
   },
 
   // Input field style
@@ -55,36 +55,34 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
     height: props.size === "small" ? "20px !important" : "24px !important",
   },
   "& .MuiOutlinedInput-root": {
-    backgroundColor: props.backgroundColor
-      ? props.backgroundColor
-      : v.monoColors.ffffff,
+    backgroundColor: props.backgroundColor ? props.backgroundColor : "#ffffff",
     "& .MuiAutocomplete-input": {
       padding:
         props.size === "large" ? "12px 16px !important" : "6px 16px !important",
     },
     "&fieldset": {
-      borderColor: v.monoColors["868b8c"],
-      color: v.primaryColors.charcoal80,
+      borderColor: "#868b8c",
+      color: "#5b636b",
     },
     "&:hoverfieldset": {
-      borderColor: v.monoColors["444444"],
-      color: v.primaryColors.charcoal80,
+      borderColor: "#444444",
+      color: "#5b636b",
     },
     "&.Mui-focusedfieldset": {
-      borderColor: v.primaryColors.blue,
-      color: v.primaryColors.charcoal,
+      borderColor: "#13426b",
+      color: "#333d47",
     },
     "&.Mui-errorfieldset": {
-      borderColor: v.primaryColors.red110,
+      borderColor: "#cf1f38",
     },
     "&.Mui-disabledfieldset": {
-      borderColor: v.monoColors["868b8c"],
+      borderColor: "#868b8c",
     },
   },
   // Style for disabledtextfield
   "& .Mui-disabled": {
-    backgroundColor: v.monoColors.f7f7f8,
-    color: v.primaryColors.charcoal80,
+    backgroundColor: "#f7f7f8",
+    color: "#5b636b",
   },
 
   // Overwrite Autocomplete padding

@@ -8,36 +8,36 @@ export const Switch = styled(MSwitch)(() => ({
   padding: 1,
   marginRight: 14,
   "& .MuiSwitch-track": {
-    backgroundColor: v.monoColors["868b8c"],
+    backgroundColor: "#868b8c",
     opacity: 1,
     borderRadius: 100,
 
     "&.Mui-disabled": {
-      backgroundColor: `${v.monoColors.d6d8da} !important`,
+      backgroundColor: "#d6d8da !important",
     },
   },
   "& .MuiSwitch-switchBase": {
     margin: -7,
   },
   "& .MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track": {
-    backgroundColor: v.primaryColors.blue,
+    backgroundColor: "#13426B",
     opacity: 1,
 
     "&:hover": {
-      backgroundColor: v.primaryColors.blue120,
+      backgroundColor: "#0f3556",
     },
     "&:disabled": {
-      backgroundColor: v.monoColors.d6d8da,
+      backgroundColor: "#d6d8da",
     },
   },
 
   "& .MuiSwitch-switchBase.Mui-checked": {
     marginLeft: -4,
-    color: v.monoColors.ffffff,
+    color: "#ffffff",
   },
 
   "&:hover.MuiSwitch-track": {
-    backgroundColor: v.monoColors["444444"],
+    backgroundColor: "#444444",
   },
 }));
 

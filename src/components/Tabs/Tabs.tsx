@@ -7,8 +7,8 @@ export const Tabs = styled(MTabs)(() => ({
   borderColor: "divider",
 
   "& .MuiTabs-indicator": {
-    backgroundColor: v.primaryColors.charcoal,
-    color: v.primaryColors.charcoal,
+    backgroundColor: "#333D47",
+    color: "#333D47",
     height: "3px",
 
     // TODO: update disabled and selected style for tabs

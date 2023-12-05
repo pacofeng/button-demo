@@ -16,16 +16,16 @@ export const Select = styled(MSelect)((props) => ({
     padding: props.size === "large" ? "12px 16px" : "6px 16px",
 
     "&.Mui-focused": {
-      backgroundColor: v.primaryColors.pebble50,
+      backgroundColor: "#e8eef3",
     },
   },
 
   "& .MuiSelect-root.Mui-forced": {
-    backgroundColor: v.primaryColors.pebble50,
+    backgroundColor: "#e8eef3",
   },
 
   gap: 8,
-  backgroundColor: v.monoColors.ffffff,
+  backgroundColor: "#ffffff",
 }));
 
 export default Select;
