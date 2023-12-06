@@ -1,0 +1,70 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as TabsStories from "./components/Tabs/Tabs.stories.tsx";
+import * as TabsGUIStories from "./components/Tabs-GUI/Tabs-GUI.stories.tsx";
+
+<Meta title="Tabs Overview" />
+
+# Tabs
+
+Tabs organise and allow navigation between groups of content that are related and at the same level of hierarchy. Each tab should contain content that is distinct from other tabs in a set. Tabs can be paired with components or nested within components like cards.
+
+## Primary Tabs
+
+### Default Tabs
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.Default} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.Default} />
+    </div>
+  </div>
+</Canvas>
+
+### Disabled Tabs
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.WithDisabled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.WithDisabled} />
+    </div>
+  </div>
+</Canvas>
+
+### Tabs with Icon
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.WithIcon} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.WithIcon} />
+    </div>
+  </div>
+</Canvas>

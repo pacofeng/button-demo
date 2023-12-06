@@ -5,7 +5,7 @@ import FormControl from "../FormControl";
 import FormControlLabel from "../FormControlLabel";
 
 const meta = {
-  title: "Components/Radio",
+  title: "Components/Radio DLS",
   component: FormControlLabel,
   tags: ["autodocs"],
 } satisfies Meta<typeof FormControlLabel>;

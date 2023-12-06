@@ -1,37 +1,33 @@
 import React from "react";
 import { Tab as MTab, styled, TabProps as MTabProps } from "@mui/material";
-import * as v from "../../styles/variables";
 
 export interface TabProps extends MTabProps {
   width?: number | string;
 }
 
 export const Tab = styled(MTab)((props: TabProps) => ({
-  display: "block",
+  // display: "inline-flex",
+  // gap: 8,
   width: props.width || "auto",
-  justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center",
-  height: "56px",
-  //fontSize:props.size=== 'small' ?10 :props.size=== 'large' ?14 :12,
-  padding: "16px",
-  color: "#333D47",
-  fontWeight: 400,
-  fontSize: "16px",
-  textTransform: "none",
-  letterSpacing: "0.1px",
+  minHeight: "auto",
+  fontSize: 16,
   lineHeight: "24px",
-
-  "&:hover": {
+  letterSpacing: 0.1,
+  padding: 16,
+  color: "#333D47",
+  textTransform: "initial",
+  borderBottom: "1px solid #D6D8DA",
+  "&:hover:not(.Mui-disabled)": {
     backgroundColor: "#F7F7F8",
   },
-
-  "&.Mui-selected": {
+  "&.Mui-selected:not(.Mui-disabled)": {
     color: "#333D47",
-    "&.Mui-disabled": {
-      color: "#868B8C",
-      //borderBottom: "3px solid #868B8C",
-    },
+  },
+  "&.Mui-disabled": {
+    color: "#868B8C",
+  },
+  ".MuiTouchRipple-root": {
+    display: "none",
   },
 }));
 
