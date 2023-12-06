@@ -2,26 +2,41 @@ import React from "react";
 import { Radio as MRadio, styled } from "@mui/material";
 
 export const Radio = styled(MRadio)(() => ({
-  fontSize: 20,
-  "&:disabled": {
-    color: "#d6d8da",
+  // "&.MuiRadio-colorSecondary.Mui-error": {
+  //   color: "#cf1318",
+  // },
+
+  padding: 0,
+  marginRight: 12,
+  "&:hover": {
+    backgroundColor: "transparent",
   },
-  "&.MuiRadio-colorSecondary:not(.Mui-checked)": {
-    color: "#868b8c",
-    "&:hover": {
-      color: "#444444",
+
+  ".MuiSvgIcon-root": {
+    color: "#868B8C",
+    fontSize: 20,
+  },
+
+  "&.Mui-disabled": {
+    ".MuiSvgIcon-root": {
+      color: "#D6D8DA",
     },
   },
 
-  "&.MuiRadio-colorSecondary.Mui-checked": {
-    color: "#13426b",
-    "&:hover": {
-      color: "#0f3556",
+  "&.Mui-checked": {
+    ".MuiSvgIcon-root": {
+      color: "#13426B",
     },
   },
 
-  "&.MuiRadio-colorSecondary.Mui-error": {
-    color: "#cf1318",
+  "&.Mui-disabled.Mui-checked": {
+    ".MuiSvgIcon-root": {
+      color: "#D6D8DA",
+    },
+  },
+
+  ".MuiTouchRipple-root": {
+    display: "none",
   },
 }));
 

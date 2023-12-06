@@ -12,11 +12,12 @@ export const FormControlLabel = styled(MFormControlLabel)(() => ({
         color: "#444444",
       },
     },
-    ".MuiCheckbox-root.Mui-checked:not(.Mui-disabled)": {
-      ".MuiSvgIcon-root": {
-        color: "#0F3556",
+    ".MuiCheckbox-root.Mui-checked:not(.Mui-disabled), .MuiRadio-root.Mui-checked:not(.Mui-disabled)":
+      {
+        ".MuiSvgIcon-root": {
+          color: "#0F3556",
+        },
       },
-    },
   },
 }));
 

@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Checkbox from "./Checkbox";
-import Radio from "../Radio";
 import FormControl from "../FormControl";
 import FormControlLabel from "../FormControlLabel";
 
@@ -14,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof FormControlLabel>;
 
-export const Default: Story = {
+export const DefaultUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel control={<Checkbox />} label="Checkbox" />
@@ -33,7 +32,7 @@ export const DefaultChecked: Story = {
   ),
 };
 
-export const DefaultDisable: Story = {
+export const DefaultDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel control={<Checkbox disabled />} label="Checkbox" />
@@ -41,7 +40,7 @@ export const DefaultDisable: Story = {
   ),
 };
 
-export const DefaultDisableChecked: Story = {
+export const DefaultDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel

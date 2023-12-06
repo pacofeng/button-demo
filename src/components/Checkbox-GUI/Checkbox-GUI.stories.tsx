@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof FormControlLabel>;
 
-export const Default: Story = {
+export const DefaultUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
@@ -35,7 +35,7 @@ export const DefaultChecked: Story = {
   ),
 };
 
-export const DefaultDisable: Story = {
+export const DefaultDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
@@ -46,7 +46,7 @@ export const DefaultDisable: Story = {
   ),
 };
 
-export const DefaultDisableChecked: Story = {
+export const DefaultDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel

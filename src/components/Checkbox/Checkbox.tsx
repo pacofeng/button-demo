@@ -2,21 +2,19 @@ import React from "react";
 import { Checkbox as MCheckbox, styled } from "@mui/material";
 
 export const Checkbox = styled(MCheckbox)(() => ({
-  // TODO: remove
-  fontFamily: "'FS Elliot Pro', Arial",
   // "&.MuiCheckbox-colorSecondary.Mui-error": {
   //   color: "#cf1318",
   // },
 
-  /////////////////////
-  padding: 12,
+  padding: 0,
+  marginRight: 12,
   "&:hover": {
     backgroundColor: "transparent",
   },
 
   ".MuiSvgIcon-root": {
     color: "#868B8C",
-    // fontSize: 20,
+    fontSize: 20,
   },
 
   "&.Mui-disabled": {
