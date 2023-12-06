@@ -1,0 +1,40 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as RadioStories from "./components/Radio/Radio.stories.tsx";
+import * as RadioGUIStories from "./components/Radio-GUI/Radio-GUI.stories.tsx";
+
+<Meta title="Radio Overview" />
+
+# Radio
+
+Radios are a proven and effective way to elicit a single choice from a user. They also require careful consideration to produce the best results.
+
+## Primary Radio
+
+### Default Radios
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={RadioStories.Default} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={RadioGUIStories.Default} />
+    </div>
+  </div>
+</Canvas>
