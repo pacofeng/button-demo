@@ -1,2 +1,9 @@
-export { default as primitiveTokens } from "./primitiveTokens";
-export { default as buttonTokens } from "./buttonTokens";
+import primitiveTokens from "./primitiveTokens";
+import buttonTokens from "./buttonTokens";
+
+const tokens = {
+  ...primitiveTokens,
+  ...buttonTokens,
+};
+
+export default tokens;
