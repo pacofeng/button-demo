@@ -16,6 +16,7 @@ export const Tab = styled(MTab)((props: TabProps) => ({
   color: "#333D47",
   textTransform: "initial",
   borderBottom: "1px solid #D6D8DA",
+  borderTop: "1px solid transparent",
   "&:hover:not(.Mui-disabled)": {
     backgroundColor: "#F7F7F8",
   },

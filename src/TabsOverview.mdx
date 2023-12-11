@@ -28,7 +28,7 @@ Tabs organise and allow navigation between groups of content that are related an
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.Small} />
+      <Story of={TabsStories.DefaultSmall} />
     </div>
   </div>
 </Canvas>
@@ -37,7 +37,7 @@ Tabs organise and allow navigation between groups of content that are related an
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.Medium} />
+      <Story of={TabsStories.DefaultMedium} />
     </div>
     <div class="flex">
       <p class="type">GUI:</p>
@@ -50,10 +50,80 @@ Tabs organise and allow navigation between groups of content that are related an
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.Large} />
+      <Story of={TabsStories.DefaultLarge} />
     </div>
   </div>
 </Canvas>
+
+#### 1. Size: (new change after v20230420)
+
+DLS - different sizes are added: changes include:
+
+- font-size - small for 10px, medium for 12px, large for 14px
+
+- height - small for 28px, medium for 32px, large for 36px
+
+- line-height - small for 14px, medium for 16px, large for 20px
+
+GUI - default one size
+
+#### 2. Border
+
+DLS - border bottom is added
+
+GUI - no border
+
+#### 3. Ripple
+
+DLS: no ripple when clicking the button
+
+GUI: ripple with a different pressed background color
+
+## Tabs with icon
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.SmallWithIcon} />
+    </div>
+
+  </div>
+</Canvas>
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.MediumWithIcon} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.WithIcon} />
+    </div>
+  </div>
+</Canvas>
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.LargeWithIcon} />
+    </div>
+  </div>
+</Canvas>
+
+#### 1. Alignment:
+
+DLS - vertical align center
+
+GUI - not aligned correctly and extra height is added
+
+#### 2. Icon Size: (new change after v20230420)
+
+DLS - 3 icon sizes are added: small for 12px, medium for 16px, large for 16px
+
+GUI - same size
 
 ## Tabs with disabled tab
 
@@ -61,7 +131,16 @@ Tabs organise and allow navigation between groups of content that are related an
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.WithDisabled} />
+      <Story of={TabsStories.SmallWithDisabled} />
+    </div>
+  </div>
+</Canvas>
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.MediumWithDisabled} />
     </div>
     <div class="flex">
       <p class="type">GUI:</p>
@@ -70,17 +149,11 @@ Tabs organise and allow navigation between groups of content that are related an
   </div>
 </Canvas>
 
-## Tabs with icon
-
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.WithIcon} />
-    </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={TabsGUIStories.WithIcon} />
+      <Story of={TabsStories.LargeWithDisabled} />
     </div>
   </div>
 </Canvas>

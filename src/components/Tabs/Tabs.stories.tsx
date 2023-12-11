@@ -16,7 +16,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Tabs>;
 
-export const Small: Story = {
+export const DefaultSmall: Story = {
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = React.useState(0);
@@ -34,7 +34,7 @@ export const Small: Story = {
   },
 };
 
-export const Medium: Story = {
+export const DefaultMedium: Story = {
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = React.useState(0);
@@ -52,7 +52,7 @@ export const Medium: Story = {
   },
 };
 
-export const Large: Story = {
+export const DefaultLarge: Story = {
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = React.useState(0);
@@ -70,7 +70,25 @@ export const Large: Story = {
   },
 };
 
-export const WithDisabled: Story = {
+export const SmallWithDisabled: Story = {
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    return (
+      <Tabs {...args} value={value} onChange={handleChange} size="small">
+        <Tab label="Tab1" disabled />
+        <Tab label="Tab2" />
+        <Tab label="Tab3" disabled />
+        <Tab label="Tab4" />
+      </Tabs>
+    );
+  },
+};
+
+export const MediumWithDisabled: Story = {
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = React.useState(0);
@@ -88,7 +106,51 @@ export const WithDisabled: Story = {
   },
 };
 
-export const WithIcon: Story = {
+export const LargeWithDisabled: Story = {
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    return (
+      <Tabs {...args} value={value} onChange={handleChange} size="large">
+        <Tab label="Tab1" disabled />
+        <Tab label="Tab2" />
+        <Tab label="Tab3" disabled />
+        <Tab label="Tab4" />
+      </Tabs>
+    );
+  },
+};
+
+export const SmallWithIcon: Story = {
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    return (
+      <Tabs {...args} value={value} onChange={handleChange} size="small">
+        <Tab
+          label="Tab1"
+          icon={<FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>}
+          iconPosition="start"
+        />
+        <Tab
+          label="Tab2"
+          icon={<FavoriteIcon></FavoriteIcon>}
+          iconPosition="end"
+        />
+        <Tab icon={<PersonPinIcon></PersonPinIcon>} />
+        <Tab label="Tab4" />
+      </Tabs>
+    );
+  },
+};
+
+export const MediumWithIcon: Story = {
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = React.useState(0);
@@ -97,6 +159,32 @@ export const WithIcon: Story = {
     };
     return (
       <Tabs {...args} value={value} onChange={handleChange}>
+        <Tab
+          label="Tab1"
+          icon={<FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>}
+          iconPosition="start"
+        />
+        <Tab
+          label="Tab2"
+          icon={<FavoriteIcon></FavoriteIcon>}
+          iconPosition="end"
+        />
+        <Tab icon={<PersonPinIcon></PersonPinIcon>} />
+        <Tab label="Tab4" />
+      </Tabs>
+    );
+  },
+};
+
+export const LargeWithIcon: Story = {
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    return (
+      <Tabs {...args} value={value} onChange={handleChange} size="large">
         <Tab
           label="Tab1"
           icon={<FileDownloadOutlinedIcon></FileDownloadOutlinedIcon>}
