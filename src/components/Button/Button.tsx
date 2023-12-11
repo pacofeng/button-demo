@@ -126,13 +126,13 @@ export const Button = styled(MButton)((props: ButtonProps) => ({
         ? "#d6d8da"
         : "#0B2840",
   },
-  ".MuiButton-startIcon, .MuiButton-endIcon": {
+  "& .MuiButton-startIcon, & .MuiButton-endIcon": {
     margin: 0,
-    ".MuiSvgIcon-root": {
+    "& .MuiSvgIcon-root": {
       fontSize: props.size === "small" ? "12px" : "16px",
     },
   },
-  ".MuiTouchRipple-root": {
+  "& .MuiTouchRipple-root": {
     display: "none",
   },
 }));
