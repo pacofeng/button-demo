@@ -16,7 +16,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Tabs>;
 
-export const Default: Story = {
+export const Small: Story = {
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = React.useState(0);
@@ -24,7 +24,43 @@ export const Default: Story = {
       setValue(newValue);
     };
     return (
-      <Tabs {...args} value={value} onChange={handleChange}>
+      <Tabs {...args} value={value} onChange={handleChange} size="small">
+        <Tab label="Tab1" />
+        <Tab label="Tab2" />
+        <Tab label="Tab3" />
+        <Tab label="Tab4" />
+      </Tabs>
+    );
+  },
+};
+
+export const Medium: Story = {
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    return (
+      <Tabs {...args} value={value} onChange={handleChange} size="medium">
+        <Tab label="Tab1" />
+        <Tab label="Tab2" />
+        <Tab label="Tab3" />
+        <Tab label="Tab4" />
+      </Tabs>
+    );
+  },
+};
+
+export const Large: Story = {
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = React.useState(0);
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+      setValue(newValue);
+    };
+    return (
+      <Tabs {...args} value={value} onChange={handleChange} size="large">
         <Tab label="Tab1" />
         <Tab label="Tab2" />
         <Tab label="Tab3" />

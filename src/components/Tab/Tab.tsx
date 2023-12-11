@@ -6,14 +6,13 @@ export interface TabProps extends MTabProps {
 }
 
 export const Tab = styled(MTab)((props: TabProps) => ({
-  // display: "inline-flex",
-  // gap: 8,
+  // TODO: remove
+  fontFamily: "'FS Elliot Pro', Arial",
   width: props.width || "auto",
   minHeight: "auto",
-  fontSize: 16,
-  lineHeight: "24px",
   letterSpacing: 0.1,
-  padding: 16,
+  paddingLeft: 16,
+  paddingRight: 16,
   color: "#333D47",
   textTransform: "initial",
   borderBottom: "1px solid #D6D8DA",

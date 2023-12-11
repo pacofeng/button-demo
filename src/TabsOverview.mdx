@@ -22,15 +22,22 @@ import * as TabsGUIStories from "./components/Tabs-GUI/Tabs-GUI.stories.tsx";
 
 Tabs organise and allow navigation between groups of content that are related and at the same level of hierarchy. Each tab should contain content that is distinct from other tabs in a set. Tabs can be paired with components or nested within components like cards.
 
-## Primary Tabs
-
-### Default Tabs
+## Tabs with different size
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.Default} />
+      <Story of={TabsStories.Small} />
+    </div>
+  </div>
+</Canvas>
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.Medium} />
     </div>
     <div class="flex">
       <p class="type">GUI:</p>
@@ -39,7 +46,16 @@ Tabs organise and allow navigation between groups of content that are related an
   </div>
 </Canvas>
 
-### Disabled Tabs
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.Large} />
+    </div>
+  </div>
+</Canvas>
+
+## Tabs with disabled tab
 
 <Canvas>
   <div>
@@ -54,7 +70,7 @@ Tabs organise and allow navigation between groups of content that are related an
   </div>
 </Canvas>
 
-### Tabs with Icon
+## Tabs with icon
 
 <Canvas>
   <div>
