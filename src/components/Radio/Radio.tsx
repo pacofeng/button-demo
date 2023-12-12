@@ -12,30 +12,29 @@ export const Radio = styled(MRadio)(() => ({
     backgroundColor: "transparent",
   },
 
-  "& .MuiSvgIcon-root": {
+  ".MuiSvgIcon-root": {
     color: "#868B8C",
-    fontSize: 20,
   },
 
-  "& .Mui-disabled": {
+  "&.Mui-disabled": {
     ".MuiSvgIcon-root": {
       color: "#D6D8DA",
     },
   },
 
-  "& .Mui-checked": {
+  "&.Mui-checked": {
     ".MuiSvgIcon-root": {
       color: "#13426B",
     },
   },
 
-  "& .Mui-disabled.Mui-checked": {
+  "&.Mui-disabled.Mui-checked": {
     ".MuiSvgIcon-root": {
       color: "#D6D8DA",
     },
   },
 
-  "& .MuiTouchRipple-root": {
+  ".MuiTouchRipple-root": {
     display: "none",
   },
 }));

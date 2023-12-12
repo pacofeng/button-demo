@@ -12,30 +12,29 @@ export const Checkbox = styled(MCheckbox)(() => ({
     backgroundColor: "transparent",
   },
 
-  "& .MuiSvgIcon-root": {
+  ".MuiSvgIcon-root": {
     color: "#868B8C",
-    fontSize: 20,
   },
 
-  "& .Mui-disabled": {
+  "&.Mui-disabled": {
     ".MuiSvgIcon-root": {
       color: "#D6D8DA",
     },
   },
 
-  "& .Mui-checked": {
+  "&.Mui-checked:not(.Mui-disabled)": {
     ".MuiSvgIcon-root": {
       color: "#13426B",
     },
   },
 
-  "& .Mui-disabled.Mui-checked": {
+  ".Mui-disabled.Mui-checked": {
     ".MuiSvgIcon-root": {
       color: "#D6D8DA",
     },
   },
 
-  "& .MuiTouchRipple-root": {
+  ".MuiTouchRipple-root": {
     display: "none",
   },
 }));

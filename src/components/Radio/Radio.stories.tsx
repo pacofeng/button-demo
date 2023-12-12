@@ -14,36 +14,133 @@ export default meta;
 type Story = StoryObj<typeof FormControlLabel>;
 
 // Radio
-export const DefaultUnchecked: Story = {
+export const SmallUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio />} label="Radio" />
+      <FormControlLabel control={<Radio />} label="Radio" size="small" />
     </FormControl>
   ),
 };
 
-export const DefaultChecked: Story = {
+export const SmallChecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio defaultChecked />} label="Radio" />
+      <FormControlLabel
+        control={<Radio defaultChecked />}
+        label="Radio"
+        size="small"
+      />
     </FormControl>
   ),
 };
 
-export const DefaultDisabledUnchecked: Story = {
+export const SmallDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio disabled />} label="Radio" />
+      <FormControlLabel
+        control={<Radio disabled />}
+        label="Radio"
+        size="small"
+      />
     </FormControl>
   ),
 };
 
-export const DefaultDisabledChecked: Story = {
+export const SmallDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
         control={<Radio disabled defaultChecked />}
         label="Radio"
+        size="small"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel control={<Radio />} label="Radio" size="medium" />
+    </FormControl>
+  ),
+};
+
+export const MediumChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Radio defaultChecked />}
+        label="Radio"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumDisabledUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Radio disabled />}
+        label="Radio"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumDisabledChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Radio disabled defaultChecked />}
+        label="Radio"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel control={<Radio />} label="Radio" size="large" />
+    </FormControl>
+  ),
+};
+
+export const LargeChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Radio defaultChecked />}
+        label="Radio"
+        size="large"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeDisabledUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Radio disabled />}
+        label="Radio"
+        size="large"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeDisabledChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Radio disabled defaultChecked />}
+        label="Radio"
+        size="large"
       />
     </FormControl>
   ),

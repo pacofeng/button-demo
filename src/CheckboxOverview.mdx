@@ -4,6 +4,9 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      div {
+        display: flex;
+      }
     }
      .type {
       min-width: 40px;
@@ -22,38 +25,54 @@ import * as CheckboxGUIStories from "./components/Checkbox-GUI/Checkbox-GUI.stor
 
 Checkboxes are a proven and effective way to elicit a multiple choice from a user. They also require careful consideration to produce the best results.
 
-## Primary Checkbox
-
-### Default Checkboxs
+## Small Size Checkboxs
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={CheckboxStories.DefaultUnchecked} />
-      <Story of={CheckboxStories.DefaultChecked} />
-    </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={CheckboxGUIStories.DefaultUnchecked} />
-      <Story of={CheckboxGUIStories.DefaultChecked} />
+      <Story of={CheckboxStories.SmallUnchecked} />
+      <Story of={CheckboxStories.SmallChecked} />
+      <Story of={CheckboxStories.SmallDisabledUnchecked} />
+      <Story of={CheckboxStories.SmallDisabledChecked} />
     </div>
   </div>
 </Canvas>
 
-### Disabled Checkboxs
+## Medium Size Checkboxs
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={CheckboxStories.DefaultDisabledUnchecked} />
-      <Story of={CheckboxStories.DefaultDisabledChecked} />
+      <Story of={CheckboxStories.MediumUnchecked} />
+      <Story of={CheckboxStories.MediumChecked} />
+      <Story of={CheckboxStories.MediumDisabledUnchecked} />
+      <Story of={CheckboxStories.MediumDisabledChecked} />
     </div>
     <div class="flex">
       <p class="type">GUI:</p>
-      <Story of={CheckboxGUIStories.DefaultDisabledUnchecked} />
-      <Story of={CheckboxGUIStories.DefaultDisabledChecked} />
+      <div class="flex">
+        <p class="type">GUI:</p>
+        <Story of={CheckboxGUIStories.DefaultUnchecked} />
+        <Story of={CheckboxGUIStories.DefaultChecked} />
+        <Story of={CheckboxGUIStories.DefaultDisabledUnchecked} />
+        <Story of={CheckboxGUIStories.DefaultDisabledChecked} />
+      </div>
+    </div>
+  </div>
+</Canvas>
+
+## Large Size Checkboxs
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={CheckboxStories.LargeUnchecked} />
+      <Story of={CheckboxStories.LargeChecked} />
+      <Story of={CheckboxStories.LargeDisabledUnchecked} />
+      <Story of={CheckboxStories.LargeDisabledChecked} />
     </div>
   </div>
 </Canvas>

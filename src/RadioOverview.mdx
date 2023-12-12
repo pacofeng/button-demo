@@ -4,6 +4,9 @@
       display: flex;
       align-items: center;
       gap: 16px;
+      div {
+        display: flex;
+      }
     }
      .type {
       min-width: 40px;
@@ -22,38 +25,51 @@ import * as RadioGUIStories from "./components/Radio-GUI/Radio-GUI.stories.tsx";
 
 Radios are a proven and effective way to elicit a single choice from a user. They also require careful consideration to produce the best results.
 
-## Primary Radio
-
-### Default Radios
+## Small Size Radios
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={RadioStories.DefaultUnchecked} />
-      <Story of={RadioStories.DefaultChecked} />
+      <Story of={RadioStories.SmallUnchecked} />
+      <Story of={RadioStories.SmallChecked} />
+      <Story of={RadioStories.SmallDisabledUnchecked} />
+      <Story of={RadioStories.SmallDisabledChecked} />
+    </div>
+  </div>
+</Canvas>
+
+## Medium Size Radios
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={RadioStories.MediumUnchecked} />
+      <Story of={RadioStories.MediumChecked} />
+      <Story of={RadioStories.MediumDisabledUnchecked} />
+      <Story of={RadioStories.MediumDisabledChecked} />
     </div>
     <div class="flex">
       <p class="type">GUI:</p>
       <Story of={RadioGUIStories.DefaultUnchecked} />
       <Story of={RadioGUIStories.DefaultChecked} />
+      <Story of={RadioGUIStories.DefaultDisabledUnchecked} />
+      <Story of={RadioGUIStories.DefaultDisabledChecked} />
     </div>
   </div>
 </Canvas>
 
-### Disabled Checkboxs
+## Large Size Radios
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={RadioStories.DefaultDisabledUnchecked} />
-      <Story of={RadioStories.DefaultDisabledChecked} />
-    </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={RadioGUIStories.DefaultDisabledUnchecked} />
-      <Story of={RadioGUIStories.DefaultDisabledChecked} />
+      <Story of={RadioStories.LargeUnchecked} />
+      <Story of={RadioStories.LargeChecked} />
+      <Story of={RadioStories.LargeDisabledUnchecked} />
+      <Story of={RadioStories.LargeDisabledChecked} />
     </div>
   </div>
 </Canvas>
