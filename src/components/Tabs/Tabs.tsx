@@ -9,16 +9,16 @@ export const Tabs: FC<TabsProps> = styled(MTabs)((props: TabsProps) => ({
   // TODO: remove
   fontFamily: "'FS Elliot Pro', Arial",
   minHeight: "auto",
-  "& .MuiTabs-indicator": {
+  ".MuiTabs-indicator": {
     backgroundColor: "#13426B",
     height: 3,
   },
-  "& .MuiTab-root": {
+  ".MuiTab-root": {
     ...(props.size === "small" && {
       fontSize: 10,
       height: 28,
       lineHeight: "14px",
-      "& .MuiSvgIcon-root": {
+      ".MuiSvgIcon-root": {
         fontSize: 12,
       },
     }),
@@ -26,7 +26,7 @@ export const Tabs: FC<TabsProps> = styled(MTabs)((props: TabsProps) => ({
       fontSize: 12,
       height: 32,
       lineHeight: "16px",
-      "& .MuiSvgIcon-root": {
+      ".MuiSvgIcon-root": {
         fontSize: 16,
       },
     }),
@@ -34,7 +34,7 @@ export const Tabs: FC<TabsProps> = styled(MTabs)((props: TabsProps) => ({
       fontSize: 14,
       height: 36,
       lineHeight: "20px",
-      "& .MuiSvgIcon-root": {
+      ".MuiSvgIcon-root": {
         fontSize: 16,
       },
     }),

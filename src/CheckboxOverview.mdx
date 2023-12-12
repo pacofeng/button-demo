@@ -39,6 +39,8 @@ Checkboxes are a proven and effective way to elicit a multiple choice from a use
   </div>
 </Canvas>
 
+GUI - default one size
+
 ## Medium Size Checkboxs
 
 <Canvas>
@@ -49,16 +51,6 @@ Checkboxes are a proven and effective way to elicit a multiple choice from a use
       <Story of={CheckboxStories.MediumChecked} />
       <Story of={CheckboxStories.MediumDisabledUnchecked} />
       <Story of={CheckboxStories.MediumDisabledChecked} />
-    </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <div class="flex">
-        <p class="type">GUI:</p>
-        <Story of={CheckboxGUIStories.DefaultUnchecked} />
-        <Story of={CheckboxGUIStories.DefaultChecked} />
-        <Story of={CheckboxGUIStories.DefaultDisabledUnchecked} />
-        <Story of={CheckboxGUIStories.DefaultDisabledChecked} />
-      </div>
     </div>
   </div>
 </Canvas>
@@ -74,5 +66,44 @@ Checkboxes are a proven and effective way to elicit a multiple choice from a use
       <Story of={CheckboxStories.LargeDisabledUnchecked} />
       <Story of={CheckboxStories.LargeDisabledChecked} />
     </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={CheckboxGUIStories.DefaultUnchecked} />
+      <Story of={CheckboxGUIStories.DefaultChecked} />
+      <Story of={CheckboxGUIStories.DefaultDisabledUnchecked} />
+      <Story of={CheckboxGUIStories.DefaultDisabledChecked} />
+    </div>
   </div>
 </Canvas>
+
+#### 1. Size: (new change after v20230420)
+
+DLS: different sizes are added to FormControlLabel component:
+
+- font-size - small for 10px, medium for 12px, large for 14px
+
+- checkbox size - small for 8px, medium for 12px, large for 16px
+
+- line-height - small for 14px, medium for 16px, large for 20px
+
+- letter-sapcing - small & medium for 0.25px, large for 0.1px
+
+GUI: default one size
+
+#### 2. Disabled State
+
+DLS: text color is #333D47; checkbox color is #D6D8DA
+
+GUI: text color is rgba(0, 0, 0, 0.38); checkbox color is #13426b
+
+#### 3. Hover State
+
+DLS: no background on hover; checkbox color #333D47 is added on hover
+
+GUI: has circle background color rgba(156, 39, 176, 0.04)
+
+#### 4. Ripple
+
+DLS: no ripple when clicking the checkbox
+
+GUI: ripple when clicking the checkbox

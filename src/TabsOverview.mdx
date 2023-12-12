@@ -43,10 +43,6 @@ Tabs organise and allow navigation between groups of content that are related an
       <p class="type">DLS:</p>
       <Story of={TabsStories.DefaultMedium} />
     </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={TabsGUIStories.Default} />
-    </div>
   </div>
 </Canvas>
 
@@ -58,12 +54,16 @@ Tabs organise and allow navigation between groups of content that are related an
       <p class="type">DLS:</p>
       <Story of={TabsStories.DefaultLarge} />
     </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.Default} />
+    </div>
   </div>
 </Canvas>
 
 #### 1. Size: (new change after v20230420)
 
-DLS - different sizes are added: changes include:
+DLS: different sizes are added to Tabs component:
 
 - font-size - small for 10px, medium for 12px, large for 14px
 
@@ -71,19 +71,19 @@ DLS - different sizes are added: changes include:
 
 - line-height - small for 14px, medium for 16px, large for 20px
 
-GUI - default one size
+GUI: default one size
 
 #### 2. Border
 
-DLS - border bottom is added
+DLS: border bottom is added
 
-GUI - no border
+GUI: no border
 
 #### 3. Ripple
 
-DLS: no ripple when clicking the button
+DLS: no ripple when clicking the tab
 
-GUI: ripple with a different pressed background color
+GUI: ripple when clicking the tab
 
 ## Tabs with Icon
 
@@ -107,10 +107,6 @@ GUI: ripple with a different pressed background color
       <p class="type">DLS:</p>
       <Story of={TabsStories.MediumWithIcon} />
     </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={TabsGUIStories.WithIcon} />
-    </div>
   </div>
 </Canvas>
 
@@ -121,6 +117,10 @@ GUI: ripple with a different pressed background color
     <div class="flex">
       <p class="type">DLS:</p>
       <Story of={TabsStories.LargeWithIcon} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.WithIcon} />
     </div>
   </div>
 </Canvas>
@@ -158,10 +158,6 @@ GUI - same size
       <p class="type">DLS:</p>
       <Story of={TabsStories.MediumWithDisabled} />
     </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={TabsGUIStories.WithDisabled} />
-    </div>
   </div>
 </Canvas>
 
@@ -172,6 +168,10 @@ GUI - same size
     <div class="flex">
       <p class="type">DLS:</p>
       <Story of={TabsStories.LargeWithDisabled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.WithDisabled} />
     </div>
   </div>
 </Canvas>
