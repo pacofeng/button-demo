@@ -3,12 +3,8 @@ import { Switch as MSwitch, styled } from "@mui/material";
 export const Switch = styled(MSwitch)(() => ({
   height: 24,
   width: 48,
-  padding: 0,
-  marginRight: 12,
-  "&:hover": {
-    backgroundColor: "transparent",
-  },
-
+  padding: 1,
+  marginRight: 14,
   "& .MuiSwitch-track": {
     backgroundColor: "#868b8c",
     opacity: 1,

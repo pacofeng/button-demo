@@ -1,0 +1,88 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      div {
+        display: flex;
+      }
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as SwitchStories from "./components/Switch/Switch.stories.tsx";
+import * as SwitchGUIStories from "./components/Switch-GUI/Switch-GUI.stories.tsx";
+
+<Meta title="Switch Overview" />
+
+# Switch
+
+Toggle Switches allow users to change the state of a single setting on or off.
+
+## Small Size Switch
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={SwitchStories.SmallUnchecked} />
+      <Story of={SwitchStories.SmallChecked} />
+      <Story of={SwitchStories.SmallDisabledUnchecked} />
+      <Story of={SwitchStories.SmallDisabledChecked} />
+    </div>
+  </div>
+</Canvas>
+
+GUI - default one size
+
+## Medium Size Switch
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={SwitchStories.MediumUnchecked} />
+      <Story of={SwitchStories.MediumChecked} />
+      <Story of={SwitchStories.MediumDisabledUnchecked} />
+      <Story of={SwitchStories.MediumDisabledChecked} />
+    </div>
+  </div>
+</Canvas>
+
+#### 1. Size: (new change after v20230420)
+
+DLS: different sizes are added to FormControlLabel component:
+
+- font-size - small for 10px, medium for 12px, large for 14px
+
+- Switch size - small for 8px, medium for 12px, large for 16px
+
+- line-height - small for 14px, medium for 16px, large for 20px
+
+- letter-sapcing - small & medium for 0.25px, large for 0.1px
+
+GUI: default one size
+
+#### 2. Disabled State
+
+DLS: text color is #333D47; Switch color is #D6D8DA
+
+GUI: text color is rgba(0, 0, 0, 0.38); Switch color is #13426b
+
+#### 3. Hover State
+
+DLS: no background on hover; Switch color #333D47 is added on hover
+
+GUI: has circle background color rgba(156, 39, 176, 0.04)
+
+#### 4. Ripple
+
+DLS: no ripple when clicking the Switch
+
+GUI: ripple when clicking the Switch
