@@ -1,0 +1,93 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top:10px
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as InputLabelStories from "./components/InputLabel/InputLabel.stories.tsx";
+import * as InputLabelGUIStories from "./components/InputLabel-GUI/InputLabel.stories.tsx";
+
+<Meta title="InputLabel Overview" />
+
+# InputLabel
+
+InputLabel is a share styled InputLabel component for Dropdown/Input/Select and so on.
+
+## InputLabel with different size
+
+### Small Size InputLabel
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={InputLabelStories.DefaultSmall} />
+
+      <p class="type">GUI:</p>
+      <Story of={InputLabelGUIStories.DefaultSmall} />
+    </div>
+
+  </div>
+</Canvas>
+
+### Medium Size InputLabel
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={InputLabelStories.DefaultMedium} />
+
+       <p class="type">GUI:</p>
+      <Story of={InputLabelGUIStories.DefaultMedium} />
+    </div>
+
+  </div>
+</Canvas>
+
+### Large Size InputLabel
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={InputLabelStories.DefaultLarge} />
+
+       <p class="type">GUI:</p>
+      <Story of={InputLabelGUIStories.DefaultLarge} />
+    </div>
+
+  </div>
+</Canvas>
+
+#### Different
+
+DLS: different sizes are added to InputLabel component:
+
+- font-size - small for 10px, medium for 12px, large for 14px
+
+- color: #333D47
+
+- letterSpacing - small for 8px, medium for 12px, large for 16px
+
+- line-height - small for 0.25px, medium for 0.25, large for 0.1px
+
+GUI:
+
+- font-size - small for 10px, medium for 12px ,large for 14px(the same as DLS)
+
+- color: #5b636b
+
+- letterSpacing: none
+
+- line-height: none
