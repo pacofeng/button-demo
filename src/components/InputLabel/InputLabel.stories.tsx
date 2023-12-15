@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import InputLabel from "./InputLabel";
 import FormControl from "../FormControl";
-import { Box, MenuItem, Select } from "@mui/material";
+import Select from "../Select";
+import { Box, MenuItem } from "@mui/material";
 import React from "react";
 
 const meta = {
@@ -38,6 +39,7 @@ export const DefaultSmall = () => {
           value={age}
           label="Age"
           onChange={handleChange}
+          size="small"
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
@@ -67,6 +69,7 @@ export const DefaultMedium = () => {
           value={age}
           label="Age"
           onChange={handleChange}
+          size="medium"
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
@@ -96,6 +99,7 @@ export const DefaultLarge = () => {
           value={age}
           label="Age"
           onChange={handleChange}
+          size="large"
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>

@@ -15,8 +15,7 @@ declare module "@mui/material/InputLabel" {
 export const InputLabel = styled(MInputLabel)(
   (props: InputLabelProps & { size?: "small" | "medium" | "large" }) => ({
     color: "#333D47",
-    top:
-      props.size === "small" ? "12px" : props.size === "medium" ? "4px" : "0",
+    top: props.size === "small" ? "8px" : props.size === "medium" ? "2px" : "0",
     ...(props.size === "small"
       ? { fontSize: "10px", lineHeight: "14px", letterSpacing: "0.25px" }
       : props.size === "medium"
@@ -30,7 +29,7 @@ export const InputLabel = styled(MInputLabel)(
     "&.Mui-focused": {
       fontSize: "10px",
       top:
-        props.size === "small" ? "4px" : props.size === "medium" ? "2px" : "0",
+        props.size === "small" ? "2px" : props.size === "medium" ? "2px" : "0",
     },
   })
 );
