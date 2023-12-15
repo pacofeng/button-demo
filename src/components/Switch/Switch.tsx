@@ -31,6 +31,7 @@ export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
     borderRadius: 100,
 
     "&.Mui-disabled": {
+      opacity: 1,
       backgroundColor: "#d6d8da !important",
     },
   },
@@ -58,10 +59,16 @@ export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
     },
   },
 
+  "&  .MuiSwitch-switchBase.Mui-disabled+.MuiSwitch-track": {
+    opacity: 1,
+
+    backgroundColor: "#d6d8da !important",
+  },
+
   "&  .MuiSwitch-switchBase.Mui-checked.Mui-disabled+.MuiSwitch-track": {
     opacity: 1,
 
-    backgroundColor: "#d6d8da",
+    backgroundColor: "#d6d8da !important",
   },
 
   "& .MuiSwitch-switchBase.Mui-checked": {
