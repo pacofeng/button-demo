@@ -1,0 +1,74 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as AutocompleteStories from "./components/Autocomplete/Autocomplete.stories.tsx";
+import * as AutocompleteGUIStories from "./components/Autocomplete-GUI/Autocomplete-GUI.stories.tsx";
+
+{/* 👇 Documentation-only page */}
+
+<Meta title="Autocomplete Overview" />
+
+# Autocomplete
+
+## 10px (Extra Extra Small) Autocompletes
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={AutocompleteStories.Small} />
+    </div>
+  </div>
+  <div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={AutocompleteGUIStories.Small} />
+    </div>
+  </div>
+</Canvas>
+
+## 12px (Extra Small) Autocompletes
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={AutocompleteStories.Medium} />
+    </div>
+  </div>
+  <div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={AutocompleteGUIStories.Medium} />
+    </div>
+  </div>
+</Canvas>
+
+## 14px (Small) Autocompletes
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={AutocompleteStories.Large} />
+    </div>
+  </div>
+  <div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={AutocompleteGUIStories.Large} />
+    </div>
+  </div>
+</Canvas>
