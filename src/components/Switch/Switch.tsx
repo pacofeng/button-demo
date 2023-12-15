@@ -66,7 +66,7 @@ export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
 
   "& .MuiSwitch-switchBase.Mui-checked": {
     marginLeft: -4,
-    color: "#ffffff",
+    color: "#ffffff !important",
   },
 
   "&:hover.MuiSwitch-track": {
