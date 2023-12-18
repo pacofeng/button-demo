@@ -78,14 +78,6 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
       },
     },
   },
-  // // Input Spinner Style
-  // "&input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button":
-  //   {
-  //     position: "absolute",
-  //     top: 0,
-  //     right: 0,
-  //     bottom: 0,
-  //   },
 }));
 
 export default TextField;

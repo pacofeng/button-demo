@@ -1,18 +1,29 @@
 import React from "react";
-import { Checkbox as MCheckbox, styled } from "@mui/material";
+import {
+  Checkbox as MCheckbox,
+  styled,
+  CheckboxProps as MCheckboxProps,
+} from "@mui/material";
 
-export const Checkbox = styled(MCheckbox)(() => ({
+declare module "@mui/material/Checkbox" {
+  interface CheckboxPropsSizeOverrides {
+    large: true;
+  }
+}
+
+export const Checkbox = styled(MCheckbox)((props: MCheckboxProps) => ({
   // "&.MuiCheckbox-colorSecondary.Mui-error": {
   //   color: "#cf1318",
   // },
 
   padding: 0,
-  marginRight: 12,
+  marginRight: props.size === "small" ? 6 : props.size === "large" ? 12 : 8,
   "&:hover": {
     backgroundColor: "transparent",
   },
 
   ".MuiSvgIcon-root": {
+    fontSize: props.size === "small" ? 8 : props.size === "large" ? 16 : 12,
     color: "#868B8C",
   },
 

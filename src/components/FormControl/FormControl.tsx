@@ -9,17 +9,17 @@ export const FormControl = styled(MFormControl)((props) => ({
       borderColor: "#868b8c",
       color: "#5b636b",
     },
-    "&:hoverfieldset": {
+    "&:hover fieldset": {
       borderColor: "#444444",
     },
-    "&.Mui-focusedfieldset": {
+    "&.Mui-focused fieldset": {
       borderColor: "#13426b",
       color: "#333d47",
     },
-    "&.Mui-errorfieldset": {
+    "&.Mui-error fieldset": {
       borderColor: "#cf1f38",
     },
-    "&.Mui-disabledfieldset": {
+    "&.Mui-disabled fieldset": {
       borderColor: "#868b8c",
       backgroundColor: "#f7f7f8",
     },

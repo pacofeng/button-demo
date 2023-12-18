@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof TextField>;
 
 export const SmallDefault: Story = {
-  render: () => <TextField size="small" label="Default" />,
+  render: () => <TextField size="small" label="Default" type="number" />,
 };
 
 export const SmallDefaultFilled: Story = {
@@ -26,15 +26,15 @@ export const SmallDefaultFilled: Story = {
 };
 
 export const SmallError: Story = {
-  render: () => <TextField size="small" label="Error" error />,
+  render: () => <TextField size="small" label="错误" error />,
 };
 
 export const SmallErrorFilled: Story = {
   render: () => (
     <TextField
       size="small"
-      label="Error Filled"
-      defaultValue="Error Filled"
+      label="错误 Filled"
+      defaultValue="错误 Filled"
       error
     />
   ),
@@ -56,7 +56,7 @@ export const SmallDisabledFilled: Story = {
 };
 
 export const MediumDefault: Story = {
-  render: () => <TextField size="medium" label="Default" />,
+  render: () => <TextField size="medium" label="Default" type="number" />,
 };
 
 export const MediumDefaultFilled: Story = {
@@ -70,15 +70,15 @@ export const MediumDefaultFilled: Story = {
 };
 
 export const MediumError: Story = {
-  render: () => <TextField size="medium" label="Error" error />,
+  render: () => <TextField size="medium" label="错误" error />,
 };
 
 export const MediumErrorFilled: Story = {
   render: () => (
     <TextField
       size="medium"
-      label="Error Filled"
-      defaultValue="Error Filled"
+      label="错误 Filled"
+      defaultValue="错误 Filled"
       error
     />
   ),
@@ -99,7 +99,7 @@ export const MediumDisabledFilled: Story = {
 };
 
 export const LargeDefault: Story = {
-  render: () => <TextField size="large" label="Default" />,
+  render: () => <TextField size="large" label="Default" type="number" />,
 };
 
 export const LargeDefaultFilled: Story = {
@@ -113,15 +113,15 @@ export const LargeDefaultFilled: Story = {
 };
 
 export const LargeError: Story = {
-  render: () => <TextField size="large" label="Error" error />,
+  render: () => <TextField size="large" label="错误" error />,
 };
 
 export const LargeErrorFilled: Story = {
   render: () => (
     <TextField
       size="large"
-      label="Error Filled"
-      defaultValue="Error Filled"
+      label="错误 Filled"
+      defaultValue="错误 Filled"
       error
     />
   ),

@@ -20,6 +20,13 @@ export const PrimarySmall: Story = {
   },
 };
 
+export const PrimarySmallChinese: Story = {
+  args: {
+    ...PrimarySmall.args,
+    children: "按钮",
+  },
+};
+
 export const PrimaryMedium: Story = {
   args: {
     ...PrimarySmall.args,
@@ -27,9 +34,23 @@ export const PrimaryMedium: Story = {
   },
 };
 
+export const PrimaryMediumChinese: Story = {
+  args: {
+    ...PrimarySmallChinese.args,
+    size: "medium",
+  },
+};
+
 export const PrimaryLarge: Story = {
   args: {
     ...PrimarySmall.args,
+    size: "large",
+  },
+};
+
+export const PrimaryLargeChinese: Story = {
+  args: {
+    ...PrimarySmallChinese.args,
     size: "large",
   },
 };
@@ -108,15 +129,38 @@ export const SecondarySmall: Story = {
     children: "Button",
   },
 };
+
+export const SecondarySmallChinese: Story = {
+  args: {
+    ...SecondarySmall.args,
+    children: "按钮",
+  },
+};
+
 export const SecondaryMedium: Story = {
   args: {
     ...SecondarySmall.args,
     size: "medium",
   },
 };
+
+export const SecondaryMediumChinese: Story = {
+  args: {
+    ...SecondarySmallChinese.args,
+    size: "medium",
+  },
+};
+
 export const SecondaryLarge: Story = {
   args: {
     ...SecondarySmall.args,
+    size: "large",
+  },
+};
+
+export const SecondaryLargeChinese: Story = {
+  args: {
+    ...SecondarySmallChinese.args,
     size: "large",
   },
 };
@@ -193,15 +237,38 @@ export const TertiarySmall: Story = {
     children: "Button",
   },
 };
+
+export const TertiarySmallChinese: Story = {
+  args: {
+    ...TertiarySmall.args,
+    children: "按钮",
+  },
+};
+
 export const TertiaryMedium: Story = {
   args: {
     ...TertiarySmall.args,
     size: "medium",
   },
 };
+
+export const TertiaryMediumChinese: Story = {
+  args: {
+    ...TertiarySmallChinese.args,
+    size: "medium",
+  },
+};
+
 export const TertiaryLarge: Story = {
   args: {
     ...TertiarySmall.args,
+    size: "large",
+  },
+};
+
+export const TertiaryLargeChinese: Story = {
+  args: {
+    ...TertiarySmallChinese.args,
     size: "large",
   },
 };

@@ -8,7 +8,7 @@ export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
   height: size === "small" ? 12 : size === "large" ? 20 : 16,
   width: size === "small" ? 24 : size === "large" ? 40 : 32,
   padding: 0,
-  marginRight: 12,
+  marginRight: size === "small" ? 6 : size === "large" ? 12 : 8,
   "&:hover": {
     backgroundColor: "transparent",
   },

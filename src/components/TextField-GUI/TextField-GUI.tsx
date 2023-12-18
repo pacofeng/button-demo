@@ -63,18 +63,18 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
       borderColor: "#868b8c",
       color: "#5b636b",
     },
-    "&:hoverfieldset": {
+    "&:hover fieldset": {
       borderColor: "#444444",
       color: "#5b636b",
     },
-    "&.Mui-focusedfieldset": {
+    "&.Mui-focused fieldset": {
       borderColor: "#13426b",
       color: "#333d47",
     },
-    "&.Mui-errorfieldset": {
+    "&.Mui-error fieldset": {
       borderColor: "#cf1f38",
     },
-    "&.Mui-disabledfieldset": {
+    "&.Mui-disabled fieldset": {
       borderColor: "#868b8c",
     },
   },

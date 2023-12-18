@@ -17,7 +17,11 @@ type Story = StoryObj<typeof FormControlLabel>;
 export const SmallUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio />} label="Radio" size="small" />
+      <FormControlLabel
+        control={<Radio size="small" />}
+        label="Radio"
+        size="small"
+      />
     </FormControl>
   ),
 };
@@ -26,7 +30,7 @@ export const SmallChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio defaultChecked />}
+        control={<Radio defaultChecked size="small" />}
         label="Radio"
         size="small"
       />
@@ -38,7 +42,7 @@ export const SmallDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled />}
+        control={<Radio disabled size="small" />}
         label="Radio"
         size="small"
       />
@@ -50,7 +54,7 @@ export const SmallDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled defaultChecked />}
+        control={<Radio disabled defaultChecked size="small" />}
         label="Radio"
         size="small"
       />
@@ -61,7 +65,11 @@ export const SmallDisabledChecked: Story = {
 export const MediumUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio />} label="Radio" size="medium" />
+      <FormControlLabel
+        control={<Radio size="medium" />}
+        label="Radio"
+        size="medium"
+      />
     </FormControl>
   ),
 };
@@ -70,7 +78,7 @@ export const MediumChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio defaultChecked />}
+        control={<Radio defaultChecked size="medium" />}
         label="Radio"
         size="medium"
       />
@@ -82,7 +90,7 @@ export const MediumDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled />}
+        control={<Radio disabled size="medium" />}
         label="Radio"
         size="medium"
       />
@@ -94,7 +102,7 @@ export const MediumDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled defaultChecked />}
+        control={<Radio disabled defaultChecked size="medium" />}
         label="Radio"
         size="medium"
       />
@@ -105,7 +113,11 @@ export const MediumDisabledChecked: Story = {
 export const LargeUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio />} label="Radio" size="large" />
+      <FormControlLabel
+        control={<Radio size="large" />}
+        label="Radio"
+        size="large"
+      />
     </FormControl>
   ),
 };
@@ -114,7 +126,7 @@ export const LargeChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio defaultChecked />}
+        control={<Radio defaultChecked size="large" />}
         label="Radio"
         size="large"
       />
@@ -126,7 +138,7 @@ export const LargeDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled />}
+        control={<Radio disabled size="large" />}
         label="Radio"
         size="large"
       />
@@ -138,7 +150,7 @@ export const LargeDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled defaultChecked />}
+        control={<Radio disabled defaultChecked size="large" />}
         label="Radio"
         size="large"
       />

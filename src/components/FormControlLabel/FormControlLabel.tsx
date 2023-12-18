@@ -16,11 +16,8 @@ export const FormControlLabel: FC<FormControlLabelProps> = styled(
   ".MuiFormControlLabel-label.Mui-disabled": {
     color: "#333D47",
   },
-  // checkbox and radio,Switch
-  ".MuiCheckbox-root, .MuiRadio-root,.MuiSwitch-root": {
-    ".MuiSvgIcon-root": {
-      fontSize: props.size === "small" ? 8 : props.size === "large" ? 16 : 12,
-    },
+  // checkbox, radio and witch
+  ".MuiCheckbox-root, .MuiRadio-root, .MuiSwitch-root": {
     "+ .MuiFormControlLabel-label": {
       fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
       lineHeight:
