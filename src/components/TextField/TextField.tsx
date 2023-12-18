@@ -56,12 +56,6 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
         : props.size === "large"
         ? "20px"
         : "16px",
-    "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "#868B8C",
-      legend: {
-        fontSize: 10,
-      },
-    },
     "&:hover:not(.Mui-disabled):not(.Mui-error):not(.Mui-focused)": {
       "& .MuiOutlinedInput-notchedOutline": {
         borderColor: "#444444",
@@ -83,6 +77,15 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
       "& .MuiOutlinedInput-notchedOutline": {
         borderColor: "#D6D8DA",
       },
+    },
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#868B8C",
+      legend: {
+        fontSize: 10,
+      },
+    },
+    "& .MuiSvgIcon-root.MuiSelect-icon": {
+      fontSize: props.size === "small" ? 12 : props.size === "large" ? 22 : 16,
     },
   },
 }));

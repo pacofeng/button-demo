@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import TextField from "./TextField-GUI";
+import MenuItem from "@mui/material/MenuItem";
 
 const meta = {
   title: "Components/TextField GUI",
@@ -11,6 +12,24 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof TextField>;
 
+const currencies = [
+  {
+    value: "USD",
+    label: "$ This is a long currency",
+  },
+  {
+    value: "EUR",
+    label: "€",
+  },
+  {
+    value: "BTC",
+    label: "฿",
+  },
+  {
+    value: "JPY",
+    label: "¥",
+  },
+];
 export const SmallDefault: Story = {
   render: () => <TextField size="small" label="Default" type="number" />,
 };
@@ -52,6 +71,43 @@ export const SmallDisabledFilled: Story = {
       defaultValue="Disabled Filled"
       disabled
     />
+  ),
+};
+
+export const SmallSelect: Story = {
+  render: () => (
+    <TextField
+      select
+      sx={{ width: 100 }}
+      label="Currency"
+      size="small"
+      fullWidth
+    >
+      {currencies.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
+    </TextField>
+  ),
+};
+
+export const SmallSelectFilled: Story = {
+  render: () => (
+    <TextField
+      select
+      sx={{ width: 100 }}
+      label="Currency Filled"
+      defaultValue="EUR"
+      size="small"
+      fullWidth
+    >
+      {currencies.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
+    </TextField>
   ),
 };
 
@@ -98,6 +154,43 @@ export const MediumDisabledFilled: Story = {
   ),
 };
 
+export const MediumSelect: Story = {
+  render: () => (
+    <TextField
+      select
+      sx={{ width: 100 }}
+      label="Currency"
+      size="medium"
+      fullWidth
+    >
+      {currencies.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
+    </TextField>
+  ),
+};
+
+export const MediumSelectFilled: Story = {
+  render: () => (
+    <TextField
+      select
+      sx={{ width: 100 }}
+      label="Currency Filled"
+      defaultValue="EUR"
+      size="medium"
+      fullWidth
+    >
+      {currencies.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
+    </TextField>
+  ),
+};
+
 export const LargeDefault: Story = {
   render: () => <TextField size="large" label="Default" type="number" />,
 };
@@ -139,5 +232,42 @@ export const LargeDisabledFilled: Story = {
       defaultValue="Disabled Filled"
       disabled
     />
+  ),
+};
+
+export const LargeSelect: Story = {
+  render: () => (
+    <TextField
+      sx={{ width: 100 }}
+      select
+      label="Currency"
+      size="large"
+      fullWidth
+    >
+      {currencies.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
+    </TextField>
+  ),
+};
+
+export const LargeSelectFilled: Story = {
+  render: () => (
+    <TextField
+      sx={{ width: 100 }}
+      select
+      label="Currency Filled"
+      defaultValue="EUR"
+      size="large"
+      fullWidth
+    >
+      {currencies.map((option) => (
+        <MenuItem key={option.value} value={option.value}>
+          {option.label}
+        </MenuItem>
+      ))}
+    </TextField>
   ),
 };
