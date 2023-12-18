@@ -29,12 +29,16 @@ import * as AutocompleteGUIStories from "./components/Autocomplete-GUI/Autocompl
     <div class="flex">
       <p class="type">DLS:</p>
       <Story of={AutocompleteStories.Large} />
+      <Story of={AutocompleteStories.LargeFilled} />
+      <Story of={AutocompleteStories.LargeDisabled} />
     </div>
   </div>
   <div>
     <div class="flex">
       <p class="type">GUI:</p>
       <Story of={AutocompleteGUIStories.Large} />
+      <Story of={AutocompleteGUIStories.LargeFilled} />
+      <Story of={AutocompleteGUIStories.LargeDisabled} />
     </div>
   </div>
 </Canvas>
@@ -46,13 +50,18 @@ import * as AutocompleteGUIStories from "./components/Autocomplete-GUI/Autocompl
     <div class="flex">
       <p class="type">DLS:</p>
       <Story of={AutocompleteStories.Medium} />
+      <Story of={AutocompleteStories.MediumFilled} />
+      <Story of={AutocompleteStories.MediumDisabled} />
     </div>
   </div>
   <div>
     <div class="flex">
       <p class="type">GUI:</p>
       <Story of={AutocompleteGUIStories.Medium} />
+      <Story of={AutocompleteGUIStories.MediumFilled} />
+      <Story of={AutocompleteGUIStories.MediumDisabled} />
     </div>
+
   </div>
 </Canvas>
 
@@ -63,12 +72,42 @@ import * as AutocompleteGUIStories from "./components/Autocomplete-GUI/Autocompl
     <div class="flex">
       <p class="type">DLS:</p>
       <Story of={AutocompleteStories.Small} />
+      <Story of={AutocompleteStories.SmallFilled} />
+      <Story of={AutocompleteStories.SmallDisabled} />
     </div>
   </div>
   <div>
     <div class="flex">
       <p class="type">GUI:</p>
       <Story of={AutocompleteGUIStories.Small} />
+      <Story of={AutocompleteGUIStories.SmallFilled} />
+      <Story of={AutocompleteGUIStories.SmallDisabled} />
     </div>
   </div>
 </Canvas>
+
+### Differences
+
+#### 1. All the Differences in Text Field
+
+#### 2. Text Field Padding Right (new change after v20230420)
+
+DLS: padding right - 48px for small, 54px for medium, and 66 px for large
+
+GUI: 0 padding right and selected value overlaps with icon
+
+#### 3. Icon
+
+DLS:
+
+- Size: 12px for small, 16px for medium, and 22 px for large Size (new change after v20230420)
+- Ripple: no ripple when clicking the icon
+- Hover State Background Color: none
+- Gap: 8px gap between icons
+
+GUI:
+
+- Size: 24px for all sizes
+- Ripple: has ripple
+- Hover State Background Color: #eeeff0
+- Gap: no gap
