@@ -24,13 +24,17 @@ Tabs organise and allow navigation between groups of content that are related an
 
 ## Tabs with different size
 
-### 10px (Extra Extra Small) Tabs
+### 14px (Small) Tabs
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.DefaultSmall} />
+      <Story of={TabsStories.DefaultLarge} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TabsGUIStories.Default} />
     </div>
   </div>
 </Canvas>
@@ -46,20 +50,18 @@ Tabs organise and allow navigation between groups of content that are related an
   </div>
 </Canvas>
 
-### 14px (Small) Tabs
+### 10px (Extra Extra Small) Tabs
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={TabsStories.DefaultLarge} />
-    </div>
-    <div class="flex">
-      <p class="type">GUI:</p>
-      <Story of={TabsGUIStories.Default} />
+      <Story of={TabsStories.DefaultSmall} />
     </div>
   </div>
 </Canvas>
+
+### Differences
 
 #### 1. Size: (new change after v20230420)
 
@@ -87,30 +89,7 @@ GUI: ripple when clicking the tab
 
 ## Tabs with Icon
 
-### Small Tabs with Icon
-
-<Canvas>
-  <div>
-    <div class="flex">
-      <p class="type">DLS:</p>
-      <Story of={TabsStories.SmallWithIcon} />
-    </div>
-
-  </div>
-</Canvas>
-
-### Medium Tabs with Icon
-
-<Canvas>
-  <div>
-    <div class="flex">
-      <p class="type">DLS:</p>
-      <Story of={TabsStories.MediumWithIcon} />
-    </div>
-  </div>
-</Canvas>
-
-### Large Tabs with Icon
+### 14px (Small) Tabs with Icon
 
 <Canvas>
   <div>
@@ -124,6 +103,31 @@ GUI: ripple when clicking the tab
     </div>
   </div>
 </Canvas>
+
+### 12px (Extra Small) Tabs with Icon
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.MediumWithIcon} />
+    </div>
+  </div>
+</Canvas>
+
+### 10px (Extra Extra Small) Tabs with Icon
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TabsStories.SmallWithIcon} />
+    </div>
+
+  </div>
+</Canvas>
+
+### Differences
 
 #### 1. Alignment:
 
@@ -139,7 +143,7 @@ GUI - same size
 
 ## Tabs with Disabled Tab
 
-### Small Tabs with Disabled
+### 14px (Small) Tabs with Disabled
 
 <Canvas>
   <div>
@@ -150,7 +154,7 @@ GUI - same size
   </div>
 </Canvas>
 
-### Medium Tabs with Disabled
+### 12px (Extra Small) Tabs with Disabled
 
 <Canvas>
   <div>
@@ -161,7 +165,7 @@ GUI - same size
   </div>
 </Canvas>
 
-### Large Tabs with Disabled
+### 10px (Extra Extra Small) Tabs with Disabled
 
 <Canvas>
   <div>

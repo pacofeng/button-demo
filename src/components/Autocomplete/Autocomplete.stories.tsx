@@ -24,7 +24,7 @@ export const Small: Story = {
   render: () => (
     <Autocomplete
       size="small"
-      sx={{ width: 300 }}
+      sx={{ width: 200 }}
       options={films}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="small" />

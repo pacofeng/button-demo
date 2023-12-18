@@ -25,23 +25,21 @@ import * as SwitchGUIStories from "./components/Switch-GUI/Switch-GUI.stories.ts
 
 Toggle Switches allow users to change the state of a single setting on or off.
 
-## Small Size Switch
+## 14px (Small) Switches
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={SwitchStories.SmallUnchecked} />
-      <Story of={SwitchStories.SmallChecked} />
-      <Story of={SwitchStories.SmallDisabledUnchecked} />
-      <Story of={SwitchStories.SmallDisabledChecked} />
+      <Story of={SwitchStories.LargeUnchecked} />
+      <Story of={SwitchStories.LargeChecked} />
+      <Story of={SwitchStories.LargeDisabledUnchecked} />
+      <Story of={SwitchStories.LargeDisabledChecked} />
     </div>
   </div>
 </Canvas>
 
-GUI - default one size
-
-## Medium Size Switch
+## 12px (Extra Small) Switches
 
 <Canvas>
   <div>
@@ -55,19 +53,21 @@ GUI - default one size
   </div>
 </Canvas>
 
-## Large Size Switch
+## 10px (Extra Extra Small) Switches
 
 <Canvas>
   <div>
     <div class="flex">
       <p class="type">DLS:</p>
-      <Story of={SwitchStories.LargeUnchecked} />
-      <Story of={SwitchStories.LargeChecked} />
-      <Story of={SwitchStories.LargeDisabledUnchecked} />
-      <Story of={SwitchStories.LargeDisabledChecked} />
+      <Story of={SwitchStories.SmallUnchecked} />
+      <Story of={SwitchStories.SmallChecked} />
+      <Story of={SwitchStories.SmallDisabledUnchecked} />
+      <Story of={SwitchStories.SmallDisabledChecked} />
     </div>
   </div>
 </Canvas>
+
+### Differences
 
 #### 1. Size: (new change after v20230420)
 

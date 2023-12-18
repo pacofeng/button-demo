@@ -19,43 +19,9 @@ import * as InputLabelGUIStories from "./components/InputLabel-GUI/InputLabel.st
 
 <Meta title="SelectOverview" />
 
-# SelectLabel
+# Select
 
-SelectLabel is a share styled SelectLabel component for Dropdown/Input/Select and so on.
-
-## SelectLabel with different size
-
-### Small Size SelectLabel
-
-<Canvas>
-  <div>
-    <div class="flex">
-      <p class="type">DLS:</p>
-      <Story of={InputLabelStories.DefaultSmall} />
-
-      <p class="type">GUI:</p>
-      <Story of={InputLabelGUIStories.DefaultSmall} />
-    </div>
-
-  </div>
-</Canvas>
-
-### Medium Size SelectLabel
-
-<Canvas>
-  <div>
-    <div class="flex">
-      <p class="type">DLS:</p>
-      <Story of={InputLabelStories.DefaultMedium} />
-
-       <p class="type">GUI:</p>
-      <Story of={InputLabelGUIStories.DefaultMedium} />
-    </div>
-
-  </div>
-</Canvas>
-
-### Large Size SelectLabel
+## 14px (Small) Selects
 
 <Canvas>
   <div>
@@ -70,9 +36,39 @@ SelectLabel is a share styled SelectLabel component for Dropdown/Input/Select an
   </div>
 </Canvas>
 
-#### Different
+## 12px (Extra Small) Selects
 
-DLS: different sizes are added to SelectLabel component:
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={InputLabelStories.DefaultMedium} />
+
+       <p class="type">GUI:</p>
+      <Story of={InputLabelGUIStories.DefaultMedium} />
+    </div>
+
+  </div>
+</Canvas>
+
+## 10px (Extra Extra Small) Selects
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={InputLabelStories.DefaultSmall} />
+
+      <p class="type">GUI:</p>
+      <Story of={InputLabelGUIStories.DefaultSmall} />
+    </div>
+
+  </div>
+</Canvas>
+
+### Differences
+
+DLS: different sizes are added to select component:
 
 - font-size - small for 10px, medium for 12px, large for 14px
 
