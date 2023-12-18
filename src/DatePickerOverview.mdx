@@ -1,0 +1,105 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      div {
+        display: flex;
+      }
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as DatePickerStories from "./components/DatePicker/DatePicker.stories.tsx";
+import * as DatePickerGUIStories from "./components/DatePicker-GUI/DatePicker-GUI.stories.tsx";
+
+<Meta title="DatePicker Overview" />
+
+# DatePicker
+
+## 14px (Small) DatePickers
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={DatePickerStories.Large} />
+      <Story of={DatePickerStories.LargeFilled} />
+      <Story of={DatePickerStories.LargeDisabled} />
+      <Story of={DatePickerStories.LargeDisabledFilled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={DatePickerGUIStories.Large} />
+      <Story of={DatePickerGUIStories.LargeFilled} />
+      <Story of={DatePickerGUIStories.LargeDisabled} />
+      <Story of={DatePickerGUIStories.LargeDisabledFilled} />
+    </div>
+  </div>
+</Canvas>
+
+## 12px (Extra Small) DatePickers
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={DatePickerStories.Medium} />
+      <Story of={DatePickerStories.MediumFilled} />
+      <Story of={DatePickerStories.MediumDisabled} />
+      <Story of={DatePickerStories.MediumDisabledFilled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={DatePickerGUIStories.Medium} />
+      <Story of={DatePickerGUIStories.MediumFilled} />
+      <Story of={DatePickerGUIStories.MediumDisabled} />
+      <Story of={DatePickerGUIStories.MediumDisabledFilled} />
+    </div>
+  </div>
+</Canvas>
+
+## 10px (Extra Extra Small) DatePickers
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={DatePickerStories.Small} />
+      <Story of={DatePickerStories.SmallFilled} />
+      <Story of={DatePickerStories.SmallDisabled} />
+      <Story of={DatePickerStories.SmallDisabledFilled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={DatePickerGUIStories.Small} />
+      <Story of={DatePickerGUIStories.SmallFilled} />
+      <Story of={DatePickerGUIStories.SmallDisabled} />
+      <Story of={DatePickerGUIStories.SmallDisabledFilled} />
+    </div>
+  </div>
+</Canvas>
+
+### Differences
+
+#### 1. All the Differences in Text Field
+
+#### 2. Icon
+
+DLS:
+
+- Size: 12px for small, 16px for medium, and 22 px for large Size (new change after v20230420)
+- Ripple: no ripple when clicking the icon
+- Hover State Background Color: none
+
+GUI:
+
+- Size: 24px for all sizes
+- Ripple: has ripple
+- Hover State Background Color: #eeeff0

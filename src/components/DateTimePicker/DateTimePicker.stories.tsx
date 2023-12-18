@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TimePicker from "./TimePicker-GUI";
+import DateTimePicker from "./DateTimePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import dayjs from "dayjs";
 
 const meta = {
-  title: "Components/TimePicker GUI",
-  component: TimePicker,
+  title: "Components/DateTimePicker DLS",
+  component: DateTimePicker,
   tags: ["autodocs"],
-} satisfies Meta<typeof TimePicker>;
+} satisfies Meta<typeof DateTimePicker>;
 
 export default meta;
-type Story = StoryObj<typeof TimePicker>;
+type Story = StoryObj<typeof DateTimePicker>;
 
 export const Small: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="small" />
+      <DateTimePicker size="small" />
     </LocalizationProvider>
   ),
 };
@@ -25,7 +25,7 @@ export const Small: Story = {
 export const SmallFilled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="small" defaultValue={dayjs("2022-04-17T15:30")} />
+      <DateTimePicker size="small" defaultValue={dayjs("2022-04-17T15:30")} />
     </LocalizationProvider>
   ),
 };
@@ -33,14 +33,14 @@ export const SmallFilled: Story = {
 export const SmallDisabled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="small" disabled />
+      <DateTimePicker size="small" disabled />
     </LocalizationProvider>
   ),
 };
 export const SmallDisabledFilled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker
+      <DateTimePicker
         size="small"
         disabled
         defaultValue={dayjs("2022-04-17T15:30")}
@@ -52,7 +52,7 @@ export const SmallDisabledFilled: Story = {
 export const Medium: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="medium" />
+      <DateTimePicker size="medium" />
     </LocalizationProvider>
   ),
 };
@@ -60,7 +60,7 @@ export const Medium: Story = {
 export const MediumFilled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="medium" defaultValue={dayjs("2022-04-17T15:30")} />
+      <DateTimePicker size="medium" defaultValue={dayjs("2022-04-17T15:30")} />
     </LocalizationProvider>
   ),
 };
@@ -68,7 +68,7 @@ export const MediumFilled: Story = {
 export const MediumDisabled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="medium" disabled />
+      <DateTimePicker size="medium" disabled />
     </LocalizationProvider>
   ),
 };
@@ -76,7 +76,7 @@ export const MediumDisabled: Story = {
 export const MediumDisabledFilled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker
+      <DateTimePicker
         size="medium"
         disabled
         defaultValue={dayjs("2022-04-17T15:30")}
@@ -88,7 +88,7 @@ export const MediumDisabledFilled: Story = {
 export const Large: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="large" />
+      <DateTimePicker size="large" />
     </LocalizationProvider>
   ),
 };
@@ -96,7 +96,7 @@ export const Large: Story = {
 export const LargeFilled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="large" defaultValue={dayjs("2022-04-17T15:30")} />
+      <DateTimePicker size="large" defaultValue={dayjs("2022-04-17T15:30")} />
     </LocalizationProvider>
   ),
 };
@@ -104,7 +104,7 @@ export const LargeFilled: Story = {
 export const LargeDisabled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker size="large" disabled />
+      <DateTimePicker size="large" disabled />
     </LocalizationProvider>
   ),
 };
@@ -112,7 +112,7 @@ export const LargeDisabled: Story = {
 export const LargeDisabledFilled: Story = {
   render: () => (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <TimePicker
+      <DateTimePicker
         size="large"
         disabled
         defaultValue={dayjs("2022-04-17T15:30")}

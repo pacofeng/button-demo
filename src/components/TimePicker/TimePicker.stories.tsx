@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import TimePicker from "./TimePicker-GUI";
+import TimePicker from "./TimePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import dayjs from "dayjs";
 
 const meta = {
-  title: "Components/TimePicker GUI",
+  title: "Components/TimePicker DLS",
   component: TimePicker,
   tags: ["autodocs"],
 } satisfies Meta<typeof TimePicker>;

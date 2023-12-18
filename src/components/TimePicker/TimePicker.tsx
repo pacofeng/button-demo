@@ -1,26 +1,18 @@
 import React from "react";
+import { styled } from "@mui/material";
 import {
-  TextField as MTextField,
-  styled,
-  TextFieldProps as MTextFieldProps,
-} from "@mui/material";
+  TimePicker as MTimePicker,
+  TimePickerProps as MTimePickerProps,
+} from "@mui/x-date-pickers";
 
-declare module "@mui/material/TextField" {
-  interface TextFieldPropsSizeOverrides {
-    small: true;
-    medium: true;
-    large: true;
-  }
-}
-
-export interface TextFieldProps {
+export interface TimePickerProps extends MTimePickerProps<Date> {
+  hidden?: boolean;
   fontColor?: string;
+  size?: "small" | "medium" | "large";
   backgroundColor?: string;
 }
 
-export type MergedTextFieldProps = MTextFieldProps & TextFieldProps;
-
-export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
+export const TimePicker = styled(MTimePicker)((props: TimePickerProps) => ({
   display: props.hidden ? "none" : "block",
   // Input label style
   "& .MuiInputLabel-root": {
@@ -87,7 +79,15 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
     "& .MuiSvgIcon-root": {
       fontSize: props.size === "small" ? 12 : props.size === "large" ? 22 : 16,
     },
+    "& .MuiTouchRipple-root": {
+      display: "none",
+    },
+    "& .MuiButtonBase-root": {
+      "&:hover": {
+        backgroundColor: "transparent",
+      },
+    },
   },
 }));
 
-export default TextField;
+export default TimePicker;

@@ -1,0 +1,105 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      div {
+        display: flex;
+      }
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as TimePickerStories from "./components/TimePicker/TimePicker.stories.tsx";
+import * as TimePickerGUIStories from "./components/TimePicker-GUI/TimePicker-GUI.stories.tsx";
+
+<Meta title="TimePicker Overview" />
+
+# TimePicker
+
+## 14px (Small) TimePickers
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TimePickerStories.Large} />
+      <Story of={TimePickerStories.LargeFilled} />
+      <Story of={TimePickerStories.LargeDisabled} />
+      <Story of={TimePickerStories.LargeDisabledFilled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TimePickerGUIStories.Large} />
+      <Story of={TimePickerGUIStories.LargeFilled} />
+      <Story of={TimePickerGUIStories.LargeDisabled} />
+      <Story of={TimePickerGUIStories.LargeDisabledFilled} />
+    </div>
+  </div>
+</Canvas>
+
+## 12px (Extra Small) TimePickers
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TimePickerStories.Medium} />
+      <Story of={TimePickerStories.MediumFilled} />
+      <Story of={TimePickerStories.MediumDisabled} />
+      <Story of={TimePickerStories.MediumDisabledFilled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TimePickerGUIStories.Medium} />
+      <Story of={TimePickerGUIStories.MediumFilled} />
+      <Story of={TimePickerGUIStories.MediumDisabled} />
+      <Story of={TimePickerGUIStories.MediumDisabledFilled} />
+    </div>
+  </div>
+</Canvas>
+
+## 10px (Extra Extra Small) TimePickers
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TimePickerStories.Small} />
+      <Story of={TimePickerStories.SmallFilled} />
+      <Story of={TimePickerStories.SmallDisabled} />
+      <Story of={TimePickerStories.SmallDisabledFilled} />
+    </div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TimePickerGUIStories.Small} />
+      <Story of={TimePickerGUIStories.SmallFilled} />
+      <Story of={TimePickerGUIStories.SmallDisabled} />
+      <Story of={TimePickerGUIStories.SmallDisabledFilled} />
+    </div>
+  </div>
+</Canvas>
+
+### Differences
+
+#### 1. All the Differences in Text Field
+
+#### 2. Icon
+
+DLS:
+
+- Size: 12px for small, 16px for medium, and 22 px for large Size (new change after v20230420)
+- Ripple: no ripple when clicking the icon
+- Hover State Background Color: none
+
+GUI:
+
+- Size: 24px for all sizes
+- Ripple: has ripple
+- Hover State Background Color: #eeeff0

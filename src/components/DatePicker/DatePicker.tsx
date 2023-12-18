@@ -1,26 +1,18 @@
 import React from "react";
+import { styled } from "@mui/material";
 import {
-  TextField as MTextField,
-  styled,
-  TextFieldProps as MTextFieldProps,
-} from "@mui/material";
+  DatePicker as MDatePicker,
+  DatePickerProps as MDatePickerProps,
+} from "@mui/x-date-pickers";
 
-declare module "@mui/material/TextField" {
-  interface TextFieldPropsSizeOverrides {
-    small: true;
-    medium: true;
-    large: true;
-  }
-}
-
-export interface TextFieldProps {
+export interface DatePickerProps extends MDatePickerProps<Date> {
+  hidden?: boolean;
   fontColor?: string;
+  size?: "small" | "medium" | "large";
   backgroundColor?: string;
 }
 
-export type MergedTextFieldProps = MTextFieldProps & TextFieldProps;
-
-export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
+export const DatePicker = styled(MDatePicker)((props: DatePickerProps) => ({
   display: props.hidden ? "none" : "block",
   // Input label style
   "& .MuiInputLabel-root": {
@@ -87,7 +79,15 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
     "& .MuiSvgIcon-root": {
       fontSize: props.size === "small" ? 12 : props.size === "large" ? 22 : 16,
     },
+    "& .MuiTouchRipple-root": {
+      display: "none",
+    },
+    "& .MuiButtonBase-root": {
+      "&:hover": {
+        backgroundColor: "transparent",
+      },
+    },
   },
 }));
 
-export default TextField;
+export default DatePicker;
