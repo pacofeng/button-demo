@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Autocomplete from "./Autocomplete-GUI";
-import TextField from "../TextField";
+import TextField from "../TextField-GUI";
 
 const meta = {
   title: "Components/Autocomplete GUI",
@@ -13,7 +13,7 @@ export default meta;
 type Story = StoryObj<typeof Autocomplete>;
 
 const films = [
-  { label: "The Shawshank Redemption", year: 1994 },
+  { label: "The Shawshank Redemption Redemption Redemption", year: 1994 },
   { label: "The Godfather", year: 1972 },
   { label: "The Godfather: Part II", year: 1974 },
   { label: "The Dark Knight", year: 2008 },
@@ -24,7 +24,7 @@ export const Small: Story = {
   render: () => (
     <Autocomplete
       size="small"
-      sx={{ width: 250 }}
+      sx={{ width: 200 }}
       options={films}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="small" />
@@ -37,10 +37,10 @@ export const Medium: Story = {
   render: () => (
     <Autocomplete
       size="medium"
-      sx={{ width: 250 }}
+      sx={{ width: 200 }}
       options={films}
       renderInput={(params) => (
-        <TextField {...params} label="Movie" size="meidum" />
+        <TextField {...params} label="Movie" size="medium" />
       )}
     />
   ),
@@ -50,7 +50,7 @@ export const Large: Story = {
   render: () => (
     <Autocomplete
       size="large"
-      sx={{ width: 250 }}
+      sx={{ width: 200 }}
       options={films}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
