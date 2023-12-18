@@ -59,7 +59,7 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
       padding:
         props.size === "large" ? "12px 16px !important" : "6px 16px !important",
     },
-    "&fieldset": {
+    "& fieldset": {
       borderColor: "#868b8c",
       color: "#5b636b",
     },
@@ -78,7 +78,7 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
       borderColor: "#868b8c",
     },
   },
-  // Style for disabledtextfield
+  // Style for disabled textfield
   "& .Mui-disabled": {
     backgroundColor: "#f7f7f8",
     color: "#5b636b",

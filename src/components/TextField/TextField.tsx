@@ -49,15 +49,22 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
     color: "#333D47",
     fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
     height: props.size === "small" ? 22 : props.size === "large" ? 32 : 28,
+    letterSpacing: props.size === "large" ? 0.1 : 0.25,
+    lineHeight:
+      props.size === "small"
+        ? "14px"
+        : props.size === "large"
+        ? "20px"
+        : "16px",
     "& .MuiOutlinedInput-notchedOutline": {
       borderColor: "#868B8C",
       legend: {
         fontSize: 10,
       },
     },
-    "&:hover:not(.Mui-disabled):not(.Mui-error)": {
+    "&:hover:not(.Mui-disabled):not(.Mui-error):not(.Mui-focused)": {
       "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "#333D47",
+        borderColor: "#444444",
       },
     },
     "&.Mui-focused": {
