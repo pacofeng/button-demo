@@ -1,0 +1,113 @@
+<style>
+  {`
+    .flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      div {
+        display: flex;
+      }
+    }
+     .type {
+      min-width: 40px;
+    }
+ `}
+</style>
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+
+import * as TooltipStories from "./components/Tooltip/Tooltip.stories.tsx";
+import * as TooltipGUIStories from "./components/Tooltip-GUI/Tooltip-GUI.stories.tsx";
+
+<Meta title="Tooltip Overview" />
+
+# Tooltip
+
+Tooltips are user-triggered messages that provide additional information that briefly explain a page element or function. They can be triggered by mouse/keyboard hover, focus or click.
+
+## 14px (Small) Tooltips
+
+<Canvas style={{ background: "#efefef" }}>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TooltipStories.Large} />
+      <Story of={TooltipStories.LargeOpen} />
+    </div>
+  </div>
+  <div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TooltipGUIStories.Large} />
+      <Story of={TooltipGUIStories.LargeOpen} />
+    </div>
+  </div>
+</Canvas>
+
+## 12px (Extra Small) Tooltips
+
+<Canvas style={{ background: "#efefef" }}>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TooltipStories.Medium} />
+      <Story of={TooltipStories.MediumOpen} />
+    </div>
+  </div>
+  <div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TooltipGUIStories.Medium} />
+      <Story of={TooltipGUIStories.MediumOpen} />
+    </div>
+  </div>
+</Canvas>
+
+## 10px (Extra Extra Small) Tooltips
+
+<Canvas style={{ background: "#efefef" }}>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={TooltipStories.Small} />
+      <Story of={TooltipStories.SmallOpen} />
+    </div>
+  </div>
+  <div>
+    <div class="flex">
+      <p class="type">GUI:</p>
+      <Story of={TooltipGUIStories.Small} />
+      <Story of={TooltipGUIStories.SmallOpen} />
+    </div>
+  </div>
+</Canvas>
+
+### Differences
+
+#### 1. Line Height and Letter Spacing:
+
+DLS:
+
+- line-height - small for 14px, medium for 16px, large for 20px
+
+- letter-spacing - small & medium for 0.25px, large for 0.1px
+
+GUI: Default value for line-height and letter-spacing
+
+#### 2. Padding
+
+DLS: Padding 8px 12px
+
+GUI: No padding
+
+#### 3. BoxShadow
+
+DLS: Boxshadow is updated to "0px 7px 10px 0px rgba(0, 0, 0, 0.04), 0px 1px 8px 0px rgba(0, 0, 0, 0.06)"
+
+GUI: Boxshadow "0px 7px 10px 0px rgba(0, 0, 0, 0.04)"
+
+#### 4. Arrow
+
+DLS: Arrow is enabled by default
+
+GUI: Arrow is not enabled by default

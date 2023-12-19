@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import Tooltip from "./Tooltip-GUI";
-import Button from "../Button-GUI";
+import Tooltip from "./Tooltip";
+import Button from "../Button";
 
 const meta = {
-  title: "Components/Tooltip GUI",
+  title: "Components/Tooltip DLS",
   component: Tooltip,
   tags: ["autodocs"],
 } satisfies Meta<typeof Tooltip>;
