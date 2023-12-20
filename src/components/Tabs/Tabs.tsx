@@ -6,8 +6,6 @@ export interface TabsProps extends MTabsProps {
 }
 
 export const Tabs: FC<TabsProps> = styled(MTabs)((props: TabsProps) => ({
-  // TODO: remove
-  fontFamily: "'FS Elliot Pro', Arial",
   minHeight: "auto",
   ".MuiTabs-indicator": {
     backgroundColor: "#13426B",

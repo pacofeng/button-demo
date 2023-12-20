@@ -22,8 +22,6 @@ export interface ButtonProps extends MButtonProps {
 }
 
 export const Button = styled(MButton)((props: ButtonProps) => ({
-  // TODO: remove
-  fontFamily: "'FS Elliot Pro', Arial",
   ...(props.hidden && { display: "none" }),
   width: props.fullWidth ? "100%" : props.width ? props.width : "auto",
   justifyContent: "center",

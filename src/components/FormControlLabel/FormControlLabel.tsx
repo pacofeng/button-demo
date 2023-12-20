@@ -27,7 +27,6 @@ export const FormControlLabel: FC<FormControlLabelProps> = styled(
           ? "20px"
           : "16px",
       letterSpacing: props.size === "large" ? 0.1 : 0.25,
-      fontFamily: "'FS Elliot Pro', Arial",
     },
   },
   "&:hover": {
