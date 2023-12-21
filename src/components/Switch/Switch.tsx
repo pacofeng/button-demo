@@ -1,17 +1,16 @@
 import { Switch as MSwitch, styled } from "@mui/material";
 
-interface MySwitchProps {
-  size?: "small" | "medium" | "large";
+declare module "@mui/material/Switch" {
+  interface SwitchPropsSizeOverrides {
+    large: true;
+  }
 }
 
-export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
+export const Switch = styled(MSwitch)(({ size }) => ({
   height: size === "small" ? 12 : size === "large" ? 20 : 16,
   width: size === "small" ? 24 : size === "large" ? 40 : 32,
   padding: 0,
   marginRight: size === "small" ? 6 : size === "large" ? 12 : 8,
-  "&:hover": {
-    backgroundColor: "transparent",
-  },
 
   "& .MuiSwitch-thumb": {
     height: size === "small" ? 10 : size === "large" ? 18 : 14,
@@ -19,6 +18,8 @@ export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
     borderRadius: "50%",
     marginTop: size === "small" ? 4 : size === "large" ? -1 : -1,
     marginLeft: size === "small" ? 4 : size === "large" ? -1 : -1,
+    backgroundColor: "#FFFFFF",
+    boxShadow: "0px 3px 7px 0px rgba(0, 0, 0, 0.03)",
   },
 
   "& .Mui-checked .MuiSwitch-thumb": {
@@ -76,8 +77,11 @@ export const Switch = styled(MSwitch)(({ size }: MySwitchProps) => ({
     color: "#ffffff !important",
   },
 
-  "&:hover.MuiSwitch-track": {
+  "&:hover .MuiSwitch-track": {
     backgroundColor: "#444444",
+  },
+  "&:hover .Mui-checked + .MuiSwitch-track": {
+    backgroundColor: "#0F3556",
   },
 }));
 
