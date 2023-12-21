@@ -1,6 +1,4 @@
-import React from "react";
 import { Select as MSelect, styled } from "@mui/material";
-import * as v from "../../styles/variables";
 
 declare module "@mui/material/InputBase" {
   interface InputBasePropsSizeOverrides {
@@ -14,7 +12,7 @@ export const Select = styled(MSelect)((props) => ({
   "& .MuiSelect-select": {
     height:
       props.size === "small"
-        ? "20px !important"
+        ? "22px !important"
         : props.size === "large"
         ? "32px !important"
         : "28px !important",
