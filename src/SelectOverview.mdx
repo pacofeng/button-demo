@@ -14,7 +14,7 @@
 
 import { Canvas, Meta, Story } from "@storybook/blocks";
 
-import * as InputLabelStories from "./components/InputLabel/InputLabel.stories.tsx";
+import * as InputLabelStories from "./components/Select/Select.stories.tsx";
 import * as InputLabelGUIStories from "./components/InputLabel-GUI/InputLabel.stories.tsx";
 
 <Meta title="SelectOverview" />
@@ -61,6 +61,21 @@ import * as InputLabelGUIStories from "./components/InputLabel-GUI/InputLabel.st
 
       <p class="type">GUI:</p>
       <Story of={InputLabelGUIStories.DefaultSmall} />
+    </div>
+
+  </div>
+</Canvas>
+
+## disabled Selects
+
+<Canvas>
+  <div>
+    <div class="flex">
+      <p class="type">DLS:</p>
+      <Story of={InputLabelStories.DefaultLargeDisabled} />
+
+       <p class="type">GUI:</p>
+      <Story of={InputLabelGUIStories.DefaultLarge} />
     </div>
 
   </div>

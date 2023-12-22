@@ -1,25 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 
-// import InputLabel from "./InputLabel";
 import FormControl from "../FormControl";
-import Select from "../Select";
-import { Box, MenuItem, InputLabel } from "@mui/material";
+import InputLabel from "../InputLabel";
+import { Box, MenuItem } from "@mui/material";
 import React from "react";
+import Select from "./Select";
+import TextField from "../TextField";
 
 const meta = {
-  title: "Components/InputLabel DLS",
-  component: InputLabel,
+  title: "Components/Select",
+  component: Select,
   tags: ["autodocs"],
-} satisfies Meta<typeof InputLabel>;
+} satisfies Meta<typeof Select>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-type StoryArgs = {
-  size: "small" | "medium" | "large";
-};
-
-// TODO: 控制台size
 export const DefaultSmall = () => {
   const [age, setAge] = React.useState("");
 
@@ -28,7 +23,7 @@ export const DefaultSmall = () => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ width: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label" size="small">
           Age
@@ -58,7 +53,7 @@ export const DefaultMedium = () => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ width: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label" size="medium">
           Age
@@ -88,7 +83,7 @@ export const DefaultLarge = () => {
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ width: 120 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label" size="large">
           Age
@@ -100,6 +95,37 @@ export const DefaultLarge = () => {
           label="Age"
           onChange={handleChange}
           size="large"
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+  );
+};
+
+export const DefaultLargeDisabled = () => {
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event: any) => {
+    setAge(event.target.value);
+  };
+
+  return (
+    <Box sx={{ width: 120 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label" size="large">
+          Age
+        </InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Age"
+          onChange={handleChange}
+          size="large"
+          disabled
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>

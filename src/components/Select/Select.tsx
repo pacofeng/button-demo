@@ -9,31 +9,61 @@ declare module "@mui/material/InputBase" {
 }
 
 export const Select = styled(MSelect)((props) => ({
-  "& .MuiSelect-select": {
-    height:
+  "&.MuiInputBase-root": {
+    boxSizing: "borderBox",
+    height: props.size === "small" ? 22 : props.size === "large" ? 32 : 28,
+    fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
+    color: "#333D47",
+    letterSpacing: props.size === "large" ? 0.1 : 0.25,
+    lineHeight:
       props.size === "small"
-        ? "22px !important"
+        ? "14px"
         : props.size === "large"
-        ? "32px !important"
-        : "28px !important",
-    padding:
-      props.size === "small"
-        ? "12px 8px"
-        : props.size === "large"
-        ? "12px 16px"
-        : "12px 10px",
+        ? "20px"
+        : "16px",
 
-    "&.Mui-focused": {
-      backgroundColor: "#e8eef3",
+    "& .MuiInputBase-input": {
+      height: props.size === "small" ? 22 : props.size === "large" ? 32 : 28,
+      boxSizing: "border-box",
+    },
+
+    "& .MuiSelect-select": {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+    },
+
+    "& .MuiSvgIcon-root": {
+      fontSize: props.size === "small" ? 12 : props.size === "large" ? 22 : 16,
+    },
+
+    "&:hover:not(.Mui-disabled)": {
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#444",
+      },
+    },
+
+    "&:focus:not(.Mui-disabled)": {
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "red",
+      },
+    },
+
+    "& .Mui-disabled + .MuiOutlinedInput-notchedOutline": {
+      color: "#868B8C",
+      backgroundColor: "#F7F7F8",
+      border: "1px solid #D6D8DA",
     },
   },
 
-  "& .MuiSelect-root.Mui-forced": {
-    backgroundColor: "#e8eef3",
+  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+    borderColor: "#444",
+    // backgroundColor: "#E7ECF0",
   },
 
-  gap: 8,
-  backgroundColor: "#ffffff",
+  ".MuiPaper-root .MuiList-root .Mui-selected": {
+    fontSize: "10px",
+  },
 }));
 
 export default Select;

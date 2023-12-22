@@ -9,8 +9,6 @@ declare module "@mui/material/InputLabel" {
 }
 
 export const InputLabel = styled(MInputLabel)((props) => ({
-  color: "#333D47",
-  top: props.size === "small" ? "8px" : props.size === "medium" ? "2px" : "0",
   ...(props.size === "small"
     ? { fontSize: "10px", lineHeight: "14px", letterSpacing: "0.25px" }
     : props.size === "medium"
@@ -21,9 +19,27 @@ export const InputLabel = styled(MInputLabel)((props) => ({
       }
     : { fontsize: "14px", lineHeight: "20px", letterSpacing: "0.1px" }),
 
-  "&.Mui-focused": {
+  "&.MuiInputLabel-shrink": {
+    color: "#333D47",
     fontSize: "10px",
-    top: props.size === "small" ? "2px" : props.size === "medium" ? "2px" : "0",
+    letterSpacing: props.size === "large" ? 0.1 : 0.25,
+    top:
+      props.size === "small" ? "5px" : props.size === "medium" ? "4px" : "2px",
+    left: props.size === "small" ? 1 : props.size === "medium" ? 2 : 3,
+  },
+
+  "&.MuiInputLabel-shrink + .Mui-focused > .MuiOutlinedInput-notchedOutline": {
+    border: "1px solid #13426B",
+    // backgroundColor: "#E7ECF0",
+  },
+
+  "&:not(.MuiInputLabel-shrink)": {
+    top:
+      props.size === "small"
+        ? "-4px"
+        : props.size === "medium"
+        ? "-9px"
+        : "-10px",
   },
 }));
 
