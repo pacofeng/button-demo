@@ -36,7 +36,9 @@ export const DefaultSmall = () => {
           onChange={handleChange}
           size="small"
         >
-          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem disabled value={10}>
+            Ten
+          </MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
@@ -66,7 +68,9 @@ export const DefaultMedium = () => {
           onChange={handleChange}
           size="medium"
         >
-          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem disabled value={10}>
+            Ten
+          </MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
@@ -96,7 +100,9 @@ export const DefaultLarge = () => {
           onChange={handleChange}
           size="large"
         >
-          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem disabled value={10}>
+            Ten
+          </MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>

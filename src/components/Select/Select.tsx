@@ -1,4 +1,8 @@
-import { Select as MSelect, styled } from "@mui/material";
+import {
+  Select as MSelect,
+  SelectProps as MSelectProps,
+  styled,
+} from "@mui/material";
 
 declare module "@mui/material/InputBase" {
   interface InputBasePropsSizeOverrides {
@@ -8,7 +12,41 @@ declare module "@mui/material/InputBase" {
   }
 }
 
-export const Select = styled(MSelect)((props) => ({
+export const Select = styled((SelectProps: MSelectProps) => (
+  <MSelect
+    {...SelectProps}
+    MenuProps={{
+      sx: {
+        "& .MuiPaper-root .MuiMenu-list .MuiMenuItem-root": {
+          fontSize:
+            SelectProps.size === "small"
+              ? 10
+              : SelectProps.size === "large"
+              ? 14
+              : 12,
+          letterSpacing: SelectProps.size === "large" ? 0.1 : 0.25,
+          lineHeight:
+            SelectProps.size === "small"
+              ? "14px"
+              : SelectProps.size === "large"
+              ? "20px"
+              : "16px",
+          padding: "6px 16px",
+          color: "#333D47",
+
+          "&:hover": {
+            backgroundColor: "#E7ECF0",
+          },
+
+          "&.Mui-disabled": {
+            opacity: 1,
+            color: "#D6D8DA",
+          },
+        },
+      },
+    }}
+  />
+))((props) => ({
   "&.MuiInputBase-root": {
     boxSizing: "borderBox",
     height: props.size === "small" ? 22 : props.size === "large" ? 32 : 28,
