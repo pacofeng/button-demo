@@ -41,6 +41,10 @@ export const InputLabel = styled(MInputLabel)((props) => ({
         ? "-9px"
         : "-10px",
   },
+
+  "&.Mui-disabled": {
+    color: "#868B8C",
+  },
 }));
 
 export default InputLabel;

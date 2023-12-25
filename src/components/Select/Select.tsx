@@ -35,6 +35,7 @@ export const Select = styled(MSelect)((props) => ({
 
     "& .MuiSvgIcon-root": {
       fontSize: props.size === "small" ? 12 : props.size === "large" ? 22 : 16,
+      zIndex: 1000,
     },
 
     "&:hover:not(.Mui-disabled)": {
@@ -43,16 +44,16 @@ export const Select = styled(MSelect)((props) => ({
       },
     },
 
-    "&:focus:not(.Mui-disabled)": {
-      "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "red",
-      },
-    },
-
     "& .Mui-disabled + .MuiOutlinedInput-notchedOutline": {
       color: "#868B8C",
       backgroundColor: "#F7F7F8",
       border: "1px solid #D6D8DA",
+    },
+
+    "& .MuiSelect-select.Mui-disabled": {
+      color: "#333D47",
+      zIndex: 100,
+      "-webkit-text-fill-color": "initial",
     },
   },
 

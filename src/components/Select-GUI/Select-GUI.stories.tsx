@@ -4,11 +4,10 @@ import FormControl from "../FormControl";
 import InputLabel from "../InputLabel";
 import { Box, MenuItem } from "@mui/material";
 import React from "react";
-import Select from "./Select";
-import TextField from "../TextField";
+import Select from "./Select-GUI";
 
 const meta = {
-  title: "Components/Select",
+  title: "Components/Select a",
   component: Select,
   tags: ["autodocs"],
 } satisfies Meta<typeof Select>;
@@ -114,7 +113,7 @@ export const DefaultLargeDisabled = () => {
 
   return (
     <Box sx={{ width: 120 }}>
-      <FormControl fullWidth disabled>
+      <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label" size="large">
           Age
         </InputLabel>
@@ -125,6 +124,7 @@ export const DefaultLargeDisabled = () => {
           label="Age"
           onChange={handleChange}
           size="large"
+          disabled
         >
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
