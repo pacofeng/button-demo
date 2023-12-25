@@ -13,7 +13,10 @@ export default meta;
 type Story = StoryObj<typeof Autocomplete>;
 
 const films = [
-  { label: "The Shawshank Redemption ", year: 1994 },
+  {
+    label: "The Shawshank Redemption",
+    year: 1994,
+  },
   {
     label: "The Lord of the Rings: The Return of the King",
     year: 2003,
@@ -44,6 +47,7 @@ export const SmallFilled: Story = {
       sx={{ width: 200 }}
       options={films}
       defaultValue="The Lord of the Rings: The Return of the King"
+      isOptionEqualToValue={(option, value) => option.label === value}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="small" />
       )}
@@ -58,6 +62,22 @@ export const SmallDisabled: Story = {
       disabled
       sx={{ width: 200 }}
       options={films}
+      renderInput={(params) => (
+        <TextField {...params} label="Movie" size="small" />
+      )}
+    />
+  ),
+};
+
+export const SmallDisabledFilled: Story = {
+  render: () => (
+    <Autocomplete
+      size="small"
+      disabled
+      sx={{ width: 200 }}
+      options={films}
+      defaultValue="The Shawshank Redemption"
+      isOptionEqualToValue={(option, value) => option.label === value}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="small" />
       )}
@@ -85,6 +105,7 @@ export const MediumFilled: Story = {
       sx={{ width: 200 }}
       options={films}
       defaultValue="The Lord of the Rings: The Return of the King"
+      isOptionEqualToValue={(option, value) => option.label === value}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="medium" />
       )}
@@ -106,9 +127,26 @@ export const MediumDisabled: Story = {
   ),
 };
 
+export const MediumDisabledFilled: Story = {
+  render: () => (
+    <Autocomplete
+      size="medium"
+      disabled
+      sx={{ width: 200 }}
+      options={films}
+      defaultValue="The Shawshank Redemption"
+      isOptionEqualToValue={(option, value) => option.label === value}
+      renderInput={(params) => (
+        <TextField {...params} label="Movie" size="medium" />
+      )}
+    />
+  ),
+};
+
 export const Large: Story = {
   render: () => (
     <Autocomplete
+      getOptionDisabled={(option) => option.year > 2000}
       size="large"
       sx={{ width: 200 }}
       options={films}
@@ -125,7 +163,8 @@ export const LargeFilled: Story = {
       size="large"
       sx={{ width: 200 }}
       options={films}
-      defaultValue="The Lord of the Rings: The Return of the King"
+      defaultValue="The Shawshank Redemption"
+      isOptionEqualToValue={(option, value) => option.label === value}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
       )}
@@ -138,6 +177,22 @@ export const LargeDisabled: Story = {
     <Autocomplete
       size="large"
       disabled
+      sx={{ width: 200 }}
+      options={films}
+      renderInput={(params) => (
+        <TextField {...params} label="Movie" size="large" />
+      )}
+    />
+  ),
+};
+
+export const LargeDisabledFilled: Story = {
+  render: () => (
+    <Autocomplete
+      size="large"
+      disabled
+      defaultValue="The Lord of the Rings: The Return of the King"
+      isOptionEqualToValue={(option, value) => option.label === value}
       sx={{ width: 200 }}
       options={films}
       renderInput={(params) => (

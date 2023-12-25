@@ -20,6 +20,24 @@ export const Autocomplete = styled(
         "& .MuiAutocomplete-paper": {
           fontSize:
             props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
+          "& .Mui-focused": {
+            backgroundColor: "#E7ECF0",
+          },
+          "& .MuiAutocomplete-option": {
+            "&[aria-selected='true']": {
+              backgroundColor: "#F7F7F8",
+              "&.Mui-focused": {
+                backgroundColor: "#E7ECF0",
+              },
+            },
+            "&.Mui-focused": {
+              backgroundColor: "#E7ECF0",
+            },
+            "&[aria-disabled='true']": {
+              color: "#D6D8DA",
+              opacity: 1,
+            },
+          },
         },
       }))}
       {...props}
@@ -28,10 +46,16 @@ export const Autocomplete = styled(
 )((props) => ({
   "&.MuiAutocomplete-root": {
     display: props.hidden ? "none" : "",
-    "&.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon": {
+    "&.MuiAutocomplete-hasPopupIcon": {
       "& .MuiAutocomplete-inputRoot.MuiOutlinedInput-root": {
         paddingRight:
-          props.size === "small" ? 48 : props.size === "large" ? 66 : 54,
+          props.size === "small" ? 24 : props.size === "large" ? 34 : 27,
+      },
+      "&.MuiAutocomplete-hasClearIcon": {
+        "& .MuiAutocomplete-inputRoot.MuiOutlinedInput-root": {
+          paddingRight:
+            props.size === "small" ? 48 : props.size === "large" ? 66 : 54,
+        },
       },
     },
     "& .MuiAutocomplete-inputRoot.MuiOutlinedInput-root": {
