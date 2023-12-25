@@ -163,8 +163,9 @@ export const LargeFilled: Story = {
       size="large"
       sx={{ width: 200 }}
       options={films}
-      defaultValue="The Shawshank Redemption"
+      value="The Shawshank Redemption"
       isOptionEqualToValue={(option, value) => option.label === value}
+      getOptionDisabled={(option) => option.year > 2000}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
       )}
@@ -179,6 +180,7 @@ export const LargeDisabled: Story = {
       disabled
       sx={{ width: 200 }}
       options={films}
+      getOptionDisabled={(option) => option.year > 2000}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
       )}
@@ -195,6 +197,7 @@ export const LargeDisabledFilled: Story = {
       isOptionEqualToValue={(option, value) => option.label === value}
       sx={{ width: 200 }}
       options={films}
+      getOptionDisabled={(option) => option.year > 2000}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
       )}

@@ -20,22 +20,19 @@ export const Autocomplete = styled(
         "& .MuiAutocomplete-paper": {
           fontSize:
             props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
-          "& .Mui-focused": {
-            backgroundColor: "#E7ECF0",
-          },
           "& .MuiAutocomplete-option": {
-            "&[aria-selected='true']": {
-              backgroundColor: "#F7F7F8",
-              "&.Mui-focused": {
-                backgroundColor: "#E7ECF0",
-              },
-            },
             "&.Mui-focused": {
               backgroundColor: "#E7ECF0",
+            },
+            "&[aria-selected='true']:not(.Mui-focused)": {
+              backgroundColor: "#F7F7F8",
             },
             "&[aria-disabled='true']": {
               color: "#D6D8DA",
               opacity: 1,
+              "&.Mui-focused": {
+                backgroundColor: "#F7F7F8",
+              },
             },
           },
         },
