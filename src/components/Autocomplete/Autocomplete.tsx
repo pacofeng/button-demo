@@ -1,5 +1,10 @@
 import React from "react";
-import { Autocomplete as MAutocomplete, styled } from "@mui/material";
+import {
+  Autocomplete as MAutocomplete,
+  styled,
+  AutocompleteProps as MAutocompleteProps,
+  Popper,
+} from "@mui/material";
 
 declare module "@mui/material/Autocomplete" {
   interface AutocompletePropsSizeOverrides {
@@ -8,7 +13,19 @@ declare module "@mui/material/Autocomplete" {
 }
 
 // AutocompletePropsSizeOverrides
-export const Autocomplete = styled(MAutocomplete)((props) => ({
+export const Autocomplete = styled(
+  (props: MAutocompleteProps<any, any, any, any>) => (
+    <MAutocomplete
+      PopperComponent={styled(Popper)(() => ({
+        "& .MuiAutocomplete-paper": {
+          fontSize:
+            props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
+        },
+      }))}
+      {...props}
+    />
+  )
+)((props) => ({
   "&.MuiAutocomplete-root": {
     display: props.hidden ? "none" : "",
     "&.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon": {
