@@ -74,6 +74,7 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
       },
     },
     "&.Mui-disabled": {
+      backgroundColor: "#F7F7F8",
       "& .MuiOutlinedInput-notchedOutline": {
         borderColor: "#D6D8DA",
       },
