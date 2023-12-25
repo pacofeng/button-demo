@@ -20,18 +20,32 @@ export const Autocomplete = styled(
         "& .MuiAutocomplete-paper": {
           fontSize:
             props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
+          letterSpacing: props.size === "large" ? 0.1 : 0.25,
+          lineHeight:
+            props.size === "small"
+              ? "14px"
+              : props.size === "large"
+              ? "20px"
+              : "16px",
           "& .MuiAutocomplete-option": {
-            "&.Mui-focused": {
-              backgroundColor: "#E7ECF0",
-            },
-            "&[aria-selected='true']:not(.Mui-focused)": {
+            "&[aria-selected='true']": {
               backgroundColor: "#F7F7F8",
             },
             "&[aria-disabled='true']": {
               color: "#D6D8DA",
               opacity: 1,
-              "&.Mui-focused": {
+            },
+            // use hover instead of Mui-focused to update default bg color when dropdown opens
+            "&.Mui-focused": {
+              backgroundColor: "transparent",
+              "&[aria-selected='true']": {
                 backgroundColor: "#F7F7F8",
+              },
+            },
+            "&:hover": {
+              backgroundColor: "#E7ECF0",
+              "&[aria-selected='true']": {
+                backgroundColor: "#E7ECF0",
               },
             },
           },
@@ -46,7 +60,7 @@ export const Autocomplete = styled(
     "&.MuiAutocomplete-hasPopupIcon": {
       "& .MuiAutocomplete-inputRoot.MuiOutlinedInput-root": {
         paddingRight:
-          props.size === "small" ? 24 : props.size === "large" ? 34 : 27,
+          props.size === "small" ? 24 : props.size === "large" ? 34 : 28,
       },
       "&.MuiAutocomplete-hasClearIcon": {
         "& .MuiAutocomplete-inputRoot.MuiOutlinedInput-root": {
