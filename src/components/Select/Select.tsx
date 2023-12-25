@@ -56,9 +56,11 @@ export const Select = styled(MSelect)((props) => ({
     },
   },
 
-  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-    borderColor: "#444",
-    // backgroundColor: "#E7ECF0",
+  "&.Mui-focused ": {
+    backgroundColor: "#E7ECF0",
+    ".MuiOutlinedInput-notchedOutline": {
+      borderColor: "#444",
+    },
   },
 
   ".MuiPaper-root .MuiList-root .Mui-selected": {
