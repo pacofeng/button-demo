@@ -13,43 +13,124 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof FormControlLabel>;
 
-// Switch
-export const DefaultUnchecked: Story = {
+export const SmallUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Switch color="secondary" />} label="Switch" />
+      <FormControlLabel control={<Switch size="small" />} label="Switch" />
     </FormControl>
   ),
 };
 
-export const DefaultChecked: Story = {
+export const SmallChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Switch defaultChecked color="secondary" />}
+        control={<Switch defaultChecked size="small" />}
         label="Switch"
       />
     </FormControl>
   ),
 };
 
-export const DefaultDisabledUnchecked: Story = {
+export const SmallDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Switch disabled color="secondary" />}
+        control={<Switch disabled size="small" />}
         label="Switch"
       />
     </FormControl>
   ),
 };
 
-export const DefaultDisabledChecked: Story = {
+export const SmallDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Switch disabled defaultChecked color="secondary" />}
+        control={<Switch disabled defaultChecked size="small" />}
         label="Switch"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel control={<Switch size="medium" />} label="Switch" />
+    </FormControl>
+  ),
+};
+
+export const MediumChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Switch defaultChecked size="medium" />}
+        label="Switch"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumDisabledUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Switch disabled size="medium" />}
+        label="Switch"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumDisabledChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Switch disabled defaultChecked size="medium" />}
+        label="Switch"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel control={<Switch size="large" />} label="Switch" />
+    </FormControl>
+  ),
+};
+
+export const LargeChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Switch defaultChecked size="large" />}
+        label="Switch"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeDisabledUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Switch disabled size="large" />}
+        label="Switch"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeDisabledChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Switch disabled defaultChecked size="large" />}
+        label="Checkbox"
       />
     </FormControl>
   ),

@@ -13,11 +13,9 @@ export const Switch = styled(MSwitch)(({ size }) => ({
   marginRight: size === "small" ? 6 : size === "large" ? 12 : 8,
 
   "& .MuiSwitch-thumb": {
-    height: size === "small" ? 10 : size === "large" ? 18 : 14,
-    width: size === "small" ? 10 : size === "large" ? 18 : 14,
+    height: size === "small" ? 8 : size === "large" ? 16 : 12,
+    width: size === "small" ? 8 : size === "large" ? 16 : 12,
     borderRadius: "50%",
-    marginTop: size === "small" ? 4 : size === "large" ? -1 : -1,
-    marginLeft: size === "small" ? 4 : size === "large" ? -1 : -1,
     backgroundColor: "#FFFFFF",
     boxShadow: "0px 3px 7px 0px rgba(0, 0, 0, 0.03)",
   },
@@ -38,7 +36,7 @@ export const Switch = styled(MSwitch)(({ size }) => ({
   },
 
   "& .MuiSwitch-switchBase": {
-    margin: -7,
+    margin: size === "small" ? -2 : -7,
   },
   "& .MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track": {
     backgroundColor: "#13426B",
@@ -73,7 +71,7 @@ export const Switch = styled(MSwitch)(({ size }) => ({
   },
 
   "& .MuiSwitch-switchBase.Mui-checked": {
-    marginLeft: -4,
+    marginLeft: -3,
     color: "#ffffff !important",
   },
 
