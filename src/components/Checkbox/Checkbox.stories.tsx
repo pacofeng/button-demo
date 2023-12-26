@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Checkbox from "./Checkbox";
-import FormControl from "../FormControl";
+import { FormControl } from "@mui/material";
 import FormControlLabel from "../FormControlLabel";
 
 const meta = {

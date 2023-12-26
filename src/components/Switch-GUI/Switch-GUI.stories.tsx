@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import Switch from "./Switch";
-import FormControl from "../FormControl";
+import FormControl from "../FormControl-GUI";
 import { FormControlLabel } from "@mui/material";
 
 const meta = {

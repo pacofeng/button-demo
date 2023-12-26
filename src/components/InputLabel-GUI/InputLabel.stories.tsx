@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import InputLabel from "./InputLabel";
-import FormControl from "../FormControl";
+import FormControl from "../FormControl-GUI";
 import { Box, MenuItem, Select } from "@mui/material";
 import React from "react";
 
