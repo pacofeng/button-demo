@@ -42,6 +42,10 @@ export const Select = styled((SelectProps: MSelectProps) => (
             opacity: 1,
             color: "#D6D8DA",
           },
+
+          "& .MuiTouchRipple-root": {
+            display: "none",
+          },
         },
       },
     }}

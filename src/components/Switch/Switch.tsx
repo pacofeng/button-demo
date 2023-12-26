@@ -81,6 +81,9 @@ export const Switch = styled(MSwitch)(({ size }) => ({
   "&:hover .Mui-checked + .MuiSwitch-track": {
     backgroundColor: "#0F3556",
   },
+  ".MuiTouchRipple-root": {
+    display: "none",
+  },
 }));
 
 export default Switch;
