@@ -52,7 +52,7 @@ export const Button = styled(MButton)((props: ButtonProps) => ({
     : "#13426B",
   color:
     props.variant === "tertiary"
-      ? "#13426B"
+      ? "#13426B "
       : props.variant === "secondary"
       ? "#13426B"
       : "#ffffff",
@@ -68,7 +68,7 @@ export const Button = styled(MButton)((props: ButtonProps) => ({
         : "#0f3556",
     color:
       props.variant === "tertiary"
-        ? "#0f3556"
+        ? "#0f3556 "
         : props.variant === "secondary"
         ? "#0f3556"
         : "#ffffff",
@@ -80,7 +80,7 @@ export const Button = styled(MButton)((props: ButtonProps) => ({
       props.variant === "tertiary" || props.variant === "secondary" ? 0.5 : 0.5,
     color:
       props.variant === "tertiary"
-        ? "#426889"
+        ? "#426889 "
         : props.variant === "secondary"
         ? "#426889"
         : "#ffffff",
@@ -96,7 +96,7 @@ export const Button = styled(MButton)((props: ButtonProps) => ({
   "&:focus": {
     color:
       props.variant === "tertiary"
-        ? "#0b2840"
+        ? "#0b2840 "
         : props.variant === "secondary"
         ? "#0b2840"
         : "#ffffff",

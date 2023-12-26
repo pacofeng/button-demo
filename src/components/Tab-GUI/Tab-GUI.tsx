@@ -12,7 +12,7 @@ export const Tab = styled(MTab)((props: TabProps) => ({
   alignItems: "center",
   textAlign: "center",
   height: "56px",
-  //fontSize:props.size=== 'small' ?10 :props.size=== 'large' ?14 :12,
+  // fontSize: props.size === 'small' ? 10 : props.size === 'large' ? 14 : 12,
   padding: "16px",
   color: "#333D47",
   fontWeight: 400,
@@ -29,7 +29,7 @@ export const Tab = styled(MTab)((props: TabProps) => ({
     color: "#333D47",
     "&.Mui-disabled": {
       color: "#868B8C",
-      //borderBottom: "3px solid #868B8C",
+      // borderBottom: "3px solid #868B8C",
     },
   },
 }));

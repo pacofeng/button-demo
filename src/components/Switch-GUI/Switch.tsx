@@ -34,7 +34,7 @@ export const Switch = styled(MSwitch)(() => ({
     color: "#ffffff",
   },
 
-  "&:hover.MuiSwitch-track": {
+  "&:hover .MuiSwitch-track": {
     backgroundColor: "#444444",
   },
 }));

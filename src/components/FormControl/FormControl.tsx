@@ -3,9 +3,9 @@ import { FormControl as MFormControl, styled } from "@mui/material";
 
 export const FormControl = styled(MFormControl)((props) => ({
   display: props.hidden === true ? "none" : "",
-
+  width: "100%",
   "& .MuiOutlinedInput-root": {
-    "&fieldset": {
+    "& fieldset": {
       borderColor: "#868b8c",
       color: "#5b636b",
     },
@@ -19,9 +19,13 @@ export const FormControl = styled(MFormControl)((props) => ({
     "&.Mui-error fieldset": {
       borderColor: "#cf1f38",
     },
-    "&.Mui-disabled fieldset": {
+    "&.Mui-disabled": {
       borderColor: "#868b8c",
       backgroundColor: "#f7f7f8",
+      label: {
+        backgroundColor: "#ffffff",
+        color: "#ffffff",
+      },
     },
   },
 }));
