@@ -9,6 +9,7 @@ declare module "@mui/material/InputLabel" {
 }
 
 export const InputLabel = styled(MInputLabel)((props) => ({
+  color: "#333D47",
   ...(props.size === "small"
     ? { fontSize: "10px", lineHeight: "14px", letterSpacing: "0.25px" }
     : props.size === "medium"
