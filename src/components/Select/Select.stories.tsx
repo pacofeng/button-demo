@@ -8,7 +8,7 @@ import Select from "./Select";
 import TextField from "../TextField";
 
 const meta = {
-  title: "Components/Select",
+  title: "Components/Select DSL",
   component: Select,
   tags: ["autodocs"],
 } satisfies Meta<typeof Select>;

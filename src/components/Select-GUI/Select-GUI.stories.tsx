@@ -1,13 +1,13 @@
 import type { Meta } from "@storybook/react";
 
 import FormControl from "../FormControl-GUI";
-import InputLabel from "../InputLabel";
+import InputLabel from "../InputLabel-GUI";
 import { Box, MenuItem } from "@mui/material";
 import React from "react";
 import Select from "./Select-GUI";
 
 const meta = {
-  title: "Components/Select a",
+  title: "Components/Select GUI",
   component: Select,
   tags: ["autodocs"],
 } satisfies Meta<typeof Select>;
