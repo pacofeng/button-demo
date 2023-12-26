@@ -5,26 +5,33 @@ export const FormControl = styled(MFormControl)((props) => ({
   display: props.hidden === true ? "none" : "",
   width: "100%",
   "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "#868b8c",
-      color: "#5b636b",
+    "&:hover:not(.Mui-disabled):not(.Mui-error):not(.Mui-focused)": {
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#444444",
+      },
     },
-    "&:hover fieldset": {
-      borderColor: "#444444",
+    "&.Mui-focused": {
+      backgroundColor: "#E7ECF0",
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#13426B",
+        borderWidth: 1,
+      },
     },
-    "&.Mui-focused fieldset": {
-      borderColor: "#13426b",
-      color: "#333d47",
-    },
-    "&.Mui-error fieldset": {
-      borderColor: "#cf1f38",
+    "&.Mui-error": {
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#CF1F38",
+      },
     },
     "&.Mui-disabled": {
-      borderColor: "#868b8c",
-      backgroundColor: "#f7f7f8",
-      label: {
-        backgroundColor: "#ffffff",
-        color: "#ffffff",
+      backgroundColor: "#F7F7F8",
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "#D6D8DA",
+      },
+    },
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#868B8C",
+      legend: {
+        fontSize: 10,
       },
     },
   },

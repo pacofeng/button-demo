@@ -38,7 +38,7 @@ export const DateTimePicker = styled(MDateTimePicker)(
       },
     },
     // Input field style
-    "& .MuiInputBase-root": {
+    "& .MuiOutlinedInput-root": {
       color: "#333D47",
       fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
       height: props.size === "small" ? 22 : props.size === "large" ? 32 : 28,

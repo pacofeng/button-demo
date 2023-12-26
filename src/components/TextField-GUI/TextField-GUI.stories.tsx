@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import TextField from "./TextField-GUI";
 import MenuItem from "@mui/material/MenuItem";
+import FormControl from "../FormControl-GUI";
 
 const meta = {
   title: "Components/TextField GUI",
@@ -192,82 +193,104 @@ export const MediumSelectFilled: Story = {
 };
 
 export const LargeDefault: Story = {
-  render: () => <TextField size="large" label="Default" type="number" />,
+  render: () => (
+    <FormControl>
+      <TextField size="large" label="Default" type="number" />
+    </FormControl>
+  ),
 };
 
 export const LargeDefaultFilled: Story = {
   render: () => (
-    <TextField
-      size="large"
-      label="Default Filled"
-      defaultValue="Default Filled"
-    />
+    <FormControl>
+      <TextField
+        size="large"
+        label="Default Filled"
+        defaultValue="Default Filled"
+      />
+    </FormControl>
   ),
 };
 
 export const LargeError: Story = {
-  render: () => <TextField size="large" label="错误" error />,
+  render: () => (
+    <FormControl>
+      <TextField size="large" label="错误" error />
+    </FormControl>
+  ),
 };
 
 export const LargeErrorFilled: Story = {
   render: () => (
-    <TextField
-      size="large"
-      label="错误 Filled"
-      defaultValue="错误 Filled"
-      error
-    />
+    <FormControl>
+      <TextField
+        size="large"
+        label="错误 Filled"
+        defaultValue="错误 Filled"
+        error
+      />
+    </FormControl>
   ),
 };
 
 export const LargeDisabled: Story = {
-  render: () => <TextField size="large" label="Disabled" disabled />,
+  render: () => (
+    <FormControl>
+      <TextField size="large" label="Disabled" disabled />
+    </FormControl>
+  ),
 };
 
 export const LargeDisabledFilled: Story = {
   render: () => (
-    <TextField
-      size="large"
-      label="Disabled Filled"
-      defaultValue="Disabled Filled"
-      disabled
-    />
+    <FormControl>
+      <TextField
+        size="large"
+        label="Disabled Filled"
+        defaultValue="Disabled Filled"
+        disabled
+      />
+    </FormControl>
   ),
 };
 
 export const LargeSelect: Story = {
   render: () => (
-    <TextField
-      sx={{ width: 100 }}
-      select
-      label="Currency"
-      size="large"
-      fullWidth
-    >
-      {currencies.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
-          {option.label}
-        </MenuItem>
-      ))}
-    </TextField>
+    <FormControl>
+      <TextField
+        sx={{ width: 100 }}
+        select
+        label="Currency"
+        size="large"
+        fullWidth
+      >
+        {currencies.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+    </FormControl>
   ),
 };
 
 export const LargeSelectFilled: Story = {
   render: () => (
-    <TextField
-      sx={{ width: 100 }}
-      select
-      label="Currency Filled"
-      defaultValue="EUR"
-      size="large"
-      fullWidth
-    >
-      {currencies.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
-          {option.label}
-        </MenuItem>
-      ))}
-    </TextField>
+    <FormControl>
+      <TextField
+        sx={{ width: 100 }}
+        select
+        label="Currency Filled"
+        defaultValue="EUR"
+        size="large"
+        fullWidth
+      >
+        {currencies.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+    </FormControl>
   ),
 };
