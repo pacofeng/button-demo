@@ -26,7 +26,8 @@ export const InputLabel = styled(MInputLabel)((props) => ({
     letterSpacing: props.size === "large" ? 0.1 : 0.25,
     top:
       props.size === "small" ? "5px" : props.size === "medium" ? "4px" : "2px",
-    left: props.size === "small" ? 1 : props.size === "medium" ? 2 : 3,
+    left: 0,
+    right: 0,
   },
 
   "&.MuiInputLabel-shrink + .Mui-focused > .MuiOutlinedInput-notchedOutline": {
@@ -46,6 +47,11 @@ export const InputLabel = styled(MInputLabel)((props) => ({
   "&.Mui-disabled": {
     color: "#868B8C",
   },
+
+  "&.MuiInputLabel-shrink + .Mui-focused > .MuiOutlinedInput-notchedOutline legend":
+    {
+      fontSize: "8px",
+    },
 }));
 
 export default InputLabel;
