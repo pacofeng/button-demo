@@ -13,45 +13,145 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof FormControlLabel>;
 
-export const DefaultUnchecked: Story = {
+export const SmallUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox color="secondary" />}
+        control={<Checkbox size="small" />}
         label="复选框"
+        size="small"
       />
     </FormControl>
   ),
 };
 
-export const DefaultChecked: Story = {
+export const SmallChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox color="secondary" defaultChecked />}
+        control={<Checkbox defaultChecked size="small" />}
         label="Checkbox"
+        size="small"
       />
     </FormControl>
   ),
 };
 
-export const DefaultDisabledUnchecked: Story = {
+export const SmallDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox color="secondary" disabled />}
+        control={<Checkbox disabled size="small" />}
         label="Checkbox"
+        size="small"
       />
     </FormControl>
   ),
 };
 
-export const DefaultDisabledChecked: Story = {
+export const SmallDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox color="secondary" disabled defaultChecked />}
+        control={<Checkbox disabled defaultChecked size="small" />}
         label="Checkbox"
+        size="small"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox size="medium" />}
+        label="复选框"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox defaultChecked size="medium" />}
+        label="Checkbox"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumDisabledUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox disabled size="medium" />}
+        label="Checkbox"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const MediumDisabledChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox disabled defaultChecked size="medium" />}
+        label="Checkbox"
+        size="medium"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox size="large" />}
+        label="复选框"
+        size="large"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox defaultChecked size="large" />}
+        label="Checkbox"
+        size="large"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeDisabledUnchecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox disabled size="large" />}
+        label="Checkbox"
+        size="large"
+      />
+    </FormControl>
+  ),
+};
+
+export const LargeDisabledChecked: Story = {
+  render: () => (
+    <FormControl>
+      <FormControlLabel
+        control={<Checkbox disabled defaultChecked size="large" />}
+        label="Checkbox"
+        size="large"
       />
     </FormControl>
   ),
