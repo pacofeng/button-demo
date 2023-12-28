@@ -18,7 +18,7 @@ export const DefaultUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Checkbox color="secondary" />}
-        label="Checkbox"
+        label="复选框"
       />
     </FormControl>
   ),

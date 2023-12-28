@@ -26,7 +26,7 @@ export const TextField = styled(MTextField)((props: MergedTextFieldProps) => ({
   "& .MuiInputLabel-root": {
     fontSize: props.size === "small" ? 10 : props.size === "large" ? 14 : 12,
     color: props.fontColor ? props.fontColor : "#333D47",
-    top: props.size === "small" ? -5 : -10,
+    top: props.size === "small" ? -4 : -10,
     letterSpacing: props.size === "large" ? 0.1 : 0.25,
     lineHeight:
       props.size === "small"

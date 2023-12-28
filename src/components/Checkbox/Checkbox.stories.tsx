@@ -18,7 +18,7 @@ export const SmallUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Checkbox size="small" />}
-        label="Checkbox"
+        label="复选框"
         size="small"
       />
     </FormControl>
@@ -66,7 +66,7 @@ export const MediumUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Checkbox size="medium" />}
-        label="Checkbox"
+        label="复选框"
         size="medium"
       />
     </FormControl>
@@ -114,7 +114,7 @@ export const LargeUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Checkbox size="large" />}
-        label="Checkbox"
+        label="复选框"
         size="large"
       />
     </FormControl>

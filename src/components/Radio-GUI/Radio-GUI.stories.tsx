@@ -17,7 +17,10 @@ type Story = StoryObj<typeof FormControlLabel>;
 export const DefaultUnchecked: Story = {
   render: () => (
     <FormControl>
-      <FormControlLabel control={<Radio color="secondary" />} label="Radio" />
+      <FormControlLabel
+        control={<Radio color="secondary" />}
+        label="单选按钮"
+      />
     </FormControl>
   ),
 };

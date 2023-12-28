@@ -18,6 +18,10 @@ const films = [
     year: 1994,
   },
   {
+    label: "无间道",
+    year: 2002,
+  },
+  {
     label: "The Lord of the Rings: The Return of the King",
     year: 2003,
   },
@@ -46,10 +50,10 @@ export const SmallFilled: Story = {
       size="small"
       sx={{ width: 200 }}
       options={films}
-      defaultValue="The Lord of the Rings: The Return of the King"
+      defaultValue="无间道"
       isOptionEqualToValue={(option, value) => option.label === value}
       renderInput={(params) => (
-        <TextField {...params} label="Movie" size="small" />
+        <TextField {...params} label="电影" size="small" />
       )}
     />
   ),
@@ -104,10 +108,10 @@ export const MediumFilled: Story = {
       size="medium"
       sx={{ width: 200 }}
       options={films}
-      defaultValue="The Lord of the Rings: The Return of the King"
+      defaultValue="无间道"
       isOptionEqualToValue={(option, value) => option.label === value}
       renderInput={(params) => (
-        <TextField {...params} label="Movie" size="medium" />
+        <TextField {...params} label="电影" size="medium" />
       )}
     />
   ),
@@ -146,7 +150,7 @@ export const MediumDisabledFilled: Story = {
 export const Large: Story = {
   render: () => (
     <Autocomplete
-      getOptionDisabled={(option) => option.year > 2000}
+      getOptionDisabled={(option) => option.year > 2002}
       size="large"
       sx={{ width: 200 }}
       options={films}
@@ -163,10 +167,11 @@ export const LargeFilled: Story = {
       size="large"
       sx={{ width: 200 }}
       options={films}
-      defaultValue="The Shawshank Redemption"
+      value="无间道"
       isOptionEqualToValue={(option, value) => option.label === value}
+      getOptionDisabled={(option) => option.year > 2002}
       renderInput={(params) => (
-        <TextField {...params} label="Movie" size="large" />
+        <TextField {...params} label="电影" size="large" />
       )}
     />
   ),
@@ -179,6 +184,7 @@ export const LargeDisabled: Story = {
       disabled
       sx={{ width: 200 }}
       options={films}
+      getOptionDisabled={(option) => option.year > 2002}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
       )}
@@ -195,6 +201,7 @@ export const LargeDisabledFilled: Story = {
       isOptionEqualToValue={(option, value) => option.label === value}
       sx={{ width: 200 }}
       options={films}
+      getOptionDisabled={(option) => option.year > 2002}
       renderInput={(params) => (
         <TextField {...params} label="Movie" size="large" />
       )}

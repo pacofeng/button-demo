@@ -16,8 +16,7 @@ export const Radio = styled(MRadio)((props: MRadioProps) => ({
   //   color: "#cf1318",
   // },
 
-  padding: 0,
-  marginRight: props.size === "small" ? 6 : props.size === "large" ? 12 : 8,
+  paddingRight: props.size === "small" ? 6 : props.size === "large" ? 12 : 8,
   "&:hover": {
     backgroundColor: "transparent",
   },

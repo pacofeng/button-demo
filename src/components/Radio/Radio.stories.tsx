@@ -19,7 +19,7 @@ export const SmallUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Radio size="small" />}
-        label="Radio"
+        label="单选按钮"
         size="small"
       />
     </FormControl>
@@ -67,7 +67,7 @@ export const MediumUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Radio size="medium" />}
-        label="Radio"
+        label="单选按钮"
         size="medium"
       />
     </FormControl>
@@ -115,7 +115,7 @@ export const LargeUnchecked: Story = {
     <FormControl>
       <FormControlLabel
         control={<Radio size="large" />}
-        label="Radio"
+        label="单选按钮"
         size="large"
       />
     </FormControl>
