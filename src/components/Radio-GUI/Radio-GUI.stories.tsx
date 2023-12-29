@@ -18,7 +18,7 @@ export const SmallUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio size="small" />}
+        control={<Radio size="small" color="secondary" />}
         label="单选按钮"
         size="small"
       />
@@ -30,7 +30,7 @@ export const SmallChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio defaultChecked size="small" />}
+        control={<Radio defaultChecked size="small" color="secondary" />}
         label="Radio"
         size="small"
       />
@@ -42,7 +42,7 @@ export const SmallDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled size="small" />}
+        control={<Radio disabled size="small" color="secondary" />}
         label="Radio"
         size="small"
       />
@@ -54,7 +54,9 @@ export const SmallDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled defaultChecked size="small" />}
+        control={
+          <Radio disabled defaultChecked size="small" color="secondary" />
+        }
         label="Radio"
         size="small"
       />
@@ -66,7 +68,7 @@ export const MediumUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio size="medium" />}
+        control={<Radio size="medium" color="secondary" />}
         label="单选按钮"
         size="medium"
       />
@@ -78,7 +80,7 @@ export const MediumChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio defaultChecked size="medium" />}
+        control={<Radio defaultChecked size="medium" color="secondary" />}
         label="Radio"
         size="medium"
       />
@@ -90,7 +92,7 @@ export const MediumDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled size="medium" />}
+        control={<Radio disabled size="medium" color="secondary" />}
         label="Radio"
         size="medium"
       />
@@ -102,7 +104,9 @@ export const MediumDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled defaultChecked size="medium" />}
+        control={
+          <Radio disabled defaultChecked size="medium" color="secondary" />
+        }
         label="Radio"
         size="medium"
       />
@@ -114,7 +118,7 @@ export const LargeUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio size="large" />}
+        control={<Radio size="large" color="secondary" />}
         label="单选按钮"
         size="large"
       />
@@ -126,7 +130,7 @@ export const LargeChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio defaultChecked size="large" />}
+        control={<Radio defaultChecked size="large" color="secondary" />}
         label="Radio"
         size="large"
       />
@@ -138,7 +142,7 @@ export const LargeDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled size="large" />}
+        control={<Radio disabled size="large" color="secondary" />}
         label="Radio"
         size="large"
       />
@@ -150,7 +154,9 @@ export const LargeDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Radio disabled defaultChecked size="large" />}
+        control={
+          <Radio disabled defaultChecked size="large" color="secondary" />
+        }
         label="Radio"
         size="large"
       />

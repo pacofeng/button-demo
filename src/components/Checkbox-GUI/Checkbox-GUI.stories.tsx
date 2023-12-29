@@ -17,7 +17,7 @@ export const SmallUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox size="small" />}
+        control={<Checkbox size="small" color="secondary" />}
         label="复选框"
         size="small"
       />
@@ -29,7 +29,7 @@ export const SmallChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox defaultChecked size="small" />}
+        control={<Checkbox defaultChecked size="small" color="secondary" />}
         label="Checkbox"
         size="small"
       />
@@ -41,7 +41,7 @@ export const SmallDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox disabled size="small" />}
+        control={<Checkbox disabled size="small" color="secondary" />}
         label="Checkbox"
         size="small"
       />
@@ -53,7 +53,9 @@ export const SmallDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox disabled defaultChecked size="small" />}
+        control={
+          <Checkbox disabled defaultChecked size="small" color="secondary" />
+        }
         label="Checkbox"
         size="small"
       />
@@ -65,7 +67,7 @@ export const MediumUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox size="medium" />}
+        control={<Checkbox size="medium" color="secondary" />}
         label="复选框"
         size="medium"
       />
@@ -77,7 +79,7 @@ export const MediumChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox defaultChecked size="medium" />}
+        control={<Checkbox defaultChecked size="medium" color="secondary" />}
         label="Checkbox"
         size="medium"
       />
@@ -89,7 +91,7 @@ export const MediumDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox disabled size="medium" />}
+        control={<Checkbox disabled size="medium" color="secondary" />}
         label="Checkbox"
         size="medium"
       />
@@ -101,7 +103,9 @@ export const MediumDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox disabled defaultChecked size="medium" />}
+        control={
+          <Checkbox disabled defaultChecked size="medium" color="secondary" />
+        }
         label="Checkbox"
         size="medium"
       />
@@ -113,7 +117,7 @@ export const LargeUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox size="large" />}
+        control={<Checkbox size="large" color="secondary" />}
         label="复选框"
         size="large"
       />
@@ -125,7 +129,7 @@ export const LargeChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox defaultChecked size="large" />}
+        control={<Checkbox defaultChecked size="large" color="secondary" />}
         label="Checkbox"
         size="large"
       />
@@ -137,7 +141,7 @@ export const LargeDisabledUnchecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox disabled size="large" />}
+        control={<Checkbox disabled size="large" color="secondary" />}
         label="Checkbox"
         size="large"
       />
@@ -149,7 +153,9 @@ export const LargeDisabledChecked: Story = {
   render: () => (
     <FormControl>
       <FormControlLabel
-        control={<Checkbox disabled defaultChecked size="large" />}
+        control={
+          <Checkbox disabled defaultChecked size="large" color="secondary" />
+        }
         label="Checkbox"
         size="large"
       />

@@ -28,7 +28,8 @@ export const FormControlLabel: FC<FormControlLabelProps> = styled(
           : "16px",
       letterSpacing: props.size === "large" ? 0.1 : 0.25,
     },
-
+  },
+  ".MuiSwitch-root": {
     "+ .MuiFormControlLabel-label.Mui-disabled": {
       color: "#5B636B",
     },
