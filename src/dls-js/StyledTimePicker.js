@@ -8,7 +8,42 @@ import { TimePicker } from "@mui/x-date-pickers";
  * @props {boolean} hidden
  */
 
-export const StyledTimePicker = styled(TimePicker)((props) => ({
+export const StyledTimePicker = styled((props) => (
+  <TimePicker
+    slotProps={{
+      popper: {
+        sx: {
+          "& .MuiPaper-root": {
+            ".MuiMultiSectionDigitalClock-root": {
+              ".MuiMenuItem-root": {
+                "&.Mui-selected": {
+                  backgroundColor: "#13426B",
+                  "&:hover": {
+                    backgroundColor: "#0f3556",
+                  },
+                  "&:active": {
+                    backgroundColor: "#0B2840",
+                  },
+                },
+              },
+            },
+            ".MuiDialogActions-root": {
+              ".MuiButtonBase-root": {
+                "&.MuiButton-textPrimary": {
+                  color: "#13426B",
+                },
+              },
+            },
+            ".MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
+      },
+    }}
+    {...props}
+  />
+))((props) => ({
   display: props.hidden ? "none" : "block",
   // Input label style
   "& .MuiInputLabel-root": {

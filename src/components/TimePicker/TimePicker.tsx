@@ -12,7 +12,42 @@ export interface TimePickerProps extends MTimePickerProps<Date> {
   backgroundColor?: string;
 }
 
-export const TimePicker = styled(MTimePicker)((props: TimePickerProps) => ({
+export const TimePicker = styled((props: TimePickerProps) => (
+  <MTimePicker
+    slotProps={{
+      popper: {
+        sx: {
+          "& .MuiPaper-root": {
+            ".MuiMultiSectionDigitalClock-root": {
+              ".MuiMenuItem-root": {
+                "&.Mui-selected": {
+                  backgroundColor: "#13426B",
+                  "&:hover": {
+                    backgroundColor: "#0f3556",
+                  },
+                  "&:active": {
+                    backgroundColor: "#0B2840",
+                  },
+                },
+              },
+            },
+            ".MuiDialogActions-root": {
+              ".MuiButtonBase-root": {
+                "&.MuiButton-textPrimary": {
+                  color: "#13426B",
+                },
+              },
+            },
+            ".MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
+      },
+    }}
+    {...props}
+  />
+))((props: TimePickerProps) => ({
   display: props.hidden ? "none" : "block",
   // Input label style
   "& .MuiInputLabel-root": {

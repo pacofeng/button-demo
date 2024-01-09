@@ -12,7 +12,38 @@ export interface DatePickerProps extends MDatePickerProps<Date> {
   backgroundColor?: string;
 }
 
-export const DatePicker = styled(MDatePicker)((props: DatePickerProps) => ({
+export const DatePicker = styled((props: DatePickerProps) => (
+  <MDatePicker
+    slotProps={{
+      popper: {
+        sx: {
+          "& .MuiPaper-root": {
+            ".MuiDateCalendar-root": {
+              ".MuiPickersYear-root": {
+                ".MuiPickersYear-yearButton.Mui-selected": {
+                  backgroundColor: "#13426B",
+                },
+              },
+              ".MuiPickersDay-root.Mui-selected": {
+                backgroundColor: "#13426B",
+                "&:hover": {
+                  backgroundColor: "#0f3556",
+                },
+                "&:active": {
+                  backgroundColor: "#0B2840",
+                },
+              },
+            },
+            ".MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
+      },
+    }}
+    {...props}
+  />
+))((props: DatePickerProps) => ({
   display: props.hidden ? "none" : "block",
   // Input label style
   "& .MuiInputLabel-root": {

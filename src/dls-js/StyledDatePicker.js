@@ -8,7 +8,38 @@ import { DatePicker } from "@mui/x-date-pickers";
  * @props {boolean} hidden
  */
 
-export const StyledDatePicker = styled(DatePicker)((props) => ({
+export const StyledDatePicker = styled((props) => (
+  <DatePicker
+    slotProps={{
+      popper: {
+        sx: {
+          "& .MuiPaper-root": {
+            ".MuiDateCalendar-root": {
+              ".MuiPickersYear-root": {
+                ".MuiPickersYear-yearButton.Mui-selected": {
+                  backgroundColor: "#13426B",
+                },
+              },
+              ".MuiPickersDay-root.Mui-selected": {
+                backgroundColor: "#13426B",
+                "&:hover": {
+                  backgroundColor: "#0f3556",
+                },
+                "&:active": {
+                  backgroundColor: "#0B2840",
+                },
+              },
+            },
+            ".MuiTouchRipple-root": {
+              display: "none",
+            },
+          },
+        },
+      },
+    }}
+    {...props}
+  />
+))((props) => ({
   display: props.hidden ? "none" : "block",
   // Input label style
   "& .MuiInputLabel-root": {
